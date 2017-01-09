@@ -1,4 +1,8 @@
 #!/bin/zsh
 
 touch thesis.tex
-make
+uplatex thesis
+upbibtex thesis
+uplatex thesis
+dvipdfmx thesis
+

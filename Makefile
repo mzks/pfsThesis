@@ -15,6 +15,6 @@ distclean: clean
 %.pdf: %.dvi
 		dvipdfmx $<
 
-%.dvi: %.tex
+%.dvi: %.tex reference.bib
 		for i in `seq 1 $(CNT)`; do uplatex -interaction=batchmode $<; done
 

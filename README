@@ -3,8 +3,16 @@
 Author: Mizukoshi Keita
 
 ##Usage
+仕組みがよくわかっていない人は
+
 $make
 またはb.shを実行
+
+##最新の方法
+
+ターミナルで$latexmk thesis
+
+入っていればこっちが楽。
 
 ##Attention
 なぜかpdfが回転する問題には$pdfcorp problem.pdf
@@ -13,6 +21,7 @@ $make
 
 ##構成
 担当は仮です.
+実験装置の説明を水越と井口のどっちでした方がわかりやすいか考える。
 
 #. 表紙,諸目次
 
