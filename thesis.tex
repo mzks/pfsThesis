@@ -1,0 +1,36 @@
+% sample.tex
+\documentclass[uplatex,report]{jsbook}
+\usepackage[uplatex,jis2004]{otf}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{float}
+\usepackage[version=3]{mhchem}
+\begin{document}
+% 表紙
+\title{平成28年度 卒業論文\\
+ポジトロニウムの微細構造の測定(仮)}
+\author{水越彗太\thanks{神戸大学}\and 井口条蒔\thanks{神戸大学}\and 礒部裕太\thanks{神戸大学}\and 宮辺裕樹\thanks{神戸大学}}
+\date{2017年 3月}
+
+\maketitle
+
+\input{tex/abstract.tex}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+% 本文
+\input{tex/introduction.tex}
+\input{tex/theory.tex}
+\input{tex/simulation.tex}
+\input{tex/pmt.tex}
+\input{tex/result.tex}
+\input{tex/prospect.tex}
+\input{tex/thanks.tex}
+
+%sample
+\appendix
+\input{tex/part1.tex}
+\input{tex/part2.tex}
+
+\end{document}
