@@ -1,24 +1,41 @@
 % sample.tex
-\documentclass[uplatex,report]{jsbook}
+\documentclass[uplatex,report,10pt,a4paper]{jsbook}
+
+
 \bibliographystyle{jplain}
 \usepackage[uplatex,jis2004]{otf}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{float}
 \usepackage[version=3]{mhchem}
+\setlength{\textwidth}{\fullwidth}
+\setlength{\evensidemargin}{\oddsidemargin}
+
 \begin{document}
 % 表紙
-\title{平成28年度 卒業論文\\
-ポジトロニウムの微細構造の測定(仮)}
-\author{水越彗太\thanks{神戸大学}\and 井口条蒔\thanks{神戸大学}\and 礒部裕太\thanks{神戸大学}\and 宮辺裕樹\thanks{神戸大学}}
-\date{2017年 3月}
+%\title{平成28年度 卒業論文\\
+%ポジトロニウムの微細構造の測定(仮)}
+%\author{水越彗太\thanks{神戸大学}\and 井口条蒔\thanks{神戸大学}\and 礒部裕太\thanks{神戸大学}\and 宮辺裕樹\thanks{神戸大学}}
+\title{ポジトロニウムの微細構造の測定(仮)\thanks{平成28年度 神戸大学 卒業論文}}
+\author{水越彗太\and 井口条蒔\and 礒部裕太\and 宮辺裕樹}
+\date{\today}
 
 \maketitle
-
-\input{tex/abstract.tex}
+\newpage
 
 \tableofcontents
 \listoffigures
 \listoftables
+
+\newpage
+
+\begin{abstract}
+要旨
+
+アブストなぜかずれる問題。なんでだろう。なんでだろう。なおしかたがいまいちわからない。なおしかたがいまいちわからない。なおしかたがいまいちわからない。なおしかたがいまいちわからない。なおしかたがいまいちわからない。なおしかたがいまいちわからない。なおしかたがいまいちわからない。なおしかたがいまいちわからない。なおしかたがいまいちわからない。なおしかたがいまいちわからない。なおしかたがいまいちわからない。なおしかたがいまいちわからない。
+
+\end{abstract}
+
+%\input{tex/abstract.tex}
 
 % 本文
 \input{tex/introduction.tex}
@@ -30,9 +47,9 @@
 \input{tex/thanks.tex}
 
 %sample
-\appendix
-\input{tex/part1.tex}
-\input{tex/part2.tex}
+%\appendix
+%\input{tex/part1.tex}
+%\input{tex/part2.tex}
 
 \bibliography{reference}
 
