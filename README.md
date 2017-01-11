@@ -46,13 +46,13 @@ filename:introduction.tex
 
 filename:theory.tex
 
-#. 実験装置とモンテカルロシミュレーションにおける評価(担当:水越)
-
-filename:simulation.tex
-
-#. 磁場中の光電子増倍管の評価(担当:井口)
+#. 実験装置と磁場中の光電子増倍管の評価(担当:井口)
 
 filename:pmt.tex
+
+#. モンテカルロシミュレーションにおける評価(担当:水越)
+
+filename:simulation.tex
 
 #. ポジトロニウムの崩壊事象の選別と結果(担当:礒部)
 
