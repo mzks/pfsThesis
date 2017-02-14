@@ -27,3 +27,16 @@
 		\label{module}
 	\end{center}
 \end{table}
+
+\subsection{discriminatorの閾値}
+回路図に示すようにシンチレータSとシンチレータA,B,Cではそれぞれの回路中にあるdiscriminatorで設定されている閾値が異なる.
+\begin{description}
+	\item[シンチレータSについて]\mbox{}\\
+		シンチレータSの閾値highは1275keVの$\gamma$線のみを検出するために用いられる.\\
+		highの閾値76.0mVは約900mVのエネルギーに相当する.一方で閾値lowは$\gamma$線の入射時刻を決める役割を持ち,この閾値を下げることで精度を向上させることができる.
+		さらにhigh,lowの信号の時間差から事象選別にも利用される.
+	\item[シンチレータA,B,Cについて]\mbox{}\\
+		シンチレータA,B,CはSよりも低い閾値が設定されている.\\
+		これは閾値highの役割が無関係なノイズを落とすためであり,dividerを通る回数によりhighはlowの2倍の閾値となる.
+		lowの役割はSと同様$\gamma$線の入射時刻を決めるものである.
+\end{description}
