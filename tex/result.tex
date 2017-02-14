@@ -20,7 +20,7 @@
 	\begin{center}
 		\caption{使用したモジュール}
 		\begin{tabular}{|l|c|r|r|} \hline
-			モジュール & 型番 &シリアルナンバー & 製造会社 \\ \hline \hline
+			モジュール & 型番 & シリアルナンバー & 製造会社 \\ \hline \hline
 			ADC & V005 & & 豊伸電子 \\ \hline
 			TDC & TMC & & REPIC \\ \hline
 		\end{tabular}
@@ -40,3 +40,15 @@
 		これは閾値highの役割が無関係なノイズを落とすためであり,dividerを通る回数によりhighはlowの2倍の閾値となる.
 		lowの役割はSと同様$\gamma$線の入射時刻を決めるものである.
 \end{description}
+
+\subsection{イベントを得る条件}
+イベントは以下のようにして得られる.
+\begin{enumerate}
+	\item シンチレータSに$\gamma$線が入射し2つある閾値を超える
+	\item gate generatorにより幅800nsのcoincidence gateが出力される
+	\item シンチレータA,B,Cのいずれかに$\gamma$線が入り,OR回路からdelayで遅延される
+	\item Sからの信号がAND回路に入って800ns以内にA(B,C)からの信号が来る
+\end{enumerate}
+
+\section{再現実験の結果}
+
