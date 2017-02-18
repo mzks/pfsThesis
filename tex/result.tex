@@ -52,3 +52,29 @@
 
 \section{再現実験の結果}
 
+\subsection{シンチレータの較正}
+まず,4つのシンチレータの較正直線を求める.
+この再現実験では\ce{^{22}Na}のスペクトルをADCを用いて取得し,2つのピークそれぞれ既知の511keVと1275keVに対応するものとしてガウス関数でフィットする.
+
+以下に較正に用いたデータを示す.\\
+(較正に用いたデータを貼る)\\
+これらのデータにより次の較正直線が得られた.
+\begin{eqnarray*}
+	E_A{\rm [keV]}=1.79\times {\rm ADC}-174\\
+	E_B{\rm [keV]}=1.69\times {\rm ADC}-148\\
+	E_C{\rm [keV]}=1.86\times {\rm ADC}-150\\
+	E_S{\rm [keV]}=1.86\times {\rm ADC}-145
+\end{eqnarray*}
+以後,再現実験ではこの較正直線を元にADCとエネルギーの変換を行う.
+
+\subsection{得られたデータ}
+本実験で得られたデータを図\ref{fig:dec_t_b4}に示す.
+(測定日:2017/12/05　測定時間:27928 sec)
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=10cm]{fig/isb/decay_t.pdf}
+		\caption{崩壊時間の分布}
+		\label{fig:dec_t_b4}
+	\end{center}
+\end{figure}
