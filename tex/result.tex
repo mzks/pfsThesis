@@ -69,7 +69,14 @@
 
 \subsection{得られたデータ}
 本実験で得られたデータを図\ref{fig:dec_t_b4}に示す.
-(測定日:2017/12/05　測定時間:27928 sec)
+\[
+		\left(
+			\begin{tabular}{l}
+				測定日:2017/12/05  測定時間:27928 sec\\
+				run9075  500000 events
+			\end{tabular}
+		\right)
+\]
 
 \begin{figure}[htbp]
 	\begin{center}
@@ -78,3 +85,54 @@
 		\label{fig:dec_t_b4}
 	\end{center}
 \end{figure}
+
+図\ref{fig:dec_t_b4}はシンチレータA,B,Cでの各崩壊時間の分布を足しあげたものである.ここでの崩壊時間はシンチレータSの閾値lowを超えた時刻からシンチレータA,B,Cでの閾値lowを超えた時間の差である.\\
+t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊事象由来のものではないアクシデンタルなイベントが多く含まれるために現れるものである.
+また,t=800ns付近でイベントが大幅に減少しているのは,シンチレータSの閾値highを超えたときに出力されるcoincidence gateの幅を800nsとしたためである.
+
+この結果に対し,2種類のカットをかけてバックグラウンド事象を除去しオルソポジトロニウムの崩壊由来の事象を選別する.
+
+\subsection{シンチレータSに対する事象選別}
+シンチレータSで観測されるパルスは主に図\ref{fig:pulse_diff}に示すような光電効果によるものとコンプトン散乱によるものの2種類あり,それぞれの特徴としては
+\begin{itemize}
+	\item 光電効果…波高が大きい
+	\item コンプトン散乱…波高が小さい
+\end{itemize}
+であるがどちらも立ち上がり時間は一定となる.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=15cm]{fig/isb/pulse_difference.pdf}
+		\caption{パルスの違い}
+		\label{fig:pulse_diff}
+	\end{center}
+\end{figure}
+このことを利用して光電効果由来の事象のみを選別する.
+
+図\ref{fig:tHL_all}にシンチレータSに設定された2つの閾値を超えた時間の差\\
+\begin{center}
+	$t_{\rm HL}=t_{\rm high}-t_{\rm low}$
+\end{center}
+を示す.
+\begin{figure}[htbp]
+	\begin{tabular}{cc}
+		\begin{minipage}{0.5\hsize}
+			\begin{center}
+			%1枚目
+				\includegraphics[width=80mm]{fig/isb/tHL.pdf}
+				\caption{tHLの分布}
+				\label{fig:tHL_all}
+			\end{center}
+		\end{minipage}
+		%2枚目
+		\begin{minipage}{0.5\hsize}
+			\begin{center}
+				\includegraphics[width=80mm]{fig/isb/tHL_cut.pdf}
+				\caption{t=30nsまでのtHL分布}
+				\label{fig:tHL_zoom}
+			\end{center}
+		\end{minipage}
+	\end{tabular}
+\end{figure}
+
+$t_{\rm HL}$=10ns付近に光電効果由来のパルスによるピークが立ち,その後にはコンプトン散乱由来のパルスにより,なだらかなイベント数の減少が確認できる.
+図\ref{fig:tHL_zoom}は図\ref{fig:tHL_all}において,$t_{\rm HL}$=0から30ns付近を拡大したものである.
