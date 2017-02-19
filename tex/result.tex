@@ -16,7 +16,7 @@
 (回路の図を貼る)\\
 
 本実験では各シンチレータに入射する$\gamma$線のエネルギーと時刻を測定するためADC,TDCモジュールを用いた.以下に詳細を示す.
-\begin{table}[htb]
+\begin{table}[htbp]
 	\begin{center}
 		\caption{使用したモジュール}
 		\begin{tabular}{|l|c|r|r|} \hline
@@ -33,7 +33,7 @@
 \begin{description}
 	\item[シンチレータSについて]\mbox{}\\
 		シンチレータSの閾値highは1275keVの$\gamma$線のみを検出するために用いられる.\\
-		highの閾値76.0mVは約900mVのエネルギーに相当する.一方で閾値lowは$\gamma$線の入射時刻を決める役割を持ち,この閾値を下げることで精度を向上させることができる.
+		highの閾値78.0mVは約900mVのエネルギーに相当する.一方で閾値lowは$\gamma$線の入射時刻を決める役割を持ち,この閾値を下げることで精度を向上させることができる.
 		さらにhigh,lowの信号の時間差から事象選別にも利用される.
 	\item[シンチレータA,B,Cについて]\mbox{}\\
 		シンチレータA,B,CはSよりも低い閾値が設定されている.\\
@@ -91,6 +91,10 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 また,t=800ns付近でイベントが大幅に減少しているのは,シンチレータSの閾値highを超えたときに出力されるcoincidence gateの幅を800nsとしたためである.
 
 この結果に対し,2種類のカットをかけてバックグラウンド事象を除去しオルソポジトロニウムの崩壊由来の事象を選別する.
+\begin{itemize}
+	\item low-highカット…光電効果由来1275keVのprompt-$\gamma$線による事象を選別
+	\item エネルギーカット…オルソポジトロニウムの崩壊由来の$\gamma$線を選別
+\end{itemize}
 
 \subsection{シンチレータSに対する事象選別}
 シンチレータSで観測されるパルスは主に図\ref{fig:pulse_diff}に示すような光電効果によるものとコンプトン散乱によるものの2種類あり,それぞれの特徴としては
@@ -98,7 +102,7 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 	\item 光電効果…波高が大きい
 	\item コンプトン散乱…波高が小さい
 \end{itemize}
-であるがどちらも立ち上がり時間は一定となる.
+であるがどちらも赤点線で示す立ち上がり時間は一定となる.
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{fig/isb/pulse_difference.pdf}
@@ -112,14 +116,14 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 \begin{center}
 	$t_{\rm HL}=t_{\rm high}-t_{\rm low}$
 \end{center}
-を示す.
+の分布を示す.
 \begin{figure}[htbp]
 	\begin{tabular}{cc}
 		\begin{minipage}{0.5\hsize}
 			\begin{center}
 			%1枚目
 				\includegraphics[width=80mm]{fig/isb/tHL.pdf}
-				\caption{tHLの分布}
+				\caption{$t_{\rm HL}$の分布}
 				\label{fig:tHL_all}
 			\end{center}
 		\end{minipage}
@@ -127,7 +131,7 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 		\begin{minipage}{0.5\hsize}
 			\begin{center}
 				\includegraphics[width=80mm]{fig/isb/tHL_cut.pdf}
-				\caption{t=30nsまでのtHL分布}
+				\caption{t=30nsまでの$t_{\rm HL}$分布}
 				\label{fig:tHL_zoom}
 			\end{center}
 		\end{minipage}
@@ -135,4 +139,19 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 \end{figure}
 
 $t_{\rm HL}$=10ns付近に光電効果由来のパルスによるピークが立ち,その後にはコンプトン散乱由来のパルスにより,なだらかなイベント数の減少が確認できる.
-図\ref{fig:tHL_zoom}は図\ref{fig:tHL_all}において,$t_{\rm HL}$=0から30ns付近を拡大したものである.
+図\ref{fig:tHL_zoom}は図\ref{fig:tHL_all}において,$t_{\rm HL}$=0から30ns付近を拡大したものである.\\
+これより事象選別に利用する$t_{\rm HL}$の条件として\\
+\begin{center}
+	$8\leq$$t_{\rm HL}$$\leq12$
+\end{center}
+を採用した.
+\subsubsection{シンチレータSに対する事象選別結果}
+図\ref{fig:dec_t_cut}にlow-highカット後の崩壊時間分布を示す.\\
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=10cm]{fig/isb/decay_t_cut}
+		\caption{low-highカット後の崩壊時間分布}
+		\label{fig:dec_t_cut}
+	\end{center}
+\end{figure}
+low-highカットによりコンプトン散乱由来の事象を含む約76\%のイベントがカットされた.
