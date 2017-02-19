@@ -96,7 +96,7 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 	\item エネルギーカット…オルソポジトロニウムの崩壊由来の$\gamma$線を選別
 \end{itemize}
 
-\subsection{シンチレータSに対する事象選別}
+\subsection{シンチレータSに対する事象選別 (low-highカット)}
 シンチレータSで観測されるパルスは主に図\ref{fig:pulse_diff}に示すような光電効果によるものとコンプトン散乱によるものの2種類あり,それぞれの特徴としては
 \begin{itemize}
 	\item 光電効果…波高が大きい
@@ -110,7 +110,7 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 		\label{fig:pulse_diff}
 	\end{center}
 \end{figure}
-このことを利用して光電効果由来の事象のみを選別する.
+このことを利用してシンチレータにエネルギーを落としきらなかった事象を排除し,光電効果由来の事象のみを選別する.
 
 図\ref{fig:tHL_all}にシンチレータSに設定された2つの閾値を超えた時間の差\\
 \begin{center}
@@ -119,9 +119,9 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 の分布を示す.
 \begin{figure}[htbp]
 	\begin{tabular}{cc}
+		%1枚目
 		\begin{minipage}{0.5\hsize}
 			\begin{center}
-			%1枚目
 				\includegraphics[width=80mm]{fig/isb/tHL.pdf}
 				\caption{$t_{\rm HL}$の分布}
 				\label{fig:tHL_all}
@@ -155,3 +155,56 @@ $t_{\rm HL}$=10ns付近に光電効果由来のパルスによるピークが立
 	\end{center}
 \end{figure}
 low-highカットによりコンプトン散乱由来の事象を含む約76\%のイベントがカットされた.
+
+図\ref{fig:E-tHL}には横軸に信号がシンチレータSの閾値highを超えた時間,縦軸にシンチレータSで観測されたエネルギーを示す.
+ここでの時間とはあるoffsetから崩壊時間を引いた値を示している.
+%まず,$t_{\rm high}$が大きくなるに従いエネルギーも大きくなっている特徴的な相関が確認できる.
+%このピークの濃い部分は光電効果由来の事象であり,ピークに垂れ下がるように存在する部分はコンプトン散乱由来の事象である.
+%また,$t_{\rm high}=500\sim700$ns付近にもピークが確認できる.
+\begin{figure}[H]
+	\begin{tabular}{cc}
+		%1枚目
+		\begin{minipage}{0.5\hsize}
+			\begin{center}
+				\includegraphics[width=80mm]{fig/isb/E-tHL.pdf}
+				\caption{閾値highを超えた時間とエネルギーの関係}
+				\label{fig:E-tHL}
+			\end{center}
+		\end{minipage}
+		%2枚目
+		\begin{minipage}{0.5\hsize}
+			\begin{center}
+				\includegraphics[width=80mm]{fig/isb/E-tHL_cut.pdf}
+				\caption{low-highカット後のhighを超えた時間とエネルギーの関係}
+				\label{fig:E-tHL_cut}
+			\end{center}
+		\end{minipage}
+	\end{tabular}
+\end{figure}
+まず,$t_{\rm high}$が大きくなるに従いエネルギーも大きくなっている特徴的な相関が確認できる.
+このピークの濃い部分は光電効果由来の事象であり,ピークに垂れ下がるように存在する部分はコンプトン散乱由来の事象である.
+また,$t_{\rm high}=500\sim700$ns付近にもピークが確認できる.\\
+low-highカットを施したあとの分布を図\ref{E-tHL_cut}に示す.
+これより約86\%のイベントがカットされ,$500\sim700$ns付近に存在していたピークを排除することができた.
+
+\subsection{シンチレータA,B,Cに対する事象選別 (エネルギーカット)}
+シンチレータA,B,Cで観測される$\gamma$線のエネルギーは主にポジトロニウムの崩壊由来のもので
+\begin{itemize}
+		\item $2\gamma$崩壊由来…511keV
+		\item $3\gamma$崩壊由来…0$\sim$511keVの連続スペクトル
+\end{itemize}
+となる.
+その他にも線源からの1275keVのprompt-$\gamma$線が直接シンチレータA,B,Cに入ってしまった事象がある.
+このカットではポジトロニウムの崩壊由来の$\gamma$線を観測した事象のみを選別する.
+
+前述のようにポジトロニウムの崩壊由来の$\gamma$線は511keVまたは0$\sim$511keVの連続スペクトルとなる.ここでは装置の分解能を考慮に入れて2$\gamma$,3$\gamma$崩壊のエネルギー領域を以下のように定義し,その領域のエネルギーを観測した事象のみを選んだ.
+\begin{table}[htbp]
+	\begin{center}
+		\caption{カットに用いたエネルギー領域}
+		\begin{tabular}{|l|c|r|r|} \hline
+			 & $2\gamma$崩壊領域 & $3\gamma$崩壊領域 \\ \hline
+			エネルギー & 450$\sim$600 keV & 100$\sim$450 keV\\ \hline
+		\end{tabular}
+		\label{energy_cut_region}
+	\end{center}
+\end{table}
