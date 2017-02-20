@@ -208,3 +208,79 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 		\label{energy_cut_region}
 	\end{center}
 \end{table}
+
+図\ref{fig:ABC_dec_t}にカットをかける前,図\ref{fig:ABC_dec_t_cut}にカットをかけたあとの各エネルギー領域での崩壊時間の分布を示す.
+\begin{figure}[H]
+	\begin{tabular}{cc}
+		%1枚目
+		\begin{minipage}{0.5\hsize}
+			\begin{center}
+				\includegraphics[width=80mm]{fig/isb/abc_dec_t_E.pdf}
+				\caption{エネルギーカット前の崩壊時間の分布}
+				\label{fig:ABC_dec_t}
+			\end{center}
+		\end{minipage}
+		%2枚目
+		\begin{minipage}{0.5\hsize}
+			\begin{center}
+				\includegraphics[width=80mm]{fig/isb/abc_dec_t_E_cut.pdf}
+				\caption{エネルギーカット後の崩壊時間の分布}
+				\label{fig:ABC_dec_t_cut}
+			\end{center}
+		\end{minipage}
+	\end{tabular}
+\end{figure}
+カット前後で$2\gamma$領域では80\%が,$3\gamma$領域では34\%の事象が取り除かれたことがわかる.
+
+
+\subsection{空気中での寿命を求める}
+本再現実験ではオルソポジトロニウムの真空中の寿命を直接測定することはできない.
+従って,まず空気中での寿命を求めた後昨年度の実験のシミュレーションによって求められた各領域での崩壊比を用いて真空中での寿命を求めることにする.
+
+空気中でのオルソポジトロニウムの寿命はカットによりバックグラウンドを削減したしたシンチレータA,B,Cの崩壊時間分布のヒストグラムに対し次の指数関数でフィッティングすることで得られる.\\
+\begin{equation}
+N(t)=N_0\exp(-\frac{t}{\tau_{air}})+N_{\rm BG}
+\end{equation}
+$N_{\rm BG}$はバックグラウンド事象を考慮したパラメータである.
+このフィッティングの結果を図\ref{fig:life_in_air}に示す.
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=10cm]{fig/isb/life_air.pdf}
+		\caption{フィッティング結果}
+		\label{fig:life_in_air}
+	\end{center}
+\end{figure}
+フィッティングの範囲は$(20,500)$であり,800nsを超えたイベントはカットしてある.\\
+このフィットから空気中での寿命$\tau_{air}$は\\
+\begin{equation}
+	\tau_{air}=35.7\pm 2.2\;\;\;(\rm ns)
+\end{equation}
+と測定できた.
+この値を用いて真空中でのオルソポジトロニウムの寿命を求めることとした.
+
+\subsection{真空中での寿命を求める}
+空気中での寿命$\tau_{air}=35.7(\rm ns)$はスピン交換反応,pick-off反応により真空中での寿命よりも短い寿命が観測される.
+今測定したいものは真空中で$3\gamma$崩壊を起こすときのオルソポジトロニウムの寿命である.
+これを$\tau_{3\gamma vac}$とすれば,時刻tでまだ崩壊を起こしていないオルソポジトロニウムの個数を$N(t)$とし,$2\gamma$崩壊を起こすオルソポジトロニウムの時定数を$\tau_{2\gamma}$として次の関係式が成り立つ.
+\begin{equation}
+	-\frac{dN(t)}{dt}=\left(\frac{1}{\tau_{3\gamma vac}}+\frac{1}{\tau_{2\gamma}}\right)N(t)
+	\label{eq:2_3gamma}
+\end{equation}
+今回観測した空気中での寿命$\tau_{air}$とは
+\begin{equation}
+	\frac{1}{\tau_{3\gamma vac}}+\frac{1}{\tau_{2\gamma}}=\frac{1}{\tau_{air}}
+\end{equation}
+という関係式が成り立っている.
+式\ref{eq:2_3gamma}を変形すると
+\begin{equation}
+	-\frac{dN(t)}{dt}=\left(\frac{dN_{3\gamma}}{dt}+\frac{dN_{2\gamma}}{dt}\right)N(t)=\left(\frac{1}{\tau_{3\gamma vac}}+\frac{1}{\tau_{2\gamma}}\right)N(t)
+\end{equation}
+となり,ここで
+\begin{equation}
+	\frac{dN_{3\gamma}}{dN_{2\gamma}}=\frac{\tau_2\gamma}{\tau_{3\gamma}}
+\end{equation}
+よりこれを代入すると
+\begin{equation}
+	\tau_{3\gamma vac}=\tau_{air}\left(1+\frac{dN_{2\gamma}}{dN_{3\gamma}}\right)
+\end{equation}
+となり$\frac{dN_{2\gamma}}{dN_{3\gamma}}$を測定すれば真空中での寿命$\tau_{3\gamma vac}$が求められる.
