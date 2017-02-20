@@ -301,3 +301,60 @@ $N_{\rm BG}$はバックグラウンド事象を考慮したパラメータで�
 		\label{2_3gamma_ratio}
 	\end{center}
 \end{table}
+
+$2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とすると各領域で観測される崩壊数について以下の関係式が成り立つ.
+\begin{eqnarray}
+	N_1&=&R_1N_{2\gamma}+R_3N_{3\gamma} \\
+	N_2&=&R_2N_{2\gamma}+R_4N_{3\gamma}
+	\label{eq:num_of_decay}
+\end{eqnarray}
+式\ref{eq:num_of_decay}より
+\begin{equation}
+	\frac{N_{2\gamma}}{N_{3\gamma}}=\frac{N_1R_4-N_2R_3}{N_2R_1-N_1R_2}
+	\label{eq:decay_ratio}
+\end{equation}
+という関係式が得られる.よって式\ref{eq:life_vacuum}と式\ref{eq:decay_ratio}から実験で得られた空気中での寿命を真空中での寿命へ換算できる.
+
+\subsubsection{各エネルギ領域での崩壊数}
+実験で観測された崩壊数は$2\gamma$,$3\gamma$崩壊領域の崩壊時間分布のヒストグラムに対し空気中での寿命$\tau_{air}$を代入した形の指数関数式\ref{eq:fit_for_vac}でフィットすることにより得られる.
+\begin{eqnarray}
+	&N_0&\exp\left(\frac{t}{\tau_{air}}\right)+N_{\rm BG} \nonumber \\
+	=&N_0&\exp\left(\frac{t}{35.7}\right)+N_{\rm BG} 
+\end{eqnarray}
+
+フィッティングした結果を以下に示す.フィットの範囲は$(20,500)$である.
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=15cm]{fig/isb/2-3gamma.pdf}
+		\caption{フィッティング結果}
+		\label{fig:2_3gamma_fit}
+	\end{center}
+\end{figure}
+表によりまとめると
+\begin{tabular}{cc}
+	%1つめ
+	\begin{minipage}{0.5\hsize}
+		\begin{center}
+			\begin{tabular}{|c|c|c}
+				\hline
+				fit parameter & value \\ \hline
+				$N_0$ & $3050 \pm 20$ \\ \hline
+				$N_{\rm BG} $& $174 \pm 2$ \\ \hline
+			\end{tabular}
+			%\caption{$2\gamma$領域でのフィット結果}
+		\end{center}
+	\end{minipage}
+	%2つめ
+	\begin{minipage}{0.5\hsize}
+		\begin{center}
+			\begin{tabular}{|c|c|c}
+				\hline
+				fit parameter & value \\ \hline
+				$N_0$ & $1060 \pm 420$ \\ \hline
+				$N_{\rm BG}$ & $635 \pm 40$ \\ \hline
+			\end{tabular}
+			%\caption{$3\gamma$領域でのフィット結果}
+		\end{center}
+	\end{minipage}
+\end{tabular}
+
