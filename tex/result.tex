@@ -38,9 +38,30 @@
 
 イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.\\
 ここで、コリメータをつけているのは線源からの$\gamma$線が直接シンチレータA,B,Cに入射することを防ぐためである.
+以下にコリメータの図を昨年度の資料から引用し示す.
+%\begin{figure}[H]
+%	\begin{center}
+%		\begin{tabular}{c}
+%			%1枚目
+%			\begin{minipage}{0.5\hsize}
+%				\begin{center}
+%					\includegraphics{fig/isb/collimator1.pdf}
+%					\hspace{1.6cm} (a)真鍮製コリメータ1
+%				\end{center}
+%			\end{minipage}
+%			%2枚目
+%			\begin{minipage}{0.5\hsize}
+%				\begin{center}
+%					\includegraphics{fig/isb/collimator2.pdf}
+%					\hspace{1.6cm} (b)真鍮製コリメータ2
+%				\end{center}
+%			\end{minipage}
+%		\end{tabular}
+%	\end{center}
+%\end{figure}
 \subsection{回路図}
 全体の回路図は以下のようになっている.
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{fig/isb/circuit.pdf}
 		\caption{再現実験の回路図}
@@ -88,10 +109,35 @@
 \subsection{シンチレータの較正}
 まず,4つのシンチレータの較正直線を求める.
 この再現実験では\ce{^{22}Na}のスペクトルをADCを用いて取得し,2つのピークそれぞれ既知の511keVと1275keVに対応するものとしてガウス関数でフィットする.
-
-以下に較正に用いたデータを示す.\\
-(較正に用いたデータを貼る)\\
-これらのデータにより次の較正直線が得られた.
+以下に較正に用いたデータを示す.
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=10cm]{fig/isb/cal7001.pdf}
+		\caption{較正に用いたデータ}
+		\label{fig:calibration_raw_data}
+	\end{center}
+\end{figure}
+これらのデータに以下の図のようにガウス関数でフィットし,次の較正直線が得られた.
+\begin{figure}[htbp]
+	\begin{tabular}{cc}
+		%1枚目
+		\begin{minipage}{0.5\hsize}
+			\begin{center}
+				\includegraphics[width=80mm]{fig/isb/gaussFit.pdf}
+				\caption{ガウス関数によるフィッティング}
+				\label{fig:cal_gauss}
+			\end{center}
+		\end{minipage}
+		%2枚目
+		\begin{minipage}{0.5\hsize}
+			\begin{center}
+				\includegraphics[width=80mm]{fig/isb/fitA.pdf}
+				\caption{Aに対して得られた較正直線}
+				\label{fig:fitA}
+			\end{center}
+		\end{minipage}
+	\end{tabular}
+\end{figure}
 \begin{eqnarray*}
 	E_A{\rm [keV]}=1.79\times {\rm ADC}-174\\
 	E_B{\rm [keV]}=1.69\times {\rm ADC}-148\\
@@ -111,9 +157,9 @@
 		\right)
 \]
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=10cm]{fig/isb/decay_t.pdf}
+		\includegraphics[width=12cm]{fig/isb/decay_t.pdf}
 		\caption{崩壊時間の分布}
 		\label{fig:dec_t_b4}
 	\end{center}
@@ -266,7 +312,7 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 カット前後で$2\gamma$領域では80\%が,$3\gamma$領域では34\%の事象が取り除かれたことがわかる.
 
 
-\subsection{空気中での寿命を求める}
+\subsection{空気中での寿命}
 本再現実験ではオルソポジトロニウムの真空中の寿命を直接測定することはできない.
 従って,まず空気中での寿命を求めた後昨年度の実験のシミュレーションによって求められた各領域での崩壊比を用いて真空中での寿命を求めることにする.
 
@@ -291,7 +337,7 @@ $N_{\rm BG}$はバックグラウンド事象を考慮したパラメータで�
 と測定できた.
 この値を用いて真空中でのオルソポジトロニウムの寿命を求めることとした.
 
-\subsection{真空中での寿命を求める}
+\subsection{真空中での寿命}
 空気中での寿命$\tau_{air}=35.7(\rm ns)$はスピン交換反応,pick-off反応により真空中での寿命よりも短い寿命が観測される.
 今測定したいものは真空中で$3\gamma$崩壊を起こすときのオルソポジトロニウムの寿命である.
 これを$\tau_{3\gamma vac}$とすれば,時刻tでまだ崩壊を起こしていないオルソポジトロニウムの個数を$N(t)$とし,$2\gamma$崩壊を起こすオルソポジトロニウムの時定数を$\tau_{2\gamma}$として次の関係式が成り立つ.
@@ -407,4 +453,6 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 これは理論値$\tau_{\rm theory}=142\;\;(\rm ns)$と比較すると$4.12\sigma$の開きがある.
 
 \subsection{再現実験の考察}
-
+今回の再現実験でオルソポジトロニウムの寿命が$\tau_{3\gamma vac}=142(\rm ns)$と求められた.
+ここで昨年度の結果は$\tau_{3\gamma vac}=128 \pm 10(\rm ns)$でありこちらは理論値と$1.4\sigma$で一致する.
+これは本再現実験ではトリガー用に新たにプラスチックシンチレータを導入することを考慮し,昨年度行った別の事象選別を行っておらずバックグラウンドを同程度まで減らすことができなかったためだと考える.
