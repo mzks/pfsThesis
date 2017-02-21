@@ -2,18 +2,51 @@
 
 \section{再現実験}
 超微細構造の測定にはポジトロニウムの寿命を求める必要がある.
-そのため,超微細構造の測定に先立ち昨年度の再現実験を行った.
+そのため,超微細構造の測定に先立ち昨年度の再現実験を行い真空中でのオルソポジトロニウムの寿命測定を試みた.
 
 \subsection{実験装置}
 昨年度の測定を参考にし,同様のセットアップで行った.
-以下に実験装置の概要図を示す.\\
-(装置の概要図を入れる)\\
+以下に実験装置の全体の写真と概要図を示す.\\
+\begin{figure}[htbp]
+	\begin{tabular}{cc}
+		%1枚目
+		\begin{minipage}{0.5\hsize}
+			\begin{center}
+				\includegraphics[width=80mm]{img/isb/setting_overview.JPG}
+				\caption{装置の全体写真}
+				\label{fig:setting2015}
+			\end{center}
+		\end{minipage}
+		%2枚目
+		\begin{minipage}{0.5\hsize}
+			\begin{center}
+				\includegraphics[width=80mm]{img/isb/pmt_setting}
+				\caption{シンチレータA,B,Cの配置}
+				\label{fig:pmt_setting2015}
+			\end{center}
+		\end{minipage}
+	\end{tabular}
+\end{figure}
 
-イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=15cm]{fig/isb/settings.pdf}
+		\caption{装置の概要図}
+		\label{fig:setting_dtl2015}
+	\end{center}
+\end{figure}
 
+イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.\\
+ここで、コリメータをつけているのは線源からの$\gamma$線が直接シンチレータA,B,Cに入射することを防ぐためである.
 \subsection{回路図}
-全体の回路図は以下のようになっている.\\
-(回路の図を貼る)\\
+全体の回路図は以下のようになっている.
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=15cm]{fig/isb/circuit.pdf}
+		\caption{再現実験の回路図}
+		\label{fig:circuit2015}
+	\end{center}
+\end{figure}
 
 本実験では各シンチレータに入射する$\gamma$線のエネルギーと時刻を測定するためADC,TDCモジュールを用いた.以下に詳細を示す.
 \begin{table}[htbp]
@@ -277,7 +310,7 @@ $N_{\rm BG}$はバックグラウンド事象を考慮したパラメータで�
 \end{equation}
 となり,ここで
 \begin{equation}
-	\frac{dN_{3\gamma}}{dN_{2\gamma}}=\frac{\tau_2\gamma}{\tau_{3\gamma}}
+	\frac{dN_{3\gamma}}{dN_{2\gamma}}=\frac{\tau_{2\gamma}}{\tau_{3\gamma}}
 \end{equation}
 よりこれを代入すると
 \begin{equation}
@@ -315,17 +348,18 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 \end{equation}
 という関係式が得られる.よって式\ref{eq:life_vacuum}と式\ref{eq:decay_ratio}から実験で得られた空気中での寿命を真空中での寿命へ換算できる.
 
-\subsubsection{各エネルギ領域での崩壊数}
-実験で観測された崩壊数は$2\gamma$,$3\gamma$崩壊領域の崩壊時間分布のヒストグラムに対し空気中での寿命$\tau_{air}$を代入した形の指数関数式\ref{eq:fit_for_vac}でフィットすることにより得られる.
+\subsubsection{各エネルギー領域での崩壊数}
+実験で観測された崩壊数は$2\gamma$,$3\gamma$崩壊領域の崩壊時間分布のヒストグラムに対し空気中での寿命$\tau_{air}$を代入した形の式\ref{eq:fit_for_vac}でフィットすることにより得られる.
 \begin{eqnarray}
 	&N_0&\exp\left(\frac{t}{\tau_{air}}\right)+N_{\rm BG} \nonumber \\
 	=&N_0&\exp\left(\frac{t}{35.7}\right)+N_{\rm BG} 
+	\label{eq:fit_for_vac}
 \end{eqnarray}
 
-フィッティングした結果を以下に示す.フィットの範囲は$(20,500)$である.\\
+フィッティングした結果を以下に示す.フィットの範囲は$(20,500)$である.
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=15cm]{fig/isb/2-3gamma.pdf}
+		\includegraphics[width=12cm]{fig/isb/2-3gamma.pdf}
 		\caption{フィッティング結果}
 		\label{fig:2_3gamma_fit}
 	\end{center}
@@ -370,3 +404,7 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 	\tau_{3\gamma vac}=96.7 \pm 11.0 \;\;\;(\rm ns)
 \end{equation}
 と求まった.
+これは理論値$\tau_{\rm theory}=142\;\;(\rm ns)$と比較すると$4.12\sigma$の開きがある.
+
+\subsection{再現実験の考察}
+
