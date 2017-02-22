@@ -110,9 +110,9 @@
 まず,4つのシンチレータの較正直線を求める.
 この再現実験では\ce{^{22}Na}のスペクトルをADCを用いて取得し,2つのピークそれぞれ既知の511keVと1275keVに対応するものとしてガウス関数でフィットする.
 以下に較正に用いたデータを示す.
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=10cm]{fig/isb/cal7001.pdf}
+		\includegraphics[width=11cm]{fig/isb/cal7001.pdf}
 		\caption{較正に用いたデータ}
 		\label{fig:calibration_raw_data}
 	\end{center}
@@ -139,10 +139,10 @@
 	\end{tabular}
 \end{figure}
 \begin{eqnarray*}
-	E_A{\rm [keV]}=1.79\times {\rm ADC}-174\\
-	E_B{\rm [keV]}=1.69\times {\rm ADC}-148\\
-	E_C{\rm [keV]}=1.86\times {\rm ADC}-150\\
-	E_S{\rm [keV]}=1.86\times {\rm ADC}-145
+	E_{\rm A}{\rm [keV]}=1.79\times {\rm ADC}-174\\
+	E_{\rm B}{\rm [keV]}=1.69\times {\rm ADC}-148\\
+	E_{\rm C}{\rm [keV]}=1.86\times {\rm ADC}-150\\
+	E_{\rm S}{\rm [keV]}=1.86\times {\rm ADC}-145
 \end{eqnarray*}
 以後,再現実験ではこの較正直線を元にADCとエネルギーの変換を行う.
 
@@ -332,7 +332,7 @@ $N_{\rm BG}$はバックグラウンド事象を考慮したパラメータで�
 フィッティングの範囲は$(20,500)$であり,800nsを超えたイベントはカットしてある.\\
 このフィットから空気中での寿命$\tau_{air}$は\\
 \begin{equation}
-	\tau_{air}=35.7\pm 2.2\;\;\;(\rm ns)
+	\tau_{air}=35.7\pm 2.2 \hspace{8pt}(\rm ns)
 \end{equation}
 と測定できた.
 この値を用いて真空中でのオルソポジトロニウムの寿命を求めることとした.
@@ -416,7 +416,7 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 	%1つめ
 		\begin{minipage}{0.5\hsize}
 			\begin{center}
-				\begin{tabular}{|c|c|c}
+				\begin{tabular}{|c|c|c|}
 					\hline
 					fit parameter & value \\ \hline
 					$N_0$ & $3050 \pm 20$ \\ \hline
@@ -428,7 +428,7 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 	%2つめ
 		\begin{minipage}{0.5\hsize}
 			\begin{center}
-				\begin{tabular}{|c|c|c}
+				\begin{tabular}{|c|c|c|}
 					\hline
 					fit parameter & value \\ \hline
 					$N_0$ & $1060 \pm 420$ \\ \hline
@@ -447,7 +447,7 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 
 ゆえに真空中でのオルソポジトロニウムの寿命は
 \begin{equation}
-	\tau_{3\gamma vac}=96.7 \pm 11.0 \;\;\;(\rm ns)
+	\tau_{3\gamma vac}=96.7 \pm 11.0 \hspace{8pt}(\rm ns)
 \end{equation}
 と求まった.
 これは理論値$\tau_{\rm theory}=142\;\;(\rm ns)$と比較すると$4.12\sigma$の開きがある.
@@ -455,4 +455,12 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 \subsection{再現実験の考察}
 今回の再現実験でオルソポジトロニウムの寿命が$\tau_{3\gamma vac}=142(\rm ns)$と求められた.
 ここで昨年度の結果は$\tau_{3\gamma vac}=128 \pm 10(\rm ns)$でありこちらは理論値と$1.4\sigma$で一致する.
-これは本再現実験ではトリガー用に新たにプラスチックシンチレータを導入することを考慮し,昨年度行った別の事象選別を行っておらずバックグラウンドを同程度まで減らすことができなかったためだと考える.
+これは本実験で第\ref{sec:hogehoge}章で試験を行ったトリガー用プラスチックシンチレータを新たに導入することを考慮し,昨年度行った別の事象選別を行っておらずバックグラウンドを同程度まで減らすことができなかったためだと考える. \\
+
+例としてシンチレータSからの信号に対してシンチレータAの信号が$\Delta t(>0)$だけ遅れた場合を考える.
+このときシンチレータSからの信号に対し電荷量を積分するためのADC gateは同じく$\Delta t$だけ遅れ,信号は正しく積分されずに見かけ上1275keVよりも小さい電荷量となる.
+また,閾値highを超える時間も$\Delta t$だけ小さくなる.\\
+このこと検証するため昨年度は故意にADC gateを20nsずつずらし相関を調べ,閾値highを超えた時間を10ns毎に分ける作業をlow-highカット後に行っていた.
+その後でエネルギー分布からピークと標準偏差を求め$\pm 1\sigma$に含まれるイベントのみを抽出するというカットを行った.
+
+(プラスチックシンチレータ導入することの利点を書く)
