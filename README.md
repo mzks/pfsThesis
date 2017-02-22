@@ -1,4 +1,4 @@
-#卒業論文用\TeX ディレクトリ
+#卒業論文用$\TeX$ディレクトリ
 
 Author: Mizukoshi Keita
 
