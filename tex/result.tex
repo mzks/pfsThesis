@@ -11,90 +11,80 @@
 	\begin{tabular}{cc}
 		%1枚目
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\includegraphics[width=80mm]{img/isb/setting_overview.JPG}
 				\caption{装置の全体写真}
 				\label{fig:setting2015}
-			\end{center}
 		\end{minipage}
 		%2枚目
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\includegraphics[width=80mm]{img/isb/pmt_setting}
 				\caption{シンチレータA,B,Cの配置}
 				\label{fig:pmt_setting2015}
-			\end{center}
 		\end{minipage}
 	\end{tabular}
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
+	\centering
 		\includegraphics[width=15cm]{fig/isb/settings.pdf}
 		\caption{装置の概要図}
 		\label{fig:setting_dtl2015}
-	\end{center}
 \end{figure}
 
 イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.\\
 ここで、コリメータをつけているのは線源からの$\gamma$線が直接シンチレータA,B,Cに入射することを防ぐためである.
 以下にコリメータの図を昨年度の資料から引用し示す.
 \begin{figure}[H]
-	\begin{center}
+	\centering
 		\begin{tabular}{c}
 			%1枚目
 			\begin{minipage}{0.5\hsize}
-				\begin{center}
+				\centering
 					\includegraphics[width=80mm]{fig/isb/collimator1.png}
 					\hspace{1.6cm} (a)真鍮製コリメータ1
-				\end{center}
 			\end{minipage}
 			%2枚目
 			\begin{minipage}{0.5\hsize}
-				\begin{center}
+				\centering
 					\includegraphics[width=80mm]{fig/isb/collimator2.png}
 					\hspace{1.6cm} (b)真鍮製コリメータ2
-				\end{center}
 			\end{minipage}
 		\end{tabular}
-	\end{center}
 \end{figure}
 \begin{figure}[H]
-	\begin{center}
+	\centering
 		\begin{tabular}{c}
 			%1枚目
 			\begin{minipage}{0.5\hsize}
-				\begin{center}
+				\centering
 					\includegraphics[width=80mm]{fig/isb/leadcollimator1.png}
 					\hspace{1.6cm} (c)鉛製コリメータ1
-				\end{center}
 			\end{minipage}
 			%2枚目
 			\begin{minipage}{0.5\hsize}
-				\begin{center}
+				\centering
 					\includegraphics[width=80mm]{fig/isb/leadcollimator2.png}
 					\hspace{1.6cm} (d)鉛製コリメータ2
-				\end{center}
 			\end{minipage}
 		\end{tabular}
-	\end{center}
 \end{figure}
 
 \newpage
 \subsection{回路図}
 全体の回路図は以下のようになっている.
 \begin{figure}[H]
-	\begin{center}
+	\centering
 		\includegraphics[width=15cm]{fig/isb/circuit.pdf}
 		\caption{再現実験の回路図}
 		\label{fig:circuit2015}
-	\end{center}
 \end{figure}
 
 本実験では各シンチレータに入射する$\gamma$線のエネルギーと時刻を測定するためADC,TDCモジュールを用いた.以下に詳細を示す.
 (シリアルナンバーを調べて記入)
 \begin{table}[htbp]
-	\begin{center}
+	\centering
 		\caption{使用したモジュール}
 		\begin{tabular}{|l|c|r|r|} \hline
 			モジュール & 型番 & シリアルナンバー & 製造会社 \\ \hline \hline
@@ -102,7 +92,6 @@
 			TDC & TMC & & REPIC \\ \hline
 		\end{tabular}
 		\label{module}
-	\end{center}
 \end{table}
 
 \subsection{discriminatorの閾値}
@@ -135,30 +124,27 @@
 この再現実験では\ce{^{22}Na}のスペクトルをADCを用いて取得し,2つのピークそれぞれ既知の511keVと1275keVに対応するものとしてガウス関数でフィットする.
 以下に較正に用いたデータを示す.
 \begin{figure}[H]
-	\begin{center}
+	\centering
 		\includegraphics[width=11cm]{fig/isb/cal7001.pdf}
 		\caption{較正に用いたデータ}
 		\label{fig:calibration_raw_data}
-	\end{center}
 \end{figure}
 これらのデータに以下の図のようにガウス関数でフィットし,次の較正直線が得られた.
 \begin{figure}[htbp]
 	\begin{tabular}{cc}
 		%1枚目
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\includegraphics[width=80mm]{fig/isb/gaussFit.pdf}
 				\caption{ガウス関数によるフィッティング}
 				\label{fig:cal_gauss}
-			\end{center}
 		\end{minipage}
 		%2枚目
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\includegraphics[width=80mm]{fig/isb/fitA.pdf}
 				\caption{Aに対して得られた較正直線}
 				\label{fig:fitA}
-			\end{center}
 		\end{minipage}
 	\end{tabular}
 \end{figure}
@@ -182,11 +168,10 @@
 \]
 
 \begin{figure}[H]
-	\begin{center}
+	\centering
 		\includegraphics[width=12cm]{fig/isb/decay_t.pdf}
 		\caption{崩壊時間の分布}
 		\label{fig:dec_t_b4}
-	\end{center}
 \end{figure}
 
 図\ref{fig:dec_t_b4}はシンチレータA,B,Cでの各崩壊時間の分布を足しあげたものである.ここでの崩壊時間はシンチレータSの閾値lowを超えた時刻からシンチレータA,B,Cでの閾値lowを超えた時間の差である.\\
@@ -207,11 +192,10 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 \end{itemize}
 であるがどちらも赤点線で示す立ち上がり時間は一定となる.
 \begin{figure}[H]
-	\begin{center}
+	\centering
 		\includegraphics[width=15cm]{fig/isb/pulse_difference.pdf}
 		\caption{パルスの違い}
 		\label{fig:pulse_diff}
-	\end{center}
 \end{figure}
 このことを利用してシンチレータにエネルギーを落としきらなかった事象を排除し,光電効果由来の事象のみを選別する.
 
@@ -224,19 +208,17 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 	\begin{tabular}{cc}
 		%1枚目
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\includegraphics[width=80mm]{fig/isb/tHL.pdf}
 				\caption{$t_{\rm HL}$の分布}
 				\label{fig:tHL_all}
-			\end{center}
 		\end{minipage}
 		%2枚目
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\includegraphics[width=80mm]{fig/isb/tHL_cut.pdf}
 				\caption{t=30nsまでの$t_{\rm HL}$分布}
 				\label{fig:tHL_zoom}
-			\end{center}
 		\end{minipage}
 	\end{tabular}
 \end{figure}
@@ -251,11 +233,10 @@ $t_{\rm HL}$=10ns付近に光電効果由来のパルスによるピークが立
 \subsubsection{シンチレータSに対する事象選別結果}
 図\ref{fig:dec_t_cut}にlow-highカット後の崩壊時間分布を示す.\\
 \begin{figure}[htbp]
-	\begin{center}
+	\centering
 		\includegraphics[width=10cm]{fig/isb/decay_t_cut}
 		\caption{low-highカット後の崩壊時間分布}
 		\label{fig:dec_t_cut}
-	\end{center}
 \end{figure}
 low-highカットによりコンプトン散乱由来の事象を含む約76\%のイベントがカットされた.
 
@@ -268,19 +249,17 @@ low-highカットによりコンプトン散乱由来の事象を含む約76\%�
 	\begin{tabular}{cc}
 		%1枚目
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\includegraphics[width=80mm]{fig/isb/E-tHL.pdf}
 				\caption{閾値highを超えた時間とエネルギーの関係}
 				\label{fig:E-tHL}
-			\end{center}
 		\end{minipage}
 		%2枚目
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\includegraphics[width=80mm]{fig/isb/E-tHL_cut.pdf}
 				\caption{low-highカット後のhighを超えた時間とエネルギーの関係}
 				\label{fig:E-tHL_cut}
-			\end{center}
 		\end{minipage}
 	\end{tabular}
 \end{figure}
@@ -303,14 +282,13 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 
 前述のようにポジトロニウムの崩壊由来の$\gamma$線は511keVまたは0$\sim$511keVの連続スペクトルとなる.ここでは装置の分解能を考慮に入れて2$\gamma$,3$\gamma$崩壊のエネルギー領域を以下のように定義し,その領域のエネルギーを観測した事象のみを選んだ.
 \begin{table}[htbp]
-	\begin{center}
+	\centering
 		\caption{カットに用いたエネルギー領域}
 		\begin{tabular}{|l|c|c|} \hline
 			 & $2\gamma$崩壊領域 & $3\gamma$崩壊領域 \\ \hline
 			エネルギー & 450$\sim$600 keV & 100$\sim$450 keV\\ \hline
 		\end{tabular}
 		\label{energy_cut_region}
-	\end{center}
 \end{table}
 
 図\ref{fig:ABC_dec_t}にカットをかける前,図\ref{fig:ABC_dec_t_cut}にカットをかけたあとの各エネルギー領域での崩壊時間の分布を示す.
@@ -318,19 +296,17 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 	\begin{tabular}{cc}
 		%1枚目
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\includegraphics[width=80mm]{fig/isb/abc_dec_t_E.pdf}
 				\caption{エネルギーカット前の崩壊時間の分布}
 				\label{fig:ABC_dec_t}
-			\end{center}
 		\end{minipage}
 		%2枚目
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\includegraphics[width=80mm]{fig/isb/abc_dec_t_E_cut.pdf}
 				\caption{エネルギーカット後の崩壊時間の分布}
 				\label{fig:ABC_dec_t_cut}
-			\end{center}
 		\end{minipage}
 	\end{tabular}
 \end{figure}
@@ -348,11 +324,10 @@ N(t)=N_0\exp(-\frac{t}{\tau_{air}})+N_{\rm BG}
 $N_{\rm BG}$はバックグラウンド事象を考慮したパラメータである.
 このフィッティングの結果を図\ref{fig:life_in_air}に示す.
 \begin{figure}[htbp]
-	\begin{center}
+	\centering
 		\includegraphics[width=10cm]{fig/isb/life_air.pdf}
 		\caption{フィッティング結果}
 		\label{fig:life_in_air}
-	\end{center}
 \end{figure}
 フィッティングの範囲は$(20,500)$であり,800nsを超えたイベントはカットしてある.\\
 このフィットから空気中での寿命$\tau_{air}$は\\
@@ -395,7 +370,7 @@ $N_{\rm BG}$はバックグラウンド事象を考慮したパラメータで�
 そのため昨年度の実験で行ったシミュレーション結果を用いることでこの事象数を決定することとした.
 以下にその結果を引用して示す.
 \begin{table}[htbp]
-	\begin{center}
+	\centering
 		\caption{崩壊の割合(各事象/観測した事象)}
 		\begin{tabular}{|l|c|c|} \hline
 			& $2\gamma$崩壊領域 & $3\gamma$崩壊領域 \\ \hline
@@ -403,7 +378,6 @@ $N_{\rm BG}$はバックグラウンド事象を考慮したパラメータで�
 			$3\gamma$崩壊 & $R_3=29.65\%$ & $R_4=0.850\%$\\ \hline
 		\end{tabular}
 		\label{2_3gamma_ratio}
-	\end{center}
 \end{table}
 
 $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とすると各領域で観測される崩壊数について以下の関係式が成り立つ.
@@ -429,18 +403,17 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 
 フィッティングした結果を以下に示す.フィットの範囲は$(20,500)$である.
 \begin{figure}[H]
-	\begin{center}
+	\centering
 		\includegraphics[width=12cm]{fig/isb/2-3gamma.pdf}
 		\caption{フィッティング結果}
 		\label{fig:2_3gamma_fit}
-	\end{center}
 \end{figure}
 表によりまとめると
 \begin{table}[H]
 	\begin{tabular}{cc}
 	%1つめ
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\begin{tabular}{|c|c|c|}
 					\hline
 					fit parameter & value \\ \hline
@@ -448,11 +421,10 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 					$N_{\rm BG} $& $174 \pm 2$ \\ \hline
 				\end{tabular}
 				\caption{$2\gamma$領域でのフィット結果}
-			\end{center}
 		\end{minipage}
 	%2つめ
 		\begin{minipage}{0.5\hsize}
-			\begin{center}
+			\centering
 				\begin{tabular}{|c|c|c|}
 					\hline
 					fit parameter & value \\ \hline
@@ -460,7 +432,6 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 					$N_{\rm BG}$ & $635 \pm 40$ \\ \hline
 				\end{tabular}
 				\caption{$3\gamma$領域でのフィット結果}
-			\end{center}
 		\end{minipage}
 	\end{tabular}
 \end{table}
