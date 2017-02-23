@@ -26,6 +26,24 @@
 \makeatother
 
 
+%miyabe------------------ 
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{comment}
+%\usepackage[dvipdfmx, hiresbb]{graphicx}
+\usepackage[top=35truemm,bottom=15truemm,left=25truemm,right=25truemm]{geometry}
+\def\vector#1{\mbox{\boldmath $#1$}}
+\renewcommand{\labelitemi}{・}
+\makeatletter
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\@addtoreset{figure}{section}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\@addtoreset{equation}{section}
+\makeatother
+%-------------------------
+
+
 \begin{document}
 
 \title{ポジトロニウムの微細構造の測定\thanks{平成28年度 神戸大学 卒業論文}}
