@@ -39,27 +39,48 @@
 イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.\\
 ここで、コリメータをつけているのは線源からの$\gamma$線が直接シンチレータA,B,Cに入射することを防ぐためである.
 以下にコリメータの図を昨年度の資料から引用し示す.
-(コリメータの図を入れる)
-%\begin{figure}[H]
-%	\begin{center}
-%		\begin{tabular}{c}
-%			%1枚目
-%			\begin{minipage}{0.5\hsize}
-%				\begin{center}
-%					\includegraphics{fig/isb/collimator1.pdf}
-%					\hspace{1.6cm} (a)真鍮製コリメータ1
-%				\end{center}
-%			\end{minipage}
-%			%2枚目
-%			\begin{minipage}{0.5\hsize}
-%				\begin{center}
-%					\includegraphics{fig/isb/collimator2.pdf}
-%					\hspace{1.6cm} (b)真鍮製コリメータ2
-%				\end{center}
-%			\end{minipage}
-%		\end{tabular}
-%	\end{center}
-%\end{figure}
+\begin{figure}[H]
+	\begin{center}
+		\begin{tabular}{c}
+			%1枚目
+			\begin{minipage}{0.5\hsize}
+				\begin{center}
+					\includegraphics[width=80mm]{fig/isb/collimator1.png}
+					\hspace{1.6cm} (a)真鍮製コリメータ1
+				\end{center}
+			\end{minipage}
+			%2枚目
+			\begin{minipage}{0.5\hsize}
+				\begin{center}
+					\includegraphics[width=80mm]{fig/isb/collimator2.png}
+					\hspace{1.6cm} (b)真鍮製コリメータ2
+				\end{center}
+			\end{minipage}
+		\end{tabular}
+	\end{center}
+\end{figure}
+\begin{figure}[H]
+	\begin{center}
+		\begin{tabular}{c}
+			%1枚目
+			\begin{minipage}{0.5\hsize}
+				\begin{center}
+					\includegraphics[width=80mm]{fig/isb/leadcollimator1.png}
+					\hspace{1.6cm} (c)鉛製コリメータ1
+				\end{center}
+			\end{minipage}
+			%2枚目
+			\begin{minipage}{0.5\hsize}
+				\begin{center}
+					\includegraphics[width=80mm]{fig/isb/leadcollimator2.png}
+					\hspace{1.6cm} (d)鉛製コリメータ2
+				\end{center}
+			\end{minipage}
+		\end{tabular}
+	\end{center}
+\end{figure}
+
+\newpage
 \subsection{回路図}
 全体の回路図は以下のようになっている.
 \begin{figure}[H]
@@ -85,7 +106,7 @@
 \end{table}
 
 \subsection{discriminatorの閾値}
-回路図に示すようにシンチレータSとシンチレータA,B,Cではそれぞれの回路中にあるdiscriminatorで設定されている閾値が異なる.
+回路図\ref{fig:circuit2015}に示すようにシンチレータSとシンチレータA,B,Cではそれぞれの回路中にあるdiscriminatorで設定されている閾値が異なる.
 \begin{description}
 	\item[シンチレータSについて]\mbox{}\\
 		シンチレータSの閾値highは1275keVの$\gamma$線のみを検出するために用いられる.\\
@@ -103,7 +124,7 @@
 \begin{enumerate}
 	\item シンチレータSに$\gamma$線が入射し2つある閾値を超える
 	\item gate generatorにより幅800nsのcoincidence gateが出力される
-	\item シンチレータA,B,Cのいずれかに$\gamma$線が入り,OR回路からdelayで遅延される
+	\item シンチレータA,B,Cのいずれかにオルソポジトロニウムの崩壊由来の$\gamma$線が入り,delayで遅延される
 	\item Sからの信号がAND回路に入って800ns以内にA(B,C)からの信号が来る
 \end{enumerate}
 
@@ -267,7 +288,8 @@ low-highカットによりコンプトン散乱由来の事象を含む約76\%�
 このピークの濃い部分は光電効果由来の事象であり,ピークに垂れ下がるように存在する部分はコンプトン散乱由来の事象である.
 また,$t_{\rm high}=500\sim700$ns付近にもピークが確認できる.\\
 low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
-これより約86\%のイベントがカットされ,$500\sim700$ns付近に存在していたピークを排除することができた.
+これより約86\%のイベントがカットされ,$500\sim700$ns付近に存在していたピークを排除することができた.\\
+しかし,比較的エネルギーを大きく落としたコンプトン散乱によるピークは完全に排除できず,残っていることがわかる.
 
 \subsection{シンチレータA,B,Cに対する事象選別 (エネルギーカット)}
 シンチレータA,B,Cで観測される$\gamma$線のエネルギーは主にポジトロニウムの崩壊由来のもので
@@ -458,11 +480,11 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 \subsection{再現実験の考察}
 今回の再現実験でオルソポジトロニウムの寿命が$\tau_{3\gamma vac}=142(\rm ns)$と求められた.
 ここで昨年度の結果は$\tau_{3\gamma vac}=128 \pm 10(\rm ns)$でありこちらは理論値と$1.4\sigma$で一致する.
-これは本実験で第\ref{sec:hogehoge}章で試験を行ったトリガー用プラスチックシンチレータを新たに導入することを考慮し,昨年度行った別の事象選別を行っておらずバックグラウンドを同程度まで減らすことができなかったためだと考える. \\
+これは本実験で第\ref{sec:hogehoge}章(←宮辺章を参照)で試験を行ったトリガー用プラスチックシンチレータを新たに導入することを考慮し,昨年度行った別の事象選別を行っておらずバックグラウンドを同程度まで減らすことができなかったためだと考える. \\
 
 例としてシンチレータSからの信号に対してシンチレータAの信号が$\Delta t(>0)$だけ遅れた場合を考える.
 このときシンチレータSからの信号に対し電荷量を積分するためのADC gateは同じく$\Delta t$だけ遅れ,信号は正しく積分されずに見かけ上1275keVよりも小さい電荷量となる.
-また,閾値highを超える時間も$\Delta t$だけ小さくなる.\\
+また,閾値highを超える時間も$\Delta t$だけ小さくなる.(図を入れるか考え中)
 これは図\ref{fig:E-tHL}と図\ref{fig:E-tHL_cut}ではっきりと確認できていることがわかる.\\
 昨年度はこれを検証するため故意にADC gateを20nsずつずらし相関を調べ,閾値highを超えた時間を10ns毎に分ける作業をlow-highカット後に行っていた.
 その後でエネルギー分布からピークと標準偏差を求め$\pm 1\sigma$に含まれるイベントのみを抽出するというカットを行った.
