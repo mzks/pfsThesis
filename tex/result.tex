@@ -109,7 +109,7 @@
 
 \subsection{イベントを得る条件}
 イベントは以下のようにして得られる.
-(もう少しわかりやすいように修正する)
+(もう少しわかりやすいように修正するか「実験装置」の節で簡単に述べたのでここはカットする)
 \begin{enumerate}
 	\item シンチレータSに$\gamma$線が入射し2つある閾値を超える
 	\item gate generatorにより幅800nsのcoincidence gateが出力される
@@ -149,10 +149,10 @@
 	\end{tabular}
 \end{figure}
 \begin{eqnarray*}
-	E_{\rm A}{\rm [keV]}=1.79\times {\rm ADC}-174\\
-	E_{\rm B}{\rm [keV]}=1.69\times {\rm ADC}-148\\
-	E_{\rm C}{\rm [keV]}=1.86\times {\rm ADC}-150\\
-	E_{\rm S}{\rm [keV]}=1.86\times {\rm ADC}-145
+	E_\textrm{A}\textrm{[keV]}=1.79\times {\rm ADC}-174\\
+	E_\textrm{B}\textrm{[keV]}=1.69\times {\rm ADC}-148\\
+	E_\textrm{C}\textrm{[keV]}=1.86\times {\rm ADC}-150\\
+	E_\textrm{S}\textrm{[keV]}=1.86\times {\rm ADC}-145
 \end{eqnarray*}
 以後,再現実験ではこの較正直線を元にADCとエネルギーの変換を行う.
 
@@ -201,7 +201,7 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 
 図\ref{fig:tHL_all}にシンチレータSに設定された2つの閾値を超えた時間の差\\
 \begin{center}
-	$t_{\rm HL}=t_{\rm high}-t_{\rm low}$
+	$t_\textrm{HL}=t_\textrm{high}-t_\textrm{low}$
 \end{center}
 の分布を示す.
 \begin{figure}[htbp]
@@ -210,24 +210,24 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 		\begin{minipage}{0.5\hsize}
 			\centering
 				\includegraphics[width=80mm]{fig/isb/tHL.pdf}
-				\caption{$t_{\rm HL}$の分布}
+				\caption{$t_\textrm{HL}$の分布}
 				\label{fig:tHL_all}
 		\end{minipage}
 		%2枚目
 		\begin{minipage}{0.5\hsize}
 			\centering
 				\includegraphics[width=80mm]{fig/isb/tHL_cut.pdf}
-				\caption{t=30nsまでの$t_{\rm HL}$分布}
+				\caption{t=30nsまでの$t_\textrm{HL}$分布}
 				\label{fig:tHL_zoom}
 		\end{minipage}
 	\end{tabular}
 \end{figure}
 
-$t_{\rm HL}$=10ns付近に光電効果由来のパルスによるピークが立ち,その後にはコンプトン散乱由来のパルスにより,なだらかなイベント数の減少が確認できる.
-図\ref{fig:tHL_zoom}は図\ref{fig:tHL_all}において,$t_{\rm HL}$=0から30ns付近を拡大したものである.\\
-これより事象選別に利用する$t_{\rm HL}$の条件として\\
+$t_\textrm{HL}$=10ns付近に光電効果由来のパルスによるピークが立ち,その後にはコンプトン散乱由来のパルスにより,なだらかなイベント数の減少が確認できる.
+図\ref{fig:tHL_zoom}は図\ref{fig:tHL_all}において,$t_\textrm{HL}$=0から30ns付近を拡大したものである.\\
+これより事象選別に利用する$t_\textrm{HL}$の条件として\\
 \begin{center}
-	$8\leq$$t_{\rm HL}$$\leq12$
+	$8\leq$$t_\textrm{HL}$$\leq12$
 \end{center}
 を採用した.
 \subsubsection{シンチレータSに対する事象選別結果}
@@ -242,9 +242,9 @@ low-highカットによりコンプトン散乱由来の事象を含む約76\%�
 
 図\ref{fig:E-tHL}には横軸に信号がシンチレータSの閾値highを超えた時間,縦軸にシンチレータSで観測されたエネルギーを示す.
 ここでの時間とはあるoffsetから崩壊時間を引いた値を示している.
-%まず,$t_{\rm high}$が大きくなるに従いエネルギーも大きくなっている特徴的な相関が確認できる.
+%まず,$t_\textrm{high}$が大きくなるに従いエネルギーも大きくなっている特徴的な相関が確認できる.
 %このピークの濃い部分は光電効果由来の事象であり,ピークに垂れ下がるように存在する部分はコンプトン散乱由来の事象である.
-%また,$t_{\rm high}=500\sim700$ns付近にもピークが確認できる.
+%また,$t_\textrm{high}=500\sim700$ns付近にもピークが確認できる.
 \begin{figure}[H]
 	\begin{tabular}{cc}
 		%1枚目
@@ -263,9 +263,9 @@ low-highカットによりコンプトン散乱由来の事象を含む約76\%�
 		\end{minipage}
 	\end{tabular}
 \end{figure}
-まず,$t_{\rm high}$が大きくなるに従いエネルギーも大きくなっている特徴的な相関が確認できる.
+まず,$t_\textrm{high}$が大きくなるに従いエネルギーも大きくなっている特徴的な相関が確認できる.
 このピークの濃い部分は光電効果由来の事象であり,ピークに垂れ下がるように存在する部分はコンプトン散乱由来の事象である.
-また,$t_{\rm high}=500\sim700$ns付近にもピークが確認できる.\\
+また,$t_\textrm{high}=500\sim700$ns付近にもピークが確認できる.\\
 low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 これより約86\%のイベントがカットされ,$500\sim700$ns付近に存在していたピークを排除することができた.\\
 しかし,比較的エネルギーを大きく落としたコンプトン散乱によるピークは完全に排除できず,残っていることがわかる.
@@ -319,9 +319,9 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 
 空気中でのオルソポジトロニウムの寿命はカットによりバックグラウンドを削減したしたシンチレータA,B,Cの崩壊時間分布のヒストグラムに対し次の指数関数でフィッティングすることで得られる.\\
 \begin{equation}
-N(t)=N_0\exp(-\frac{t}{\tau_{air}})+N_{\rm BG}
+N(t)=N_0\exp(-\frac{t}{\tau_\textrm{air}})+N_\textrm{BG}
 \end{equation}
-$N_{\rm BG}$はバックグラウンド事象を考慮したパラメータである.
+$N_\textrm{BG}$はバックグラウンド事象を考慮したパラメータである.
 このフィッティングの結果を図\ref{fig:life_in_air}に示す.
 \begin{figure}[htbp]
 	\centering
@@ -330,29 +330,29 @@ $N_{\rm BG}$はバックグラウンド事象を考慮したパラメータで�
 		\label{fig:life_in_air}
 \end{figure}
 フィッティングの範囲は$(20,500)$であり,800nsを超えたイベントはカットしてある.\\
-このフィットから空気中での寿命$\tau_{air}$は\\
+このフィットから空気中での寿命$\tau_\textrm{air}$は\\
 \begin{equation}
-	\tau_{air}=35.7\pm 2.2 \hspace{8pt}(\rm ns)
+	\tau_\textrm{air}=35.7\pm 2.2 \hspace{8pt}(\textrm{ns})
 \end{equation}
 と測定できた.
 この値を用いて真空中でのオルソポジトロニウムの寿命を求めることとした.
 
 \subsection{真空中での寿命}
-空気中での寿命$\tau_{air}=35.7(\rm ns)$はスピン交換反応,pick-off反応により真空中での寿命よりも短い寿命が観測される.
+空気中での寿命$\tau_\textrm{air}=35.7(\textrm{ns})$はスピン交換反応,pick-off反応により真空中での寿命よりも短い寿命が観測される.
 今測定したいものは真空中で$3\gamma$崩壊を起こすときのオルソポジトロニウムの寿命である.
-これを$\tau_{3\gamma vac}$とすれば,時刻tでまだ崩壊を起こしていないオルソポジトロニウムの個数を$N(t)$とし,$2\gamma$崩壊を起こすオルソポジトロニウムの時定数を$\tau_{2\gamma}$として次の関係式が成り立つ.
+これを$\tau_{3\gamma\textrm{vac}}$とすれば,時刻tでまだ崩壊を起こしていないオルソポジトロニウムの個数を$N(t)$とし,$2\gamma$崩壊を起こすオルソポジトロニウムの時定数を$\tau_{2\gamma}$として次の関係式が成り立つ.
 \begin{equation}
-	-\frac{dN(t)}{dt}=\left(\frac{1}{\tau_{3\gamma vac}}+\frac{1}{\tau_{2\gamma}}\right)N(t)
+	-\frac{dN(t)}{dt}=\left(\frac{1}{\tau_{3\gamma\textrm{vac}}}+\frac{1}{\tau_{2\gamma}}\right)N(t)
 	\label{eq:2_3gamma}
 \end{equation}
-今回観測した空気中での寿命$\tau_{air}$とは
+今回観測した空気中での寿命$\tau_\textrm{air}$とは
 \begin{equation}
-	\frac{1}{\tau_{3\gamma vac}}+\frac{1}{\tau_{2\gamma}}=\frac{1}{\tau_{air}}
+	\frac{1}{\tau_{3\gamma\textrm{vac}}}+\frac{1}{\tau_{2\gamma}}=\frac{1}{\tau_\textrm{air}}
 \end{equation}
 という関係式が成り立っている.
 式\ref{eq:2_3gamma}を変形すると
 \begin{equation}
-	-\frac{dN(t)}{dt}=\left(\frac{dN_{3\gamma}}{dt}+\frac{dN_{2\gamma}}{dt}\right)N(t)=\left(\frac{1}{\tau_{3\gamma vac}}+\frac{1}{\tau_{2\gamma}}\right)N(t)
+	-\frac{dN(t)}{dt}=\left(\frac{dN_{3\gamma}}{dt}+\frac{dN_{2\gamma}}{dt}\right)N(t)=\left(\frac{1}{\tau_{3\gamma\textrm{vac}}}+\frac{1}{\tau_{2\gamma}}\right)N(t)
 \end{equation}
 となり,ここで
 \begin{equation}
@@ -360,7 +360,7 @@ $N_{\rm BG}$はバックグラウンド事象を考慮したパラメータで�
 \end{equation}
 よりこれを代入すると
 \begin{equation}
-	\tau_{3\gamma vac}=\tau_{air}\left(1+\frac{dN_{2\gamma}}{dN_{3\gamma}}\right)
+	\tau_{3\gamma\textrm{vac}}=\tau_\textrm{air}\left(1+\frac{dN_{2\gamma}}{dN_{3\gamma}}\right)
 	\label{eq:life_vacuum}
 \end{equation}
 となり$\frac{dN_{2\gamma}}{dN_{3\gamma}}$を測定すれば真空中での寿命$\tau_{3\gamma vac}$が求められる.
@@ -394,10 +394,10 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 という関係式が得られる.よって式\ref{eq:life_vacuum}と式\ref{eq:decay_ratio}から実験で得られた空気中での寿命を真空中での寿命へ換算できる.
 
 \subsubsection{各エネルギー領域での崩壊数}
-実験で観測された崩壊数は$2\gamma$,$3\gamma$崩壊領域の崩壊時間分布のヒストグラムに対し空気中での寿命$\tau_{air}$を代入した形の式\ref{eq:fit_for_vac}でフィットすることにより得られる.
+実験で観測された崩壊数は$2\gamma$,$3\gamma$崩壊領域の崩壊時間分布のヒストグラムに対し空気中での寿命$\tau_\textrm{air}$を代入した形の式\ref{eq:fit_for_vac}でフィットすることにより得られる.
 \begin{eqnarray}
-	&N_0&\exp\left(\frac{t}{\tau_{air}}\right)+N_{\rm BG} \nonumber \\
-	=&N_0&\exp\left(\frac{t}{35.7}\right)+N_{\rm BG} 
+	&N_0&\exp\left(\frac{t}{\tau_\textrm{air}}\right)+N_\textrm{BG} \nonumber \\
+	=&N_0&\exp\left(\frac{t}{35.7}\right)+N_\textrm{BG} 
 	\label{eq:fit_for_vac}
 \end{eqnarray}
 
@@ -418,7 +418,7 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 					\hline
 					fit parameter & value \\ \hline
 					$N_0$ & $3050 \pm 20$ \\ \hline
-					$N_{\rm BG} $& $174 \pm 2$ \\ \hline
+					$N_\textrm{BG} $& $174 \pm 2$ \\ \hline
 				\end{tabular}
 				\caption{$2\gamma$領域でのフィット結果}
 		\end{minipage}
@@ -429,7 +429,7 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 					\hline
 					fit parameter & value \\ \hline
 					$N_0$ & $1060 \pm 420$ \\ \hline
-					$N_{\rm BG}$ & $635 \pm 40$ \\ \hline
+					$N_\textrm{BG}$ & $635 \pm 40$ \\ \hline
 				\end{tabular}
 				\caption{$3\gamma$領域でのフィット結果}
 		\end{minipage}
@@ -443,14 +443,14 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 
 ゆえに真空中でのオルソポジトロニウムの寿命は
 \begin{equation}
-	\tau_{3\gamma vac}=96.7 \pm 11.0 \hspace{8pt}(\rm ns)
+	\tau_{3\gamma\textrm{vac}}=96.7 \pm 11.0\hspace{8pt}(\textrm{ns})
 \end{equation}
 と求まった.
-これは理論値$\tau_{\rm theory}=142 \hspace{10pt}(\rm ns)$と比較すると$4.12\sigma$の開きがある.
+これは理論値$\tau_\textrm{theory}=142\hspace{8pt}(ns)$と比較すると$4.12\sigma$の開きがある.
 
 \subsection{再現実験の考察}
-今回の再現実験でオルソポジトロニウムの寿命が$\tau_{3\gamma vac}=142(\rm ns)$と求められた.
-ここで昨年度の結果は$\tau_{3\gamma vac}=128 \pm 10(\rm ns)$でありこちらは理論値と$1.4\sigma$で一致する.
+今回の再現実験でオルソポジトロニウムの寿命が$\tau_{3\gamma\textrm{vac}}=142(\textrm{ns})$と求められた.
+ここで昨年度の結果は$\tau_{3\gamma\textrm{vac}}=128 \pm 10(\textrm{ns})$でありこちらは理論値と$1.4\sigma$で一致する.
 これは本実験で第\ref{sec:hogehoge}章(←宮辺章を参照)で試験を行ったトリガー用プラスチックシンチレータを新たに導入することを考慮し,昨年度行った別の事象選別を行っておらずバックグラウンドを同程度まで減らすことができなかったためだと考える. \\
 
 例としてシンチレータSからの信号に対してシンチレータAの信号が$\Delta t(>0)$だけ遅れた場合を考える.
