@@ -6,7 +6,7 @@
 
 \subsection{実験装置}
 昨年度の測定を参考にし,同様のセットアップで行った.
-以下に実験装置の全体の写真と概要図を示す.\\
+以下に実験装置の全体の写真と概要図を示す.
 \begin{figure}[htbp]
 	\begin{tabular}{cc}
 		%1枚目
@@ -33,7 +33,7 @@
 		\label{fig:setting_dtl2015}
 \end{figure}
 
-イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.\\
+イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.
 ここで、コリメータをつけているのは線源からの$\gamma$線が直接シンチレータA,B,Cに入射することを防ぐためである.
 以下にコリメータの図を昨年度の資料から引用し示す.
 \begin{figure}[H]
@@ -98,11 +98,11 @@
 回路図\ref{fig:circuit2015}に示すようにシンチレータSとシンチレータA,B,Cではそれぞれの回路中にあるdiscriminatorで設定されている閾値が異なる.
 \begin{description}
 	\item[シンチレータSについて]\mbox{}\\
-		シンチレータSの閾値highは1275keVの$\gamma$線のみを検出するために用いられる.\\
+		シンチレータSの閾値highは1275keVの$\gamma$線のみを検出するために用いられる.
 		highの閾値78.0mVは約900mVのエネルギーに相当する.一方で閾値lowは$\gamma$線の入射時刻を決める役割を持ち,この閾値を下げることで精度を向上させることができる.
 		さらにhigh,lowの信号の時間差から事象選別にも利用される.
 	\item[シンチレータA,B,Cについて]\mbox{}\\
-		シンチレータA,B,CはSよりも低い閾値が設定されている.\\
+		シンチレータA,B,CはSよりも低い閾値が設定されている.
 		これは閾値highの役割が無関係なノイズを落とすためであり,dividerを通る回数によりhighはlowの2倍の閾値となる.
 		lowの役割はSと同様$\gamma$線の入射時刻を決めるものである.
 \end{description}
@@ -174,7 +174,7 @@
 		\label{fig:dec_t_b4}
 \end{figure}
 
-図\ref{fig:dec_t_b4}はシンチレータA,B,Cでの各崩壊時間の分布を足しあげたものである.ここでの崩壊時間はシンチレータSの閾値lowを超えた時刻からシンチレータA,B,Cでの閾値lowを超えた時間の差である.\\
+図\ref{fig:dec_t_b4}はシンチレータA,B,Cでの各崩壊時間の分布を足しあげたものである.ここでの崩壊時間はシンチレータSの閾値lowを超えた時刻からシンチレータA,B,Cでの閾値lowを超えた時間の差である.
 t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊事象由来のものではないアクシデンタルなイベントが多く含まれるために現れるものである.
 また,t=800ns付近でイベントが大幅に減少しているのは,シンチレータSの閾値highを超えたときに出力されるcoincidence gateの幅を800nsとしたためである.
 
@@ -199,7 +199,7 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 \end{figure}
 このことを利用してシンチレータにエネルギーを落としきらなかった事象を排除し,光電効果由来の事象のみを選別する.
 
-図\ref{fig:tHL_all}にシンチレータSに設定された2つの閾値を超えた時間の差\\
+図\ref{fig:tHL_all}にシンチレータSに設定された2つの閾値を超えた時間の差,
 \begin{center}
 	$t_\textrm{HL}=t_\textrm{high}-t_\textrm{low}$
 \end{center}
@@ -224,14 +224,14 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 \end{figure}
 
 $t_\textrm{HL}$=10ns付近に光電効果由来のパルスによるピークが立ち,その後にはコンプトン散乱由来のパルスにより,なだらかなイベント数の減少が確認できる.
-図\ref{fig:tHL_zoom}は図\ref{fig:tHL_all}において,$t_\textrm{HL}$=0から30ns付近を拡大したものである.\\
-これより事象選別に利用する$t_\textrm{HL}$の条件として\\
+図\ref{fig:tHL_zoom}は図\ref{fig:tHL_all}において,$t_\textrm{HL}$=0から30ns付近を拡大したものである.
+これより事象選別に利用する$t_\textrm{HL}$の条件として
 \begin{center}
 	$8\leq$$t_\textrm{HL}$$\leq12$
 \end{center}
 を採用した.
 \subsubsection{シンチレータSに対する事象選別結果}
-図\ref{fig:dec_t_cut}にlow-highカット後の崩壊時間分布を示す.\\
+図\ref{fig:dec_t_cut}にlow-highカット後の崩壊時間分布を示す.
 \begin{figure}[htbp]
 	\centering
 		\includegraphics[width=10cm]{fig/isb/decay_t_cut}
@@ -265,9 +265,9 @@ low-highカットによりコンプトン散乱由来の事象を含む約76\%�
 \end{figure}
 まず,$t_\textrm{high}$が大きくなるに従いエネルギーも大きくなっている特徴的な相関が確認できる.
 このピークの濃い部分は光電効果由来の事象であり,ピークに垂れ下がるように存在する部分はコンプトン散乱由来の事象である.
-また,$t_\textrm{high}=500\sim700$ns付近にもピークが確認できる.\\
+また,$t_\textrm{high}=500\sim700$ns付近にもピークが確認できる.
 low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
-これより約86\%のイベントがカットされ,$500\sim700$ns付近に存在していたピークを排除することができた.\\
+これより約86\%のイベントがカットされ,$500\sim700$ns付近に存在していたピークを排除することができた.
 しかし,比較的エネルギーを大きく落としたコンプトン散乱によるピークは完全に排除できず,残っていることがわかる.
 
 \subsection{シンチレータA,B,Cに対する事象選別 (エネルギーカット)}
@@ -317,8 +317,9 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 本再現実験ではオルソポジトロニウムの真空中の寿命を直接測定することはできない.
 従って,まず空気中での寿命を求めた後昨年度の実験のシミュレーションによって求められた各領域での崩壊比を用いて真空中での寿命を求めることにする.
 
-空気中でのオルソポジトロニウムの寿命はカットによりバックグラウンドを削減したしたシンチレータA,B,Cの崩壊時間分布のヒストグラムに対し次の指数関数でフィッティングすることで得られる.\\
+空気中でのオルソポジトロニウムの寿命はカットによりバックグラウンドを削減したしたシンチレータA,B,Cの崩壊時間分布のヒストグラムに対し次の指数関数でフィッティングすることで得られる.
 \begin{equation}
+	\nonumber
 N(t)=N_0\exp(-\frac{t}{\tau_\textrm{air}})+N_\textrm{BG}
 \end{equation}
 $N_\textrm{BG}$はバックグラウンド事象を考慮したパラメータである.
@@ -329,9 +330,10 @@ $N_\textrm{BG}$はバックグラウンド事象を考慮したパラメータ�
 		\caption{フィッティング結果}
 		\label{fig:life_in_air}
 \end{figure}
-フィッティングの範囲は$(20,500)$であり,800nsを超えたイベントはカットしてある.\\
-このフィットから空気中での寿命$\tau_\textrm{air}$は\\
+フィッティングの範囲は$(20,500)$であり,800nsを超えたイベントはカットしてある.
+このフィットから空気中での寿命$\tau_\textrm{air}$は
 \begin{equation}
+	\nonumber
 	\tau_\textrm{air}=35.7\pm 2.2 \hspace{8pt}(\textrm{ns})
 \end{equation}
 と測定できた.
@@ -347,15 +349,18 @@ $N_\textrm{BG}$はバックグラウンド事象を考慮したパラメータ�
 \end{equation}
 今回観測した空気中での寿命$\tau_\textrm{air}$とは
 \begin{equation}
+	\nonumber
 	\frac{1}{\tau_{3\gamma\textrm{vac}}}+\frac{1}{\tau_{2\gamma}}=\frac{1}{\tau_\textrm{air}}
 \end{equation}
 という関係式が成り立っている.
 式\ref{eq:2_3gamma}を変形すると
 \begin{equation}
+	\nonumber
 	-\frac{dN(t)}{dt}=\left(\frac{dN_{3\gamma}}{dt}+\frac{dN_{2\gamma}}{dt}\right)N(t)=\left(\frac{1}{\tau_{3\gamma\textrm{vac}}}+\frac{1}{\tau_{2\gamma}}\right)N(t)
 \end{equation}
 となり,ここで
 \begin{equation}
+	\nonumber
 	\frac{dN_{3\gamma}}{dN_{2\gamma}}=\frac{\tau_{2\gamma}}{\tau_{3\gamma}}
 \end{equation}
 よりこれを代入すると
@@ -363,7 +368,7 @@ $N_\textrm{BG}$はバックグラウンド事象を考慮したパラメータ�
 	\tau_{3\gamma\textrm{vac}}=\tau_\textrm{air}\left(1+\frac{dN_{2\gamma}}{dN_{3\gamma}}\right)
 	\label{eq:life_vacuum}
 \end{equation}
-となり$\frac{dN_{2\gamma}}{dN_{3\gamma}}$を測定すれば真空中での寿命$\tau_{3\gamma vac}$が求められる.
+となり$\frac{dN_{2\gamma}}{dN_{3\gamma}}$を測定すれば真空中での寿命$\tau_{3\gamma \textrm{vac}}$が求められる.
 
 \subsubsection{オルソポジトロニウムの崩壊の事象数}
 式\ref{eq:life_vacuum}より崩壊したポジトロニウムのうち,$2\gamma$,$3\gamma$それぞれで崩壊する事象数$N_{2\gamma}$,$N_{3\gamma}$を求めれば真空中での寿命を測定できるが実際には直接的にそれらを求めることはできない.
@@ -437,26 +442,29 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 \end{table}
 この結果を用いて式\ref{eq:decay_ratio}より$2\gamma,3\gamma$崩壊比は
 \begin{equation}
+	\nonumber
 	\frac{N_{2\gamma}}{N_{3\gamma}}=1.71 \pm 0.26
 \end{equation}
 となる.
 
 ゆえに真空中でのオルソポジトロニウムの寿命は
 \begin{equation}
+	\nonumber
 	\tau_{3\gamma\textrm{vac}}=96.7 \pm 11.0\hspace{8pt}(\textrm{ns})
 \end{equation}
 と求まった.
 これは理論値$\tau_\textrm{theory}=142\hspace{8pt}(\textrm{ns})$と比較すると$4.12\sigma$の開きがある.
 
 \subsection{再現実験の考察}
-今回の再現実験でオルソポジトロニウムの寿命が$\tau_{3\gamma\textrm{vac}}=142(\textrm{ns})$と求められた.
+今回の再現実験でオルソポジトロニウムの寿命が$\tau_{3\gamma\textrm{vac}}=96.7 \pm 11.0\hspace{8pt}(\textrm{ns})$と求められた.
 ここで昨年度の結果は$\tau_{3\gamma\textrm{vac}}=128 \pm 10(\textrm{ns})$でありこちらは理論値と$1.4\sigma$で一致する.
 これは本実験で第\ref{sec:hogehoge}章(←宮辺章を参照)で試験を行ったトリガー用プラスチックシンチレータを新たに導入することを考慮し,昨年度行った別の事象選別を行っておらずバックグラウンドを同程度まで減らすことができなかったためだと考える. \\
 
 例としてシンチレータSからの信号に対してシンチレータAの信号が$\Delta t(>0)$だけ遅れた場合を考える.
 このときシンチレータSからの信号に対し電荷量を積分するためのADC gateは同じく$\Delta t$だけ遅れ,信号は正しく積分されずに見かけ上1275keVよりも小さい電荷量となる.
 また,閾値highを超える時間も$\Delta t$だけ小さくなる.(図を入れるか考え中)
-これは図\ref{fig:E-tHL}と図\ref{fig:E-tHL_cut}ではっきりと確認できていることがわかる.\\
+これは図\ref{fig:E-tHL}と図\ref{fig:E-tHL_cut}ではっきりと確認できていることがわかる.
+
 昨年度はこれを検証するため故意にADC gateを20nsずつずらし相関を調べ,閾値highを超えた時間を10ns毎に分ける作業をlow-highカット後に行っていた.
 その後でエネルギー分布からピークと標準偏差を求め$\pm 1\sigma$に含まれるイベントのみを抽出するというカットを行った.
 
