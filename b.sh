@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 touch thesis.tex
 uplatex thesis
