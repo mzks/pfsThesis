@@ -1,11 +1,14 @@
+<<<<<<< HEAD
 \chapter{ポジトロニウムの超微細構造の測定における再現実験を含めた事象選別と結果(担当:礒部)}\label{result}
+=======
+>>>>>>> :pencil: 微修正
 
-\section{再現実験}
+\section{再現実験}\label{replication}
 超微細構造の測定にはポジトロニウムの寿命を求める必要がある.
 そのため,超微細構造の測定に先立ち昨年度の再現実験を行い真空中でのオルソポジトロニウムの寿命測定を試みた.
 
 \subsection{実験装置}
-昨年度の測定を参考にし,同様のセットアップで行った.
+昨年度の測定~\cite{卒業論文2015}を参考にし,同様のセットアップで行った.
 以下に実験装置の全体の写真と概要図を示す.
 \begin{figure}[htbp]
 	\begin{tabular}{cc}
@@ -19,7 +22,7 @@
 		%2枚目
 		\begin{minipage}{0.5\hsize}
 			\centering
-				\includegraphics[width=80mm]{img/isb/pmt_setting}
+			\includegraphics[width=80mm]{img/isb/pmt_setting.JPG}
 				\caption{シンチレータA,B,Cの配置}
 				\label{fig:pmt_setting2015}
 		\end{minipage}
@@ -35,7 +38,7 @@
 
 イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.
 ここで、コリメータをつけているのは線源からの$\gamma$線が直接シンチレータA,B,Cに入射することを防ぐためである.
-以下にコリメータの図を昨年度の資料から引用し示す.
+以下にコリメータの図を昨年度の資料~\cite{卒論発表2015}から引用し示す.
 \begin{figure}[H]
 	\centering
 		\begin{tabular}{c}
@@ -73,7 +76,7 @@
 
 \newpage
 \subsection{回路図}
-全体の回路図は以下のようになっている.
+全体の回路図は以下のようになっている.~\cite{卒業論文2015}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=15cm]{fig/isb/circuit.pdf}
@@ -99,7 +102,7 @@
 \begin{description}
 	\item[シンチレータSについて]\mbox{}\\
 		シンチレータSの閾値highは1275keVの$\gamma$線のみを検出するために用いられる.
-		highの閾値78.0mVは約900mVのエネルギーに相当する.一方で閾値lowは$\gamma$線の入射時刻を決める役割を持ち,この閾値を下げることで精度を向上させることができる.
+		highの閾値78.0mVは約900keVのエネルギーに相当する.一方で閾値lowは$\gamma$線の入射時刻を決める役割を持ち,この閾値を下げることで精度を向上させることができる.
 		さらにhigh,lowの信号の時間差から事象選別にも利用される.
 	\item[シンチレータA,B,Cについて]\mbox{}\\
 		シンチレータA,B,CはSよりも低い閾値が設定されている.
