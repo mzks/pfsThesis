@@ -1,8 +1,6 @@
 % sample.tex
 \documentclass[uplatex,report,10pt,a4paper]{jsbook}
 
-%\bibliographystyle{junsrt}
-\bibliographystyle{tieice}
 \usepackage[uplatex,jis2004]{otf}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{float}
@@ -43,6 +41,8 @@
 \makeatother
 %-------------------------
 
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
 
 \begin{document}
 
@@ -66,6 +66,8 @@
 %sample
 %\appendix
 
+%\bibliographystyle{junsrt}
+\bibliographystyle{tieice}
 \bibliography{reference}
 
 \end{document}
