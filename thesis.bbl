@@ -1,5 +1,14 @@
 \begin{thebibliography}{1}
 
+\bibitem{pmtH6410}
+光電子増倍管アッセンブリカタログ.
+\newblock \url{http://www.hamamatsu.com/resources/pdf/etd/PMT_76-83_ja.pdf}.
+
+\bibitem{pmtR2248}
+Photomultiplier tube r2248 data sheet.
+\newblock
+  \url{https://www.hamamatsu.com/resources/pdf/etd/R2248_TPMH1228E.pdf}.
+
 \bibitem{geant4}
 S.~Agostinelli, J.~Allison, K.~Amako, et~al.
 \newblock Geant4―a simulation toolkit.
