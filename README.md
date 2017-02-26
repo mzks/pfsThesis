@@ -1,4 +1,4 @@
-#卒業論文用$\TeX$ディレクトリ
+#卒業論文用TeXディレクトリ
 
 Author: Mizukoshi Keita
 
@@ -46,7 +46,9 @@ filename:introduction.tex
 
 filename:theory.tex
 
-#. 実験装置と磁場中の光電子増倍管の評価(担当:井口)
+#. 実験装置(担当:宮辺)
+
+#. 磁場中の光電子増倍管の評価(担当:井口)
 
 filename:pmt.tex
 
