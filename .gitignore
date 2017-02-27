@@ -4,6 +4,7 @@ thesis.pdf
 *.log
 *.lof
 *.aux
+*.out
 *.blg
 *.dvi
 *.gz
