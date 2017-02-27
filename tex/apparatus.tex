@@ -58,6 +58,8 @@ PMT R2248の管径は9.8mm $\times$ 9.8mmの四角で,ソケットを含めた�
 ダイノード構造はラインフォーカス型である.
 PMT H6410の管径は直径60 mm,長さが200 mm,
 ダイノード構造はラインフォーカス型である.
+PMTは完全な暗中にあるときでも微小な電流を出力している.
+これを暗電流といい,測定する前にPMTを数十分程度暗中に放置することで減少させることができる.
 %本研究ではトリガーの1.275 MeVと,
 %ポジトロニウムの崩壊による$\gamma$線を検出するために,
 %NaI(Tl)シンチレータ（図\ref{fig:naitl}）と光電子増倍管（PMT）（図\ref{fig:pmt}）を使用する.
@@ -113,14 +115,18 @@ PMT H6410の管径は直径60 mm,長さが200 mm,
 \label{fig:mag}
 \end{figure}
 
-実験装置は図ref{fig:device2},トリガー部分は図ref{fig:device3}のようになる.
+実験装置は図\ref{fig:device2},トリガー部分は図\ref{fig:device3}のようになる.
 $\mathrm{^{22}Na}$線源からの陽電子がコリメータを通り,SCtrigを通過し,
 真空容器中のシリカエアロゲルでポジトロニウムを形成する.
 SCtrigから出る光子はアクリルライトガイドを通り,
-アクリルライトガイドに取り付けた2本のPMT R2248で検出される.
+アクリルライトガイドに取り付けた2本のPMT R2248で同時計測し.
 ポジトロニウムが崩壊し放出された$\gamma$線は,
 周囲に4つ置かれたNaI(Tl)シンチレータとPMT H6410で検出される.
 %第\ref{sec:PMT}
+トリガーに陽電子を用いることで,
+陽電子がシリカエアロゲルに到達し,ポジトロニウムを形成していることを確かめ,
+またSCtrigに取り付けた2本のPMTによる同時計測により,
+暗電流のレートを減らし,バックグラウンドを低減させることが,SCtrigを導入する目的である.
 第-章で詳しく述べるが,すべてのPMTは磁場を遮蔽するための鉄管の中に入っている.
 
 \begin{figure}[H]
@@ -152,7 +158,15 @@ SCtrigはサンゴバン社製のBC490,
 ポリニトロトルエンでできており,厚さは150 $\si{\mu m}$,
 発光量は9000 pkotons/MeVである.
 
-\begin{figure}[htbp]
+図\ref{fig:coinci1},\ref{fig:coinci2}のように,
+フィルム状のミラーでSCtrigを挟み,2本のPMTをオプティカルグリスで接着する.
+これは2本のPMTで同時計測することにより,
+暗電流（\ref{fig:oscillo2}）のレートを低減することが目的である.
+またSCtrigの後方にもうひとつプラスチックシンチレータが取り付けられたPMT H6410を置く.
+これは陽電子がSCtrigを通過していることを確かめることが目的である.
+この結果はオシロスコープで図\ref{fig:oscillo},\ref{fig:oscillo1}のようになった.
+
+\begin{figure}[H]
 \begin{minipage}{0.5\hsize}
 \centering
 \includegraphics[keepaspectratio,scale=0.4]{fig/ybm/coinci1.pdf}
@@ -169,14 +183,68 @@ SCtrigはサンゴバン社製のBC490,
 
 \begin{figure}[H]
 \centering
-\includegraphics[keepaspectratio,scale=0.4]{fig/ybm/ocsillo.pdf}
-\caption{オシロスコープ}
-\label{fig:ocsillo}
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/oscillo2.pdf}
+\caption{暗電流\newline
+信号はSCtrigに取り付けたPMTのもの.トリガーは下のチャンネル.}
+\label{fig:oscilloH2}
 \end{figure}
+
+\begin{figure}[]
+\begin{minipage}{0.5\hsize}
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/oscillo.pdf}
+\caption{2本のPMTの同時計測\newline
+上2本はSCtrigに取り付けたPMTの信号,下は後方に置いたPMTの信号}
+\label{fig:oscillo}
+\end{minipage}
+\begin{minipage}{0.5\hsize}
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/oscillo1.pdf}
+\caption{図\ref{fig:oscillo}のシングルショット}
+\label{fig:oscillo1}
+\end{minipage}
+\end{figure}
+
+図\ref{fig:oscillo}より陽電子がSCtrigを突き抜けていることが確かめられた.
+また図\ref{fig:oscillo}の波形を積分し式（\ref{eq:charge}）で電荷に直したヒストグラムは図\ref{fig:charge}のようになった.
+
+\begin{equation}
+Q = \frac{V}{R}
+\label{eq:charge}
+\end{equation}
+ここで$Q [C]$は電荷,$V [V]$はオシロスコープの波形を積分した電圧,$R [\Omega]$は終端抵抗で今は50 $\Omega$である.
 
 \begin{figure}[H]
 \centering
-\includegraphics[keepaspectratio,angle=90,scale=0.4]{fig/ybm/charge.pdf}
+\includegraphics[keepaspectratio,angle=270,scale=0.7]{fig/ybm/charge.pdf}
 \caption{ヒストグラム}
 \label{fig:charge}
 \end{figure}
+
+図\ref{fig:oscillo2}より暗電流の信号の波形の高さは数百 mVであり,
+図\ref{fig:oscillo1}より陽電子による信号の波形の高さは数十 mV,幅は10 nsecであることがわかる.
+図\ref{fig:oscillo2}の典型的な信号の波形は20 mV程度であり,
+これを1個の光電子による信号とみなす.
+図\ref{fig:coinci1},\ref{fig:coinci2}の治具の効率は,
+SCtrigの屈折率や立体角から$3 \%$と見積もった.
+PMTの量子効率は$25 \%$である.
+また$\mathrm{^{22}Na}$から出る陽電子が,SCtrigを通過するときのエネルギー損失は約40 keVであり,
+そのエネルギーによって約360 個の光子が放出される.
+\begin{equation}
+360 \times 0.03 \times 0.25 \simeq 3
+\label{eq:pe}
+\end{equation}
+より約3個の光子がPMTに入射していることがわかる.
+以上より信号の電荷は
+\begin{equation}
+Q = \frac{\frac{1}{2} \times 20 [mV] \times 10}{50 \Omega} \times 3 = 6 \si{pC}
+\label{eq:charge1}
+\end{equation}
+と計算することができる.
+この計算は図\ref{fig:charge}と矛盾していない.
+図\ref{fig:charge}を見ると,信号の電荷は大きくても40 pC程度であり,
+対応する電圧は400 mVであり,信号は暗電流と同程度かそれ以下の電圧であるので,
+ディスクリミネータの閾値による自称選別は不可能である.
+以上のことから,トリガーにはディスクリミネータによる閾値を設定せずに,
+2本のPMTの同時計測信号を使用することとした.
+
