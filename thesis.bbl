@@ -1,41 +1,33 @@
 \begin{thebibliography}{1}
 
-\bibitem{pmtR2248shape}
-浜松ホトニクス株式会社web site.
-\newblock \url{https://www.hamamatsu.com/jp/ja/index.html}.
-
-\bibitem{pmtH6410shape}
-浜松ホトニクス株式会社web site.
-\newblock \url{https://www.hamamatsu.com/jp/ja/index.html}.
-
-\bibitem{nai}
-Saint-gobain crystals web site.
-\newblock \url{http://www.crystals.saint-gobain.com/}.
-
-\bibitem{pmtH6410}
-光電子増倍管アッセンブリカタログ.
-\newblock \url{http://www.hamamatsu.com/resources/pdf/etd/PMT_76-83_ja.pdf}.
-
-\bibitem{pmtR2248}
-Photomultiplier tube r2248 data sheet.
-\newblock
-  \url{https://www.hamamatsu.com/resources/pdf/etd/R2248_TPMH1228E.pdf}.
-
 \bibitem{geant4}
-S.~Agostinelli, J.~Allison, K.~Amako, et~al.
-\newblock Geant4―a simulation toolkit.
-\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment}, Vol. 506,
-  No.~3, pp. 250 -- 303, 2003.
+S.~Agostinelli, J.~Allison, K.~Amako, J.~Apostolakis, H.~Araujo, P.~Arce,
+  M.~Asai, D.~Axen, S.~Banerjee, G.~Barrand, F.~Behner, L.~Bellagamba,
+  J.~Boudreau, L.~Broglia, A.~Brunengo, H.~Burkhardt, S.~Chauvie, J.~Chuma,
+  R.~Chytracek, G.~Cooperman, G.~Cosmo, P.~Degtyarenko, A.~Dell'Acqua,
+  G.~Depaola, D.~Dietrich, R.~Enami, A.~Feliciello, C.~Ferguson, H.~Fesefeldt,
+  G.~Folger, F.~Foppiano, A.~Forti, S.~Garelli, S.~Giani, R.~Giannitrapani,
+  D.~Gibin, J.~G. Cadenas, I.~Gonz^^c3^^a1lez, G.~G. Abril, G.~Greeniaus,
+  W.~Greiner, V.~Grichine, A.~Grossheim, S.~Guatelli, P.~Gumplinger,
+  R.~Hamatsu, K.~Hashimoto, H.~Hasui, A.~Heikkinen, A.~Howard, V.~Ivanchenko,
+  A.~Johnson, F.~Jones, J.~Kallenbach, N.~Kanaya, M.~Kawabata, Y.~Kawabata,
+  M.~Kawaguti, S.~Kelner, P.~Kent, A.~Kimura, T.~Kodama, R.~Kokoulin,
+  M.~Kossov, H.~Kurashige, E.~Lamanna, T.~Lamp^^c3^^a9n, V.~Lara, V.~Lefebure,
+  F.~Lei, M.~Liendl, W.~Lockman, F.~Longo, S.~Magni, M.~Maire, E.~Medernach,
+  K.~Minamimoto, P.~M. de~Freitas, Y.~Morita, K.~Murakami, M.~Nagamatu,
+  R.~Nartallo, P.~Nieminen, T.~Nishimura, K.~Ohtsubo, M.~Okamura, S.~O'Neale,
+  Y.~Oohata, K.~Paech, J.~Perl, A.~Pfeiffer, M.~Pia, F.~Ranjard, A.~Rybin,
+  S.~Sadilov, E.~D. Salvo, G.~Santin, T.~Sasaki, N.~Savvas, Y.~Sawada,
+  S.~Scherer, S.~Sei, V.~Sirotenko, D.~Smith, N.~Starkov, H.~Stoecker,
+  J.~Sulkimo, M.~Takahata, S.~Tanaka, E.~Tcherniaev, E.~S. Tehrani,
+  M.~Tropeano, P.~Truscott, H.~Uno, L.~Urban, P.~Urban, M.~Verderi, A.~Walkden,
+  W.~Wander, H.~Weber, J.~Wellisch, T.~Wenaus, D.~Williams, D.~Wright,
+  T.~Yamada, H.~Yoshida and D.~Zschiesche: ``Geant4―a simulation toolkit'',
+  Nuclear Instruments and Methods in Physics Research Section A: Accelerators,
+  Spectrometers, Detectors and Associated Equipment, {\bf 506}, 3, pp. 250 --
+  303 (2003).
 
 \bibitem{小早川201207}
-クラウス・グルーペン.
-\newblock 宇宙素粒子物理学.
-\newblock 丸善出版, 7 2012.
-
-\bibitem{卒業論文2015}
-都留, 野崎, 山元, 竹田.
-\newblock オルソポジトロニウムの寿命測定.
-\newblock 2015.
+クラウス・グルーペン：``宇宙素粒子物理学'', 丸善出版 (2012).
 
 \end{thebibliography}
