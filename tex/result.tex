@@ -1,9 +1,10 @@
-\chapter{ポジトロニウムの超微細構造の測定における再現実験を含めた事象選別と結果(担当:礒部)}\label{result}
+\chapter{再現実験を含めた事象選別と結果(担当:礒部)}\label{result}
 
 \section{再現実験}\label{replication}
 超微細構造の測定にはポジトロニウムの寿命を求める必要がある.
 そのため,超微細構造の測定に先立ち昨年度の再現実験を行い真空中でのオルソポジトロニウムの寿命測定を試みた.
 
+\section{再現実験で用いた装置}
 \subsection{実験装置}
 昨年度の測定~\cite{卒業論文2015}を参考にし,同様のセットアップで行った.
 以下に実験装置の全体の写真と概要図を示す.
@@ -35,7 +36,7 @@
 
 イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.
 ここで、コリメータをつけているのは線源からの$\gamma$線が直接シンチレータA,B,Cに入射することを防ぐためである.
-以下にコリメータの図を昨年度の資料~\cite{卒論発表2015}から引用し示す.
+以下にコリメータの図を昨年度の資料~\cite{卒業発表2015}から引用し示す.
 \begin{figure}[H]
 	\centering
 		\begin{tabular}{c}
@@ -59,24 +60,40 @@
 			%1枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
+					\includegraphics[width=80mm]{fig/isb/collimator3.png}
+					\hspace{1.6cm} (c)真鍮製コリメータ3
+			\end{minipage}
+			%2枚目
+			\begin{minipage}{0.5\hsize}
+				\centering
+					\includegraphics[width=80mm]{fig/isb/collimator4.png}
+					\hspace{1.6cm} (d)真鍮製コリメータ3内部構造
+			\end{minipage}
+		\end{tabular}
+	\end{figure}
+\begin{figure}[H]
+	\centering
+		\begin{tabular}{c}
+			%1枚目
+			\begin{minipage}{0.5\hsize}
+				\centering
 					\includegraphics[width=80mm]{fig/isb/leadcollimator1.png}
-					\hspace{1.6cm} (c)鉛製コリメータ1
+					\hspace{1.6cm} (e)鉛製コリメータ1
 			\end{minipage}
 			%2枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
 					\includegraphics[width=80mm]{fig/isb/leadcollimator2.png}
-					\hspace{1.6cm} (d)鉛製コリメータ2
+					\hspace{1.6cm} (f)鉛製コリメータ2
 			\end{minipage}
 		\end{tabular}
 \end{figure}
-
 \newpage
 \subsection{回路図}
 全体の回路図は以下のようになっている.~\cite{卒業論文2015}\\
-信号は次のようにして得られる.
+イベントは次のようにして得られる.
 \begin{itemize}
-		\item シンチレータSから2つのdividerを経てdiscriminatorに入り幅800nsのgateを出力する
+		\item シンチレータSからの信号が2つのdividerを経てdiscriminatorに入り幅800nsのgateを出力する
 		\item シンチレータA,B,Cからの信号がSと同様にしてdividerとdiscriminatorを通りOR回路に入る
 		\item OR回路を通った後21nsの遅延をかけられ,AND回路に入る.
 		\item Sからのgateと同時の信号がやってきた場合にだけ信号が出力されて再度遅延された後ADC gateとTDC stopに到達する.
@@ -93,10 +110,10 @@
 \begin{table}[htbp]
 	\centering
 		\caption{使用したモジュール}
-		\begin{tabular}{|l|c|r|r|} \hline
+		\begin{tabular}{|c|c|c|r|} \hline
 			モジュール & 型番 & シリアルナンバー & 製造会社 \\ \hline \hline
-			ADC & V005 & & 豊伸電子 \\ \hline
-			TDC & TMC & & REPIC \\ \hline
+			ADC & V005 & 36211 & 豊伸電子 \\ \hline
+			TDC & TMC & KEK 024  & REPIC \\ \hline
 		\end{tabular}
 		\label{module}
 \end{table}
@@ -123,8 +140,6 @@
 %	\item シンチレータA,B,Cのいずれかにオルソポジトロニウムの崩壊由来の$\gamma$線が入り,delayで遅延される
 %	\item Sからの信号がAND回路に入って800ns以内にA(B,C)からの信号が来る
 %\end{enumerate}
-
-\section{再現実験}
 
 \subsection{エネルギーの較正}
 まず,4つのシンチレータの較正直線を求める.
@@ -163,12 +178,13 @@
 \end{align}
 以後,再現実験ではこの較正直線を元にADCとエネルギーの変換を行う.
 
+\section{再現実験の結果}
 \subsection{得られたデータ}
 本実験で得られたデータを図\ref{fig:dec_t_b4}に示す.
 \[
 		\left(
 			\begin{tabular}{l}
-				測定条件:(S,A,B,C) coincidence level 2\\
+				測定条件:\hspace{8pt}$\textrm{S}\land(\textrm{A}\lor \textrm{B}\lor \textrm{C})$\\
 				測定日:2016/12/05  測定時間:27928 sec\\
 				run9075  500000 events
 			\end{tabular}
@@ -186,6 +202,7 @@
 t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊事象由来のものではないアクシデンタルなイベントが多く含まれるために現れるものである.
 また,t=800ns付近でイベントが大幅に減少しているのは,シンチレータSの閾値highを超えたときに出力されるcoincidence gateの幅を800nsとしたためである.
 
+\section{得られた結果に対する事象選別}
 この結果に対し,2種類のカットをかけてバックグラウンド事象を除去しオルソポジトロニウムの崩壊由来の事象を選別する.
 \begin{itemize}
 	\item low-highカット…光電効果由来1275keVのprompt-$\gamma$線による事象を選別
@@ -199,7 +216,7 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 	\item コンプトン散乱…波高が小さい
 \end{itemize}
 であるがどちらも赤点線で示す立ち上がり時間は一定となる.
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 		\includegraphics[width=15cm]{fig/isb/pulse_difference.pdf}
 		\caption{パルスの違い}
@@ -242,7 +259,7 @@ $t_\textrm{HL}$=10ns付近に光電効果由来のパルスによるピークが
 図\ref{fig:dec_t_cut}にlow-highカット後の崩壊時間分布を示す.
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=10cm]{fig/isb/decay_t_cut}
+		\includegraphics[width=10cm]{fig/isb/decay_t_cut.pdf}
 		\caption{low-highカット後の崩壊時間分布}
 		\label{fig:dec_t_cut}
 \end{figure}
@@ -320,7 +337,7 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 \end{figure}
 カット前後で$2\gamma$領域では80\%が,$3\gamma$領域では34\%の事象が取り除かれたことがわかる.
 
-
+\section{オルソポジトロニウムの寿命測定}
 \subsection{空気中での寿命}
 本再現実験ではオルソポジトロニウムの真空中の寿命を直接測定することはできない.
 従って,まず空気中での寿命を求めた後昨年度の実験のシミュレーションによって求められた各領域での崩壊比を用いて真空中での寿命を求めることにする.
