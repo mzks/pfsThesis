@@ -1,8 +1,6 @@
 % sample.tex
 \documentclass[uplatex,report,10pt,a4paper]{jsbook}
 
-%\bibliographystyle{junsrt}
-\bibliographystyle{tieice}
 \usepackage[uplatex,jis2004]{otf}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{float}
@@ -32,7 +30,7 @@
 \usepackage{braket}
 \usepackage{comment}
 %\usepackage[dvipdfmx, hiresbb]{graphicx}
-\usepackage[top=35truemm,bottom=15truemm,left=25truemm,right=25truemm]{geometry}
+%\usepackage[top=35truemm,bottom=15truemm,left=25truemm,right=25truemm]{geometry}
 \def\vector#1{\mbox{\boldmath $#1$}}
 \renewcommand{\labelitemi}{・}
 \makeatletter
@@ -43,6 +41,9 @@
 \makeatother
 %-------------------------
 
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{url}
 
 \begin{document}
 
@@ -57,6 +58,7 @@
 \input{tex/abstract.tex}
 \input{tex/introduction.tex}
 \input{tex/theory.tex}
+\input{tex/apparatus.tex}
 \input{tex/pmt.tex}
 \input{tex/simulation.tex}
 \input{tex/result.tex}
@@ -64,8 +66,10 @@
 \input{tex/thanks.tex}
 
 %sample
-\appendix
+%\appendix
 
+\bibliographystyle{myjunsrt}
+%\bibliographystyle{tieice}
 \bibliography{reference}
 
 \end{document}
