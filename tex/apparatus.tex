@@ -127,7 +127,7 @@ SCtrigから出る光子はアクリルライトガイドを通り,
 陽電子がシリカエアロゲルに到達し,ポジトロニウムを形成していることを確かめ,
 またSCtrigに取り付けた2本のPMTによる同時計測により,
 暗電流のレートを減らし,バックグラウンドを低減させることが,SCtrigを導入する目的である.
-第-章で詳しく述べるが,すべてのPMTは磁場を遮蔽するための鉄管の中に入っている.
+第\ref{PMT}章で詳しく述べるが,すべてのPMTは磁場を遮蔽するための鉄管の中に入っている.
 
 \begin{figure}[H]
 \centering
@@ -184,16 +184,16 @@ SCtrigはサンゴバン社製のBC490,
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio,scale=0.3]{fig/ybm/oscillo2.pdf}
-\caption{暗電流\newline
+	\caption[暗電流]{暗電流\newline
 信号はSCtrigに取り付けたPMTのもの.トリガーは下のチャンネル.}
-\label{fig:oscilloH2}
+\label{fig:oscillo2}
 \end{figure}
 
 \begin{figure}[]
 \begin{minipage}{0.5\hsize}
 \centering
 \includegraphics[keepaspectratio,scale=0.3]{fig/ybm/oscillo.pdf}
-\caption{2本のPMTの同時計測\newline
+	\caption[2本のPMTの同時計測]{2本のPMTの同時計測\newline
 上2本はSCtrigに取り付けたPMTの信号,下は後方に置いたPMTの信号}
 \label{fig:oscillo}
 \end{minipage}
@@ -206,13 +206,14 @@ SCtrigはサンゴバン社製のBC490,
 \end{figure}
 
 図\ref{fig:oscillo}より陽電子がSCtrigを突き抜けていることが確かめられた.
-また図\ref{fig:oscillo}の波形を積分し式（\ref{eq:charge}）で電荷に直したヒストグラムは図\ref{fig:charge}のようになった.
+また図\ref{fig:oscillo1}の波形を積分し式（\ref{eq:charge}）で電荷に直したヒストグラムは図\ref{fig:charge}のようになった.
 
 \begin{equation}
 Q = \frac{V}{R}
 \label{eq:charge}
 \end{equation}
-ここで$Q [C]$は電荷,$V [V]$はオシロスコープの波形を積分した電圧,$R [\Omega]$は終端抵抗で今は50 $\Omega$である.
+
+ここで$Q$ [C]は電荷,$V$ [V]はオシロスコープの波形を積分した電圧,$R [\Omega]$は終端抵抗で今は50 $\Omega$である.
 
 \begin{figure}[H]
 \centering
@@ -222,12 +223,12 @@ Q = \frac{V}{R}
 \end{figure}
 
 図\ref{fig:oscillo2}より暗電流の信号の波形の高さは数百 mVであり,
-図\ref{fig:oscillo1}より陽電子による信号の波形の高さは数十 mV,幅は10 nsecであることがわかる.
+図\ref{fig:oscillo1}より陽電子による信号の波形の高さは数十 mV,幅は10 nsであることがわかる.
 図\ref{fig:oscillo2}の典型的な信号の波形は20 mV程度であり,
 これを1個の光電子による信号とみなす.
 図\ref{fig:coinci1},\ref{fig:coinci2}の治具の効率は,
-SCtrigの屈折率や立体角から$3 \%$と見積もった.
-PMTの量子効率は$25 \%$である.
+SCtrigの屈折率や立体角から3 \%と見積もった.
+PMTの量子効率は25 \%である.
 また$\mathrm{^{22}Na}$から出る陽電子が,SCtrigを通過するときのエネルギー損失は約40 keVであり,
 そのエネルギーによって約360 個の光子が放出される.
 \begin{equation}
@@ -237,14 +238,13 @@ PMTの量子効率は$25 \%$である.
 より約3個の光子がPMTに入射していることがわかる.
 以上より信号の電荷は
 \begin{equation}
-Q = \frac{\frac{1}{2} \times 20 [mV] \times 10}{50 \Omega} \times 3 = 6 \si{pC}
+	Q = \frac{\frac{1}{2} \times 20 [\si{mV}] \times 10[\si{ns}]}{50 \Omega} \times 3 = 6 [\si{pC}]
 \label{eq:charge1}
 \end{equation}
 と計算することができる.
 この計算は図\ref{fig:charge}と矛盾していない.
 図\ref{fig:charge}を見ると,信号の電荷は大きくても40 pC程度であり,
 対応する電圧は400 mVであり,信号は暗電流と同程度かそれ以下の電圧であるので,
-ディスクリミネータの閾値による自称選別は不可能である.
-以上のことから,トリガーにはディスクリミネータによる閾値を設定せずに,
-2本のPMTの同時計測信号を使用することとした.
+ディスクリミネータの閾値による事象選別は不可能である.
+以上のことから,トリガーにはディスクリミネータによる閾値を設定せずに, 2本のPMTの同時計測信号を使用することとした.
 
