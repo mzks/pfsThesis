@@ -1,11 +1,11 @@
-\chapter{ポジトロニウムの超微細構造の測定における再現実験を含めた事象選別と結果}\label{result}
+\chapter{ポジトロニウムの超微細構造の測定における再現実験を含めた事象選別と結果(担当:礒部)}\label{result}
 
-\section{再現実験}
+\section{再現実験}\label{replication}
 超微細構造の測定にはポジトロニウムの寿命を求める必要がある.
 そのため,超微細構造の測定に先立ち昨年度の再現実験を行い真空中でのオルソポジトロニウムの寿命測定を試みた.
 
 \subsection{実験装置}
-昨年度の測定を参考にし,同様のセットアップで行った.
+昨年度の測定~\cite{卒業論文2015}を参考にし,同様のセットアップで行った.
 以下に実験装置の全体の写真と概要図を示す.
 \begin{figure}[htbp]
 	\begin{tabular}{cc}
@@ -19,7 +19,7 @@
 		%2枚目
 		\begin{minipage}{0.5\hsize}
 			\centering
-				\includegraphics[width=80mm]{img/isb/pmt_setting}
+			\includegraphics[width=80mm]{img/isb/pmt_setting.JPG}
 				\caption{シンチレータA,B,Cの配置}
 				\label{fig:pmt_setting2015}
 		\end{minipage}
@@ -35,7 +35,7 @@
 
 イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.
 ここで、コリメータをつけているのは線源からの$\gamma$線が直接シンチレータA,B,Cに入射することを防ぐためである.
-以下にコリメータの図を昨年度の資料から引用し示す.
+以下にコリメータの図を昨年度の資料~\cite{卒論発表2015}から引用し示す.
 \begin{figure}[H]
 	\centering
 		\begin{tabular}{c}
@@ -73,8 +73,15 @@
 
 \newpage
 \subsection{回路図}
-全体の回路図は以下のようになっている.
-\begin{figure}[H]
+全体の回路図は以下のようになっている.~\cite{卒業論文2015}\\
+信号は次のようにして得られる.
+\begin{itemize}
+		\item シンチレータSから2つのdividerを経てdiscriminatorに入り幅800nsのgateを出力する
+		\item シンチレータA,B,Cからの信号がSと同様にしてdividerとdiscriminatorを通りOR回路に入る
+		\item OR回路を通った後21nsの遅延をかけられ,AND回路に入る.
+		\item Sからのgateと同時の信号がやってきた場合にだけ信号が出力されて再度遅延された後ADC gateとTDC stopに到達する.
+\end{itemize}
+\begin{figure}[htbp]
 	\centering
 		\includegraphics[width=15cm]{fig/isb/circuit.pdf}
 		\caption{再現実験の回路図}
@@ -94,34 +101,34 @@
 		\label{module}
 \end{table}
 
-\subsection{discriminatorの閾値}
+\subsubsection{discriminatorの閾値}
 回路図\ref{fig:circuit2015}に示すようにシンチレータSとシンチレータA,B,Cではそれぞれの回路中にあるdiscriminatorで設定されている閾値が異なる.
 \begin{description}
-	\item[シンチレータSについて]\mbox{}\\
+	\item[シンチレータS]\mbox{}\\
 		シンチレータSの閾値highは1275keVの$\gamma$線のみを検出するために用いられる.
-		highの閾値78.0mVは約900mVのエネルギーに相当する.一方で閾値lowは$\gamma$線の入射時刻を決める役割を持ち,この閾値を下げることで精度を向上させることができる.
-		さらにhigh,lowの信号の時間差から事象選別にも利用される.
-	\item[シンチレータA,B,Cについて]\mbox{}\\
+		highの閾値78.0mVは約900keVのエネルギーに相当する.一方で閾値lowは$\gamma$線の入射時刻を決める役割を持ち,この閾値を下げることで精度を向上させることができる.
+		さらにhigh,lowの信号の時間差は事象選別にも利用される.
+	\item[シンチレータA,B,C]\mbox{}\\
 		シンチレータA,B,CはSよりも低い閾値が設定されている.
 		これは閾値highの役割が無関係なノイズを落とすためであり,dividerを通る回数によりhighはlowの2倍の閾値となる.
 		lowの役割はSと同様$\gamma$線の入射時刻を決めるものである.
 \end{description}
 
-\subsection{イベントを得る条件}
-イベントは以下のようにして得られる.
-(もう少しわかりやすいように修正するか「実験装置」の節で簡単に述べたのでここはカットする)
-\begin{enumerate}
-	\item シンチレータSに$\gamma$線が入射し2つある閾値を超える
-	\item gate generatorにより幅800nsのcoincidence gateが出力される
-	\item シンチレータA,B,Cのいずれかにオルソポジトロニウムの崩壊由来の$\gamma$線が入り,delayで遅延される
-	\item Sからの信号がAND回路に入って800ns以内にA(B,C)からの信号が来る
-\end{enumerate}
+%\subsection{イベントを得る条件}
+%イベントは以下のようにして得られる.
+%(もう少しわかりやすいように修正するか「実験装置」の節で簡単に述べたのでここはカットする)
+%\begin{enumerate}
+%	\item シンチレータSに$\gamma$線が入射し2つある閾値を超える
+%	\item gate generatorにより幅800nsのcoincidence gateが出力される
+%	\item シンチレータA,B,Cのいずれかにオルソポジトロニウムの崩壊由来の$\gamma$線が入り,delayで遅延される
+%	\item Sからの信号がAND回路に入って800ns以内にA(B,C)からの信号が来る
+%\end{enumerate}
 
-\section{再現実験の結果}
+\section{再現実験}
 
-\subsection{シンチレータの較正}
+\subsection{エネルギーの較正}
 まず,4つのシンチレータの較正直線を求める.
-この再現実験では\ce{^{22}Na}のスペクトルをADCを用いて取得し,2つのピークそれぞれ既知の511keVと1275keVに対応するものとしてガウス関数でフィットする.
+この再現実験では\ce{^{22}Na}のスペクトルをADCを用いて取得し,2つのピークをそれぞれ既知の511keVと1275keVに対応するものとしてガウス関数でフィットする.
 以下に較正に用いたデータを示す.
 \begin{figure}[H]
 	\centering
@@ -161,7 +168,8 @@
 \[
 		\left(
 			\begin{tabular}{l}
-				測定日:2017/12/05  測定時間:27928 sec\\
+				測定条件:(S,A,B,C) coincidence level 2\\
+				測定日:2016/12/05  測定時間:27928 sec\\
 				run9075  500000 events
 			\end{tabular}
 		\right)
@@ -174,7 +182,7 @@
 		\label{fig:dec_t_b4}
 \end{figure}
 
-図\ref{fig:dec_t_b4}はシンチレータA,B,Cでの各崩壊時間の分布を足しあげたものである.ここでの崩壊時間はシンチレータSの閾値lowを超えた時刻からシンチレータA,B,Cでの閾値lowを超えた時間の差である.
+図\ref{fig:dec_t_b4}はシンチレータA,B,Cでの各崩壊時間の分布を足しあげたものである.ここでの崩壊時間はシンチレータSの閾値lowを超えた時刻とシンチレータA,B,Cでの閾値lowを超えた時刻の差である.
 t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊事象由来のものではないアクシデンタルなイベントが多く含まれるために現れるものである.
 また,t=800ns付近でイベントが大幅に減少しているのは,シンチレータSの閾値highを超えたときに出力されるcoincidence gateの幅を800nsとしたためである.
 
@@ -191,13 +199,13 @@ t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊�
 	\item コンプトン散乱…波高が小さい
 \end{itemize}
 であるがどちらも赤点線で示す立ち上がり時間は一定となる.
-\begin{figure}[H]
+\begin{figure}[htbp]
 	\centering
 		\includegraphics[width=15cm]{fig/isb/pulse_difference.pdf}
 		\caption{パルスの違い}
 		\label{fig:pulse_diff}
 \end{figure}
-このことを利用してシンチレータにエネルギーを落としきらなかった事象を排除し,光電効果由来の事象のみを選別する.
+このことを利用してシンチレータにエネルギーを落としきらなかったコンプトン散乱事象を排除し,光電効果由来の事象のみを選別する.
 
 図\ref{fig:tHL_all}にシンチレータSに設定された2つの閾値を超えた時間の差,
 \begin{center}
@@ -232,7 +240,7 @@ $t_\textrm{HL}$=10ns付近に光電効果由来のパルスによるピークが
 を採用した.
 \subsubsection{シンチレータSに対する事象選別結果}
 図\ref{fig:dec_t_cut}にlow-highカット後の崩壊時間分布を示す.
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 		\includegraphics[width=10cm]{fig/isb/decay_t_cut}
 		\caption{low-highカット後の崩壊時間分布}
@@ -291,22 +299,22 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 		\label{energy_cut_region}
 \end{table}
 
-図\ref{fig:ABC_dec_t}にカットをかける前,図\ref{fig:ABC_dec_t_cut}にカットをかけたあとの各エネルギー領域での崩壊時間の分布を示す.
-\begin{figure}[H]
+図\ref{fig:life2gamma}に2$\gamma$領域の,図\ref{fig:life3gamma}に3$\gamma$領域のカットをかける前(青線)とかけた後(赤線)での崩壊時間の分布を示す.
+\begin{figure}[htbp]
 	\begin{tabular}{cc}
 		%1枚目
 		\begin{minipage}{0.5\hsize}
 			\centering
-				\includegraphics[width=80mm]{fig/isb/abc_dec_t_E.pdf}
-				\caption{エネルギーカット前の崩壊時間の分布}
-				\label{fig:ABC_dec_t}
+				\includegraphics[width=80mm]{fig/isb/life_2gamma.pdf}
+				\caption{2$\gamma$領域での崩壊時間の分布}
+				\label{fig:life2gamma}
 		\end{minipage}
 		%2枚目
 		\begin{minipage}{0.5\hsize}
 			\centering
-				\includegraphics[width=80mm]{fig/isb/abc_dec_t_E_cut.pdf}
-				\caption{エネルギーカット後の崩壊時間の分布}
-				\label{fig:ABC_dec_t_cut}
+				\includegraphics[width=80mm]{fig/isb/life_3gamma.pdf}
+				\caption{3$\gamma$領域での崩壊時間の分布}
+				\label{fig:life3gamma}
 		\end{minipage}
 	\end{tabular}
 \end{figure}
@@ -317,14 +325,14 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 本再現実験ではオルソポジトロニウムの真空中の寿命を直接測定することはできない.
 従って,まず空気中での寿命を求めた後昨年度の実験のシミュレーションによって求められた各領域での崩壊比を用いて真空中での寿命を求めることにする.
 
-空気中でのオルソポジトロニウムの寿命はカットによりバックグラウンドを削減したしたシンチレータA,B,Cの崩壊時間分布のヒストグラムに対し次の指数関数でフィッティングすることで得られる.
+空気中でのオルソポジトロニウムの寿命は,カットによりバックグラウンドを削減したしたシンチレータA,B,Cの崩壊時間分布のヒストグラムを次の指数関数でフィッティングすることで得られる.
 \begin{equation}
 	\nonumber
 N(t)=N_0\exp(-\frac{t}{\tau_\textrm{air}})+N_\textrm{BG}
 \end{equation}
 $N_\textrm{BG}$はバックグラウンド事象を考慮したパラメータである.
 このフィッティングの結果を図\ref{fig:life_in_air}に示す.
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 		\includegraphics[width=10cm]{fig/isb/life_air.pdf}
 		\caption{フィッティング結果}
@@ -370,7 +378,6 @@ $N_\textrm{BG}$はバックグラウンド事象を考慮したパラメータ�
 \end{equation}
 となり$\frac{dN_{2\gamma}}{dN_{3\gamma}}$を測定すれば真空中での寿命$\tau_{3\gamma \textrm{vac}}$が求められる.
 
-\subsubsection{オルソポジトロニウムの崩壊の事象数}
 式\ref{eq:life_vacuum}より崩壊したポジトロニウムのうち,$2\gamma$,$3\gamma$それぞれで崩壊する事象数$N_{2\gamma}$,$N_{3\gamma}$を求めれば真空中での寿命を測定できるが実際には直接的にそれらを求めることはできない.
 そのため昨年度の実験で行ったシミュレーション結果を用いることでこの事象数を決定することとした.
 以下にその結果を引用して示す.
