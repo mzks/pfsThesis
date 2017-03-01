@@ -110,15 +110,6 @@ PMTを磁場中で使用すると,光電子がPMT内部を進む間にローレ�
 	\label{NaIscinti}
 \end{figure}
 
-%\begin{table}[h]
-%	\centering
-%	 \begin{tabular}{lcc}\hline
-%	種類& 直径 & 長さ \\ \hline \hline
-%	NaI(Tl)シンチレータ & 57 mm & 58 mm \\ \hline
-%	\end{tabular}
-%	  \caption{NaI(Tl)シンチレータデータ表}
-%\end{table}     
- 
  
 \subsection{2インチPMTの測定結果}
 
@@ -235,7 +226,7 @@ $r=35$ cm(1.22 mT)のときは図\ref{hist35}のようにゲインが大幅に�
 \section{3/8インチPMT}
 四角型PMT(R2248)\cite{pmtR2248}は,本実験でSCtrig用に使用するため,2章の図\ref{fig:device2}のように2インチPMTより磁極に近い位置に,光電面が$r=1.5$ cmとなるように設置される.動作確認実験は早急におこなう必要があり,また磁場の影響の大きさは主にダイノード構造に関係するため,本実験で用いる四角型PMTと同じダイノード構造を持った3/8インチPMT\cite{pmtH3164-10}を用意して磁場中での動作確認をおこなった.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 	\centering
 		\includegraphics[width=10cm]{fig/iguchi/miniPMT.jpg}
 	\caption{3/8インチPMT H3164-10}
@@ -247,7 +238,7 @@ $r=35$ cm(1.22 mT)のときは図\ref{hist35}のようにゲインが大幅に�
 	
 	  \begin{tabular}{cccccccc} \hline
 		型名& 管径 & 外径 & 長さ & 最大電圧 & 印加電圧 & ゲイン & ダイノード構造 \\ \hline \hline
-		H3164－10 & 3/8 インチ & 10.5 ㎜ & 45 mm & -1500 V & -1400 V & $1.0\times10{^{6}}$ &ラインフォーカス型/8段　\\ \hline
+		H3164－10 & 3/8 インチ & 10.5 mm & 45 mm & -1500 V & -1400 V & $1.0\times10{^{6}}$ &ラインフォーカス型/8段　\\ \hline
 	\end{tabular}
 	  \caption{3/8インチPMTデータ表}
 	  \label{3/8inchPMT}
@@ -257,7 +248,7 @@ $r=35$ cm(1.22 mT)のときは図\ref{hist35}のようにゲインが大幅に�
 	\centering
 	  \begin{tabular}{cccccccc} \hline
 		型名& 管径 & 外径 & 長さ & 最大電圧 & 印加電圧 & ゲイン & ダイノード構造 \\ \hline \hline
-		R2248 & 8 mm(四角型) & 9.8 ㎜(四角型)& 45 mm & -1500 V & - & $1.1\times10{^{6}}$ &ラインフォーカス型/8段 \\ \hline
+		R2248 & 8 mm(四角型) & 9.8 mm(四角型)& 45 mm & -1500 V & - & $1.1\times10{^{6}}$ &ラインフォーカス型/8段 \\ \hline
 	\end{tabular}
 	  \caption{角型PMTデータ表}
 \end{table}
@@ -323,7 +314,7 @@ $r=35$ cm(1.22 mT)のときは図\ref{hist35}のようにゲインが大幅に�
 	\label{miniPMTgainG}
 \end{figure}
 
-グラフ\ref{miniPMTgainG}は先述の実験と同様の手法で,横軸にr方向の距離,縦軸にゲインをとった.縦軸は磁場なしで測定したときのゲインで規格化した.また1.275MeVのピークは図\ref{histminicoout}のようにガウシアン+二次関数でフィットした.鉄管に入れない場合,$r=30$ cm(2.36 mT)まではゲインが低下しないが,$r=25$ cm(4.82 mT)付近からゲインが低下し,図\ref{histminicoout22}のように$r=22$ cm(10 mT以下)でゲインが低下しピークが見えなくなった.
+グラフ\ref{miniPMTgainG}は先述の実験と同様の手法で,横軸にr方向の距離,縦軸にゲインをとった.縦軸は磁場なしで測定したときのゲインで規格化した.また1.275MeVのピークは図\ref{histminicoout22}のようにガウシアン+二次関数でフィットした.鉄管に入れない場合,$r=30$ cm(2.36 mT)まではゲインが低下しないが,$r=25$ cm(4.82 mT)付近からゲインが低下し,図\ref{histminicoout22}のように$r=22$ cm(10 mT以下)でゲインが低下しピークが見えなくなった.
 鉄管に入れた場合,$r=6$ cmまでゲインが低下せず,図\ref{histminicoin21}のヒストグラムのようにピークがはっきり見える.
 
 
@@ -344,19 +335,19 @@ $r=35$ cm(1.22 mT)のときは図\ref{hist35}のようにゲインが大幅に�
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=16cm]{fig/iguchi/magnetgraph2.pdf}
-	\caption{femtetで再現した磁場と実測定した磁場}
+	\caption{Femtetで再現した磁場と実測定した磁場}
 	\label{magnetgraph2}
 \end{figure}
 
-図\ref{magnetgraph2}から確認できるように,femtetで再現した$ｚ$方向磁場と実際の測定結果を比較すると,ほとんど一致していることからfemtetの磁場シュミレーションは妥当であることがわかる.
+図\ref{magnetgraph2}から確認できるように,Femtetで再現した$z$方向磁場と実際の測定結果を比較すると,ほとんど一致していることからFemtetの磁場シュミレーションは妥当であることがわかる.
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=15cm]{fig/iguchi/femtetsaigengraph.pdf}
-	\caption{femtetで再現した磁場(鉄管あり)}
-	\label{femtetsaigengraph}
+		\includegraphics[width=15cm]{fig/iguchi/Femtetsaigengraph.pdf}
+	\caption{Femtetで再現した磁場(鉄管あり)}
+	\label{Femtetsaigengraph}
 \end{figure}
-図\ref{femtetsaigengraph}の,鉄管内部の$z$方向磁場のシミュレーション結果から,本実験で四角型PMTの光電面が設置される$r=1.5$ cmでの磁場の強さは1.5 mTである.3/8インチPMTが使用可能であった$r=30$ cmでの磁場の強さは2.36 mT,使用不可能になった磁場の強さは約10 mTである.これらの結果を比較すると,シミュレーションで再現した鉄管内部の磁場の方が弱いため,四角型PMTは管径21.7 mmの鉄管に入れることで磁場中でも使用可能である.光電面が$r＝2$ cmになるように設置すると図\ref{femtetsaigengraph}のグラフから,磁場の大きさは約0.1 mTであり,四角型PMTは確実に使用出来る.鉄管内部に入り込む磁場の影響を完全に排除するために,アクリルライトガイドを1 cm延長して,
+図\ref{Femtetsaigengraph}の,鉄管内部の$z$方向磁場のシミュレーション結果から,本実験で四角型PMTの光電面が設置される$r=1.5$ cmでの磁場の強さは1.5 mTである.3/8インチPMTが使用可能であった$r=30$ cmでの磁場の強さは2.36 mT,使用不可能になった磁場の強さは約10 mTである.これらの結果を比較すると,シミュレーションで再現した鉄管内部の磁場の方が弱いため,四角型PMTは管径21.7 mmの鉄管に入れることで磁場中でも使用可能である.光電面が$r＝2$ cmになるように設置すると図\ref{Femtetsaigengraph}のグラフから,磁場の大きさは約0.1 mTであり,四角型PMTは確実に使用出来る.鉄管内部に入り込む磁場の影響を完全に排除するために,アクリルライトガイドを1 cm延長して,
 光電面が$r＝2$ cmになるように設置することも考えられる.
 
 \section{まとめ}
