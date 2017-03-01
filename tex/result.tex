@@ -1,11 +1,9 @@
 \chapter{再現実験を含めた事象選別と結果(担当:礒部)}\label{result}
 
-\section{再現実験}\label{replication}
 超微細構造の測定にはポジトロニウムの寿命を求める必要がある.
 そのため,超微細構造の測定に先立ち昨年度の再現実験を行い真空中でのオルソポジトロニウムの寿命測定を試みた.
 
-\section{再現実験で用いた装置}
-\subsection{実験装置}
+\section{再現実験の実験装置}
 昨年度の測定~\cite{卒業論文2015}を参考にし,同様のセットアップで行った.
 以下に実験装置の全体の写真と概要図を示す.
 \begin{figure}[htbp]
@@ -106,16 +104,15 @@
 \end{figure}
 
 本実験では各シンチレータに入射する$\gamma$線のエネルギーと時刻を測定するためADC,TDCモジュールを用いた.以下に詳細を示す.
-(シリアルナンバーを調べて記入)
-\begin{table}[htbp]
+\begin{table}[H]
 	\centering
-		\caption{使用したモジュール}
-		\begin{tabular}{|c|c|c|r|} \hline
-			モジュール & 型番 & シリアルナンバー & 製造会社 \\ \hline \hline
-			ADC & V005 & 36211 & 豊伸電子 \\ \hline
-			TDC & TMC & KEK 024  & REPIC \\ \hline
-		\end{tabular}
-		\label{module}
+	\begin{tabular}{|c|c|c|r|} \hline
+		モジュール & 型番 & シリアルナンバー & 製造会社 \\ \hline \hline
+		ADC & V005 & 36211 & 豊伸電子 \\ \hline
+		TDC & TMC & KEK 024  & REPIC \\ \hline
+	\end{tabular}
+	\caption{使用したモジュール}
+	\label{module}
 \end{table}
 
 \subsubsection{discriminatorの閾値}
@@ -141,7 +138,7 @@
 %	\item Sからの信号がAND回路に入って800ns以内にA(B,C)からの信号が来る
 %\end{enumerate}
 
-\subsection{エネルギーの較正}
+\section{エネルギーの較正}
 まず,4つのシンチレータの較正直線を求める.
 この再現実験では\ce{^{22}Na}のスペクトルをADCを用いて取得し,2つのピークをそれぞれ既知の511keVと1275keVに対応するものとしてガウス関数でフィットする.
 以下に較正に用いたデータを示す.
@@ -178,7 +175,7 @@
 \end{align}
 以後,再現実験ではこの較正直線を元にADCとエネルギーの変換を行う.
 
-\section{再現実験の結果}
+\section{事象選別の方法と結果}
 \subsection{得られたデータ}
 本実験で得られたデータを図\ref{fig:dec_t_b4}に示す.
 \[
@@ -190,7 +187,6 @@
 			\end{tabular}
 		\right)
 \]
-
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=12cm]{fig/isb/decay_t.pdf}
@@ -202,14 +198,14 @@
 t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊事象由来のものではないアクシデンタルなイベントが多く含まれるために現れるものである.
 また,t=800ns付近でイベントが大幅に減少しているのは,シンチレータSの閾値highを超えたときに出力されるcoincidence gateの幅を800nsとしたためである.
 
-\section{得られた結果に対する事象選別}
+\subsection{得られた結果に対する事象選別}
 この結果に対し,2種類のカットをかけてバックグラウンド事象を除去しオルソポジトロニウムの崩壊由来の事象を選別する.
 \begin{itemize}
 	\item low-highカット…光電効果由来1275keVのprompt-$\gamma$線による事象を選別
 	\item エネルギーカット…オルソポジトロニウムの崩壊由来の$\gamma$線を選別
 \end{itemize}
 
-\subsection{シンチレータSに対する事象選別 (low-highカット)}
+\subsubsection{シンチレータSに対する事象選別 (low-highカット)}
 シンチレータSで観測されるパルスは主に図\ref{fig:pulse_diff}に示すような光電効果によるものとコンプトン散乱によるものの2種類あり,それぞれの特徴としては
 \begin{itemize}
 	\item 光電効果…波高が大きい
@@ -295,7 +291,7 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 これより約86\%のイベントがカットされ,$500\sim700$ns付近に存在していたピークを排除することができた.
 しかし,比較的エネルギーを大きく落としたコンプトン散乱によるピークは完全に排除できず,残っていることがわかる.
 
-\subsection{シンチレータA,B,Cに対する事象選別 (エネルギーカット)}
+\subsubsection{シンチレータA,B,Cに対する事象選別 (エネルギーカット)}
 シンチレータA,B,Cで観測される$\gamma$線のエネルギーは主にポジトロニウムの崩壊由来のもので
 \begin{itemize}
 		\item $2\gamma$崩壊由来…511keV
@@ -337,7 +333,7 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 \end{figure}
 カット前後で$2\gamma$領域では80\%が,$3\gamma$領域では34\%の事象が取り除かれたことがわかる.
 
-\section{オルソポジトロニウムの寿命測定}
+\section{寿命測定結果}
 \subsection{空気中での寿命}
 本再現実験ではオルソポジトロニウムの真空中の寿命を直接測定することはできない.
 従って,まず空気中での寿命を求めた後昨年度の実験のシミュレーションによって求められた各領域での崩壊比を用いて真空中での寿命を求めることにする.
@@ -479,7 +475,7 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 と求まった.
 これは理論値$\tau_\textrm{theory}=142\hspace{8pt}(\textrm{ns})$と比較すると$4.12\sigma$の開きがある.
 
-\subsection{再現実験の考察}
+\section{再現実験の考察}
 今回の再現実験でオルソポジトロニウムの寿命が$\tau_{3\gamma\textrm{vac}}=96.7 \pm 11.0\hspace{8pt}(\textrm{ns})$と求められた.
 ここで昨年度の結果は$\tau_{3\gamma\textrm{vac}}=128 \pm 10(\textrm{ns})$でありこちらは理論値と$1.4\sigma$で一致する.
 これは本実験で第\ref{sec:hogehoge}章(←宮辺章を参照)で試験を行ったトリガー用プラスチックシンチレータを新たに導入することを考慮し,昨年度行った別の事象選別を行っておらずバックグラウンドを同程度まで減らすことができなかったためだと考える. \\
