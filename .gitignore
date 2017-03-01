@@ -6,6 +6,7 @@ thesis.pdf
 *.aux
 *.out
 *.blg
+*.bbl
 *.dvi
 *.gz
 *.fls
