@@ -5,7 +5,7 @@
 
 \section{再現実験の実験装置}
 昨年度の測定~\cite{卒業論文2015}を参考にし,同様のセットアップで行った.
-以下に実験装置の全体の写真と概要図を示す.
+図\ref{fig:setting2015}と図\ref{fig:pmt_setting2015}にそれぞれ装置の全体図とシンチレータA,B,Cの配置の写真を,図\ref{fig:setting_dtl2015}に装置の概要図を示す.
 \begin{figure}[htbp]
 	\begin{tabular}{cc}
 		%1枚目
@@ -35,19 +35,63 @@
 イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.
 ここで、コリメータをつけているのは線源からの$\gamma$線が直接シンチレータA,B,Cに入射することを防ぐためである.
 以下にコリメータの図を昨年度の資料~\cite{卒業発表2015}から引用し示す.
+
+%一気に3行2列で配置する方
+%\begin{figure}[H]
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/collimator1.png}
+%		\caption{真鍮製コリメータ1}
+%		\label{colli1}
+%	\end{minipage}
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/collimator2.png}
+%		\caption{真鍮製コリメータ2}
+%		\label{colli2}
+%	\end{minipage}
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/collimator3.png}
+%		\caption{真鍮製コリメータ3}
+%		\label{colli3_1}
+%	\end{minipage}
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/collimator4.png}
+%		\caption{真鍮製コリメータ3内部構造}
+%		\label{colli3_2}
+%	\end{minipage}
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/leadcollimator1.png}
+%		\caption{鉛製コリメータ1}
+%		\label{leadcolli1}
+%	\end{minipage}
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/leadcollimator2.png}
+%		\caption{鉛製コリメータ2}
+%		\label{leadcolli2}
+%	\end{minipage}
+%\end{figure}
+
+%1行2列を3つ配置する方
 \begin{figure}[H]
 	\centering
 		\begin{tabular}{c}
 			%1枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=80mm]{fig/isb/collimator1.png}
+					\includegraphics[width=70mm]{fig/isb/collimator1.png}
 					\hspace{1.6cm} (a)真鍮製コリメータ1
 			\end{minipage}
 			%2枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=80mm]{fig/isb/collimator2.png}
+					\includegraphics[width=70mm]{fig/isb/collimator2.png}
 					\hspace{1.6cm} (b)真鍮製コリメータ2
 			\end{minipage}
 		\end{tabular}
@@ -58,13 +102,13 @@
 			%1枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=80mm]{fig/isb/collimator3.png}
+					\includegraphics[width=70mm]{fig/isb/collimator3.png}
 					\hspace{1.6cm} (c)真鍮製コリメータ3
 			\end{minipage}
 			%2枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=80mm]{fig/isb/collimator4.png}
+					\includegraphics[width=70mm]{fig/isb/collimator4.png}
 					\hspace{1.6cm} (d)真鍮製コリメータ3内部構造
 			\end{minipage}
 		\end{tabular}
@@ -75,21 +119,22 @@
 			%1枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=80mm]{fig/isb/leadcollimator1.png}
+					\includegraphics[width=70mm]{fig/isb/leadcollimator1.png}
 					\hspace{1.6cm} (e)鉛製コリメータ1
 			\end{minipage}
 			%2枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=80mm]{fig/isb/leadcollimator2.png}
+					\includegraphics[width=70mm]{fig/isb/leadcollimator2.png}
 					\hspace{1.6cm} (f)鉛製コリメータ2
 			\end{minipage}
 		\end{tabular}
+		\caption{各コリメータの概要図}
+		\label{collimators}
 \end{figure}
 \newpage
 \subsection{回路図}
-全体の回路図は以下のようになっている.~\cite{卒業論文2015}\\
-イベントは次のようにして得られる.
+全体の回路図は図\ref{fig:circuit2015}のようになっており~\cite{卒業論文2015},イベントは次のようにして得られる.
 \begin{itemize}
 		\item シンチレータSからの信号が2つのdividerを経てdiscriminatorに入り幅800nsのgateを出力する
 		\item シンチレータA,B,Cからの信号がSと同様にしてdividerとdiscriminatorを通りOR回路に入る
@@ -103,7 +148,7 @@
 		\label{fig:circuit2015}
 \end{figure}
 
-本実験では各シンチレータに入射する$\gamma$線のエネルギーと時刻を測定するためADC,TDCモジュールを用いた.以下に詳細を示す.
+本実験では各シンチレータに入射する$\gamma$線のエネルギーと時刻を測定するためADC,TDCモジュールを用いた.表\ref{module2016}に詳細を示す.
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|r|} \hline
@@ -112,7 +157,7 @@
 		TDC & TMC & KEK 024  & REPIC \\ \hline
 	\end{tabular}
 	\caption{使用したモジュール}
-	\label{module}
+	\label{module2016}
 \end{table}
 
 \subsubsection{discriminatorの閾値}
@@ -141,14 +186,14 @@
 \section{エネルギーの較正}
 まず,4つのシンチレータの較正直線を求める.
 この再現実験では\ce{^{22}Na}のスペクトルをADCを用いて取得し,2つのピークをそれぞれ既知の511keVと1275keVに対応するものとしてガウス関数でフィットする.
-以下に較正に用いたデータを示す.
+図\ref{fig:calibration_raw_data}較正に用いたデータを示す.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=11cm]{fig/isb/cal7001.pdf}
 		\caption{較正に用いたデータ}
 		\label{fig:calibration_raw_data}
 \end{figure}
-これらのデータに以下の図のようにガウス関数でフィットし,次の較正直線が得られた.
+これらのデータに対し図\ref{fig:fit_gauss}のようにガウス関数でフィットし,図\ref{fig:fitA}のような較正直線を得た.
 \begin{figure}[htbp]
 	\begin{tabular}{cc}
 		%1枚目
@@ -156,7 +201,7 @@
 			\centering
 				\includegraphics[width=80mm]{fig/isb/gaussFit.pdf}
 				\caption{ガウス関数によるフィッティング}
-				\label{fig:cal_gauss}
+				\label{fig:fit_gauss}
 		\end{minipage}
 		%2枚目
 		\begin{minipage}{0.5\hsize}
@@ -392,16 +437,16 @@ $N_\textrm{BG}$はバックグラウンド事象を考慮したパラメータ�
 となり$\frac{dN_{2\gamma}}{dN_{3\gamma}}$を測定すれば真空中での寿命$\tau_{3\gamma \textrm{vac}}$が求められる.
 
 式\ref{eq:life_vacuum}より崩壊したポジトロニウムのうち,$2\gamma$,$3\gamma$それぞれで崩壊する事象数$N_{2\gamma}$,$N_{3\gamma}$を求めれば真空中での寿命を測定できるが実際には直接的にそれらを求めることはできない.
-そのため昨年度の実験で行ったシミュレーション結果を用いることでこの事象数を決定することとした.
+そのため昨年度の実験~\cite{卒業論文2015}で行ったシミュレーション結果を用いることでこの事象数を決定することとした.
 以下にその結果を引用して示す.
 \begin{table}[htbp]
 	\centering
-		\caption{崩壊の割合(各事象/観測した事象)}
 		\begin{tabular}{|l|c|c|} \hline
 			& $2\gamma$崩壊領域 & $3\gamma$崩壊領域 \\ \hline
 			$2\gamma$崩壊 & $R_1=19.83\%$ & $R_2=10.15\%$\\
 			$3\gamma$崩壊 & $R_3=29.65\%$ & $R_4=0.850\%$\\ \hline
 		\end{tabular}
+		\caption{崩壊の割合(各事象/観測した事象)}
 		\label{2_3gamma_ratio}
 \end{table}
 
