@@ -5,7 +5,7 @@
 
 \section{モンテカルロシミュレーションの意義}
 
-本実験では,モンテカルロシミュレーションとしてGeant4\cite{geant4}を用いて,プラスチックシンチレータの中で停止せずに陽電子がターゲットに到達し,ターゲットから発生した$\gamma$線がNaI(Tl)シンチレータで検出される信号事象について検討する.
+本研究では,モンテカルロシミュレーションとしてGeant4\cite{geant4}を用いて,プラスチックシンチレータの中で停止せずに陽電子がターゲットに到達し,ターゲットから発生した$\gamma$線がNaI(Tl)シンチレータで検出される信号事象について検討する.
 また,実験でのバックグラウンド事象を推定する.
 
 今回用いた線源は$\ce{^{22}Na}$ の標準線源であり,200 kBqのものである.
@@ -35,7 +35,7 @@
 \begin{figure}[!tbp]
 	\centering
 		\includegraphics[width=10cm]{img/test1_geometry.pdf}
-	\caption{構築したジオメトリ}
+	\caption[構築したジオメトリ]{構築したジオメトリ \newline 黒線で\ce{^{22}Na}線源,赤線でプラスチックシンチレータと粒子検出器,緑線で$\gamma$線の軌跡,青線で陽電子の軌跡を示す.}
 	\label{test1_geometry}
 \end{figure}
 
@@ -70,7 +70,7 @@
 \begin{figure}[!tbp]
 	\centering
 		\includegraphics[width=10cm]{fig/test1.pdf}
-	\caption{シンチレータを透過した陽電子のエネルギー}
+	\caption[シンチレータを透過した陽電子のエネルギー] {シンチレータを透過した陽電子のエネルギー \newline 赤線がシンチレータ非実装,青線が実装したとき.}
 	\label{test1}
 \end{figure}
 
@@ -78,7 +78,7 @@
 \begin{figure}[!tbp]
 	\centering
 		\includegraphics[width=10cm]{fig/scinti_test.pdf}
-	\caption{プラスチックシンチレータ通過粒子割合}
+	\caption[プラスチックシンチレータ通過粒子割合] {プラスチックシンチレータ通過粒子割合 \newline 赤で磁場あり,青で磁場なしの通過割合を示す.緑破線は規格化した立体角.}
 	\label{scinti_test}
 \end{figure}
 
@@ -96,14 +96,14 @@
 \begin{figure}[!tbp]
 	\centering
 		\includegraphics[width=10cm]{img/test1b_geometry.pdf}
-	\caption{実装した鉛シールド}
+	\caption[実装した鉛シールド]{実装した鉛シールド\newline 前述のジオメトリに,鉛シールドを実装した.(黒線)}
 	\label{test1b_geometry}
 \end{figure}
 
 \begin{figure}[!tbp]
 	\centering
 		\includegraphics[width=10cm]{fig/collimator_loss.pdf}
-	\caption{シンチレータを通過する陽電子のエネルギースペクトル}
+	\caption[シンチレータを通過する陽電子のエネルギースペクトル] {シンチレータを通過する陽電子のエネルギースペクトル \newline 青でシールド非実装,赤がシールドを実装した際のエネルギースペクトルを示す.}
 	\label{collimator_loss}
 \end{figure}
 
@@ -135,7 +135,7 @@
 \begin{figure}[!tbp]
 	\centering
 		\includegraphics[width=10cm]{img/test2_geometry.pdf}
-	\caption{構築したジオメトリ}
+	\caption[構築したジオメトリ]{構築したジオメトリ\newline 赤でターゲットであるシリカゲル,薄青でNaI(Tl)シンチレータ,黒で線源と鉛シールドを示す.青で陽電子の軌跡を事象例として表示している.}
 	\label{test2_geometry}
 \end{figure}
 
@@ -153,14 +153,14 @@
 	\centering
 		\begin{minipage}{0.5\hsize}
 		\includegraphics[width=7cm]{fig/test2Event.pdf}
-			\caption{鉛シールドの有無で期待される事象のエネルギースペクトル}
+			\caption[信号事象のエネルギースペクトル]{信号事象のエネルギースペクトル \newline 青でシールドなし,赤でシールドありの時のエネルギースペクトルを示す.\newline \newline}
 	\label{test2Event}
 		\end{minipage}&
 
 		\begin{minipage}{0.5\hsize}
 	\centering
 		\includegraphics[width=7cm]{fig/test2Back.pdf}
-			\caption{バックグラウンド事象のエネルギースペクトル}
+			\caption[バックグラウンド事象のエネルギースペクトル]{バックグラウンド事象のエネルギースペクトル \newline 図\ref{test2Event}と同様に青でシールドなし,赤でシールドありの時のエネルギースペクトルを示す.}
 	\label{test2Back}
 		\end{minipage}
 		\end{tabular}
@@ -189,23 +189,22 @@
 \begin{figure}[!tbp]
 	\centering
 		\includegraphics[width=10cm]{fig/test2bXY.pdf}
-	\caption{陽電子停止位置深さX-Y方向}
+	\caption[陽電子停止位置深さ方向]{陽電子停止位置深さ方向}
 	\label{test2bXY}
 \end{figure}
 
 \begin{figure}[!tbp]
 	\centering
 		\includegraphics[width=7cm]{fig/test2bYZ.pdf}
-	\caption{陽電子停止位置Y-Z方向}
+	\caption[陽電子停止位置X--Y方向]{陽電子停止位置X--Y方向}
 	\label{test2bYZ}
 \end{figure}
 
 
 
-
 また,図\ref{test2bXY},図\ref{test2bYZ}に陽電子がエネルギーを失い停止したシリカゲル中での位置を示す.
 図\ref{test2bXY}の横軸はシリカゲルの表面を示し,縦軸方向で停止位置の深さを示している.
-この深さ方向をX軸とし,図\ref{test2bYZ}では直径8 mmのシンチレータ中のでの停止Y--Z位置を示している.
+この深さ方向をZ軸とし,図\ref{test2bYZ}では直径8 mmのシンチレータ中のでの停止X--Y位置を示している.
 
 図\ref{test2bXY}から陽電子はシリカエアロゲル中で,平均して0.3 mmの深さで停止し,2 mm以下でほぼ全ての陽電子が停止する.
 シリカエアロゲルケースは15 mmの深さで設計されており,陽電子の貫通に対して十分に深いと考えられる.
@@ -234,14 +233,14 @@
 	\centering
 		\begin{minipage}{0.5\hsize}
 		\includegraphics[width=7cm]{fig/gamma2.pdf}
-	\caption{$2\gamma$崩壊のスペクトル}
+	\caption[$2\gamma$崩壊のスペクトル]{$2\gamma$崩壊のスペクトル}
 	\label{gamma2}
 		\end{minipage}&
 
 		\begin{minipage}{0.5\hsize}
 	\centering
 		\includegraphics[width=7cm]{fig/gamma3.pdf}
-	\caption{$3\gamma$崩壊のスペクトル}
+	\caption[$3\gamma$崩壊のスペクトル]{$3\gamma$崩壊のスペクトル}
 	\label{gamma3}
 		\end{minipage}
 
@@ -251,7 +250,6 @@
 図\ref{gamma2}で示される2$\gamma$崩壊では電子と陽電子の質量に等しい511 keVの$\gamma$線が発生し,光電ピークとして現れている.
 一方,図\ref{gamma3}で示される$3\gamma$崩壊では連続スペクトルが観測される.
 本モンテカルロシミュレーションでは,シリカエアロゲルに到達した陽電子による,$10^7$事象の$3\gamma$崩壊に対して,2,418,889個の$\gamma$線がNaI(Tl)シンチレータで検出された.
-
 
 
 \section{その他の物理量の概算}
@@ -275,7 +273,7 @@
 
 \subsection{実験レートとバックグラウンドの推定}
 実験結果を統合し,実験レートを推定する.
-推定される実験での事象レートは図\ref{test1}から予測されるシリカゲルへの陽電子の到達確率,プラスチックシンチレータのトリガー効率10 \%,$3\gamma$事象の比50 \%,図\ref{gamma3}で予測される$\gamma$線がNaI(Tl)シンチレータで検出される確率と,線源強度200 kBqの積として求められる.
+推定される実験での事象レートは図\ref{test1}から予測されるシリカゲルへの陽電子の到達確率,プラスチックシンチレータの発光の検出効率10 \%,$3\gamma$事象の比50 \%,図\ref{gamma3}で予測される$\gamma$線がNaI(Tl)シンチレータで検出される確率と,線源強度200 kBqの積として求められる.
 
 \begin{equation}
 	\nonumber
@@ -298,7 +296,7 @@
 \begin{figure}[!tbp]
 	\centering
 		\includegraphics[width=10cm]{fig/test_all.pdf}
-	\caption{1週間の測定で期待されるスペクトル}
+	\caption[1週間の測定で期待されるスペクトル]{1週間の測定で期待されるスペクトル\newline 赤で信号事象,青でバックグラウンド事象のスペクトルを示す.}
 	\label{test_all}
 \end{figure}
 
