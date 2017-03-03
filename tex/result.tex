@@ -1,12 +1,11 @@
-\chapter{ポジトロニウムの超微細構造の測定における再現実験を含めた事象選別と結果(担当:礒部)}\label{result}
+\chapter{再現実験を含めた事象選別と結果(担当:礒部)}\label{result}
 
-\section{再現実験}\label{replication}
 超微細構造の測定にはポジトロニウムの寿命を求める必要がある.
 そのため,超微細構造の測定に先立ち昨年度の再現実験を行い真空中でのオルソポジトロニウムの寿命測定を試みた.
 
-\subsection{実験装置}
+\section{再現実験の実験装置}
 昨年度の測定~\cite{卒業論文2015}を参考にし,同様のセットアップで行った.
-以下に実験装置の全体の写真と概要図を示す.
+図\ref{fig:setting2015}と図\ref{fig:pmt_setting2015}にそれぞれ装置の全体図とシンチレータA,B,Cの配置の写真を,図\ref{fig:setting_dtl2015}に装置の概要図を示す.
 \begin{figure}[htbp]
 	\begin{tabular}{cc}
 		%1枚目
@@ -35,20 +34,64 @@
 
 イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.
 ここで、コリメータをつけているのは線源からの$\gamma$線が直接シンチレータA,B,Cに入射することを防ぐためである.
-以下にコリメータの図を昨年度の資料~\cite{卒論発表2015}から引用し示す.
+以下にコリメータの図を昨年度の資料~\cite{卒業発表2015}から引用し示す.
+
+%一気に3行2列で配置する方
+%\begin{figure}[H]
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/collimator1.png}
+%		\caption{真鍮製コリメータ1}
+%		\label{colli1}
+%	\end{minipage}
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/collimator2.png}
+%		\caption{真鍮製コリメータ2}
+%		\label{colli2}
+%	\end{minipage}
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/collimator3.png}
+%		\caption{真鍮製コリメータ3}
+%		\label{colli3_1}
+%	\end{minipage}
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/collimator4.png}
+%		\caption{真鍮製コリメータ3内部構造}
+%		\label{colli3_2}
+%	\end{minipage}
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/leadcollimator1.png}
+%		\caption{鉛製コリメータ1}
+%		\label{leadcolli1}
+%	\end{minipage}
+%	\begin{minipage}{0.5\hsize}
+%		\centering
+%		\includegraphics[width=80mm]{fig/isb/leadcollimator2.png}
+%		\caption{鉛製コリメータ2}
+%		\label{leadcolli2}
+%	\end{minipage}
+%\end{figure}
+
+%1行2列を3つ配置する方
 \begin{figure}[H]
 	\centering
 		\begin{tabular}{c}
 			%1枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=80mm]{fig/isb/collimator1.png}
+					\includegraphics[width=70mm]{fig/isb/collimator1.png}
 					\hspace{1.6cm} (a)真鍮製コリメータ1
 			\end{minipage}
 			%2枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=80mm]{fig/isb/collimator2.png}
+					\includegraphics[width=70mm]{fig/isb/collimator2.png}
 					\hspace{1.6cm} (b)真鍮製コリメータ2
 			\end{minipage}
 		\end{tabular}
@@ -59,24 +102,41 @@
 			%1枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=80mm]{fig/isb/leadcollimator1.png}
-					\hspace{1.6cm} (c)鉛製コリメータ1
+					\includegraphics[width=70mm]{fig/isb/collimator3.png}
+					\hspace{1.6cm} (c)真鍮製コリメータ3
 			\end{minipage}
 			%2枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=80mm]{fig/isb/leadcollimator2.png}
-					\hspace{1.6cm} (d)鉛製コリメータ2
+					\includegraphics[width=70mm]{fig/isb/collimator4.png}
+					\hspace{1.6cm} (d)真鍮製コリメータ3内部構造
 			\end{minipage}
 		\end{tabular}
+	\end{figure}
+\begin{figure}[H]
+	\centering
+		\begin{tabular}{c}
+			%1枚目
+			\begin{minipage}{0.5\hsize}
+				\centering
+					\includegraphics[width=70mm]{fig/isb/leadcollimator1.png}
+					\hspace{1.6cm} (e)鉛製コリメータ1
+			\end{minipage}
+			%2枚目
+			\begin{minipage}{0.5\hsize}
+				\centering
+					\includegraphics[width=70mm]{fig/isb/leadcollimator2.png}
+					\hspace{1.6cm} (f)鉛製コリメータ2
+			\end{minipage}
+		\end{tabular}
+		\caption{各コリメータの概要図}
+		\label{collimators}
 \end{figure}
-
 \newpage
 \subsection{回路図}
-全体の回路図は以下のようになっている.~\cite{卒業論文2015}\\
-信号は次のようにして得られる.
+全体の回路図は図\ref{fig:circuit2015}のようになっており~\cite{卒業論文2015},イベントは次のようにして得られる.
 \begin{itemize}
-		\item シンチレータSから2つのdividerを経てdiscriminatorに入り幅800nsのgateを出力する
+		\item シンチレータSからの信号が2つのdividerを経てdiscriminatorに入り幅800nsのgateを出力する
 		\item シンチレータA,B,Cからの信号がSと同様にしてdividerとdiscriminatorを通りOR回路に入る
 		\item OR回路を通った後21nsの遅延をかけられ,AND回路に入る.
 		\item Sからのgateと同時の信号がやってきた場合にだけ信号が出力されて再度遅延された後ADC gateとTDC stopに到達する.
@@ -88,17 +148,16 @@
 		\label{fig:circuit2015}
 \end{figure}
 
-本実験では各シンチレータに入射する$\gamma$線のエネルギーと時刻を測定するためADC,TDCモジュールを用いた.以下に詳細を示す.
-(シリアルナンバーを調べて記入)
-\begin{table}[htbp]
+本実験では各シンチレータに入射する$\gamma$線のエネルギーと時刻を測定するためADC,TDCモジュールを用いた.表\ref{module2016}に詳細を示す.
+\begin{table}[H]
 	\centering
-		\caption{使用したモジュール}
-		\begin{tabular}{|l|c|r|r|} \hline
-			モジュール & 型番 & シリアルナンバー & 製造会社 \\ \hline \hline
-			ADC & V005 & & 豊伸電子 \\ \hline
-			TDC & TMC & & REPIC \\ \hline
-		\end{tabular}
-		\label{module}
+	\begin{tabular}{|c|c|c|r|} \hline
+		モジュール & 型番 & シリアルナンバー & 製造会社 \\ \hline \hline
+		ADC & V005 & 36211 & 豊伸電子 \\ \hline
+		TDC & TMC & KEK 024  & REPIC \\ \hline
+	\end{tabular}
+	\caption{使用したモジュール}
+	\label{module2016}
 \end{table}
 
 \subsubsection{discriminatorの閾値}
@@ -124,19 +183,17 @@
 %	\item Sからの信号がAND回路に入って800ns以内にA(B,C)からの信号が来る
 %\end{enumerate}
 
-\section{再現実験}
-
-\subsection{エネルギーの較正}
+\section{エネルギーの較正}
 まず,4つのシンチレータの較正直線を求める.
 この再現実験では\ce{^{22}Na}のスペクトルをADCを用いて取得し,2つのピークをそれぞれ既知の511keVと1275keVに対応するものとしてガウス関数でフィットする.
-以下に較正に用いたデータを示す.
+図\ref{fig:calibration_raw_data}較正に用いたデータを示す.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=11cm]{fig/isb/cal7001.pdf}
 		\caption{較正に用いたデータ}
 		\label{fig:calibration_raw_data}
 \end{figure}
-これらのデータに以下の図のようにガウス関数でフィットし,次の較正直線が得られた.
+これらのデータに対し図\ref{fig:fit_gauss}のようにガウス関数でフィットし,図\ref{fig:fitA}のような較正直線を得た.
 \begin{figure}[htbp]
 	\begin{tabular}{cc}
 		%1枚目
@@ -144,7 +201,7 @@
 			\centering
 				\includegraphics[width=80mm]{fig/isb/gaussFit.pdf}
 				\caption{ガウス関数によるフィッティング}
-				\label{fig:cal_gauss}
+				\label{fig:fit_gauss}
 		\end{minipage}
 		%2枚目
 		\begin{minipage}{0.5\hsize}
@@ -163,18 +220,18 @@
 \end{align}
 以後,再現実験ではこの較正直線を元にADCとエネルギーの変換を行う.
 
+\section{事象選別の方法と結果}
 \subsection{得られたデータ}
 本実験で得られたデータを図\ref{fig:dec_t_b4}に示す.
 \[
 		\left(
 			\begin{tabular}{l}
-				測定条件:(S,A,B,C) coincidence level 2\\
+				測定条件:\hspace{8pt}$\textrm{S}\land(\textrm{A}\lor \textrm{B}\lor \textrm{C})$\\
 				測定日:2016/12/05  測定時間:27928 sec\\
 				run9075  500000 events
 			\end{tabular}
 		\right)
 \]
-
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=12cm]{fig/isb/decay_t.pdf}
@@ -186,20 +243,21 @@
 t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊事象由来のものではないアクシデンタルなイベントが多く含まれるために現れるものである.
 また,t=800ns付近でイベントが大幅に減少しているのは,シンチレータSの閾値highを超えたときに出力されるcoincidence gateの幅を800nsとしたためである.
 
+\subsection{得られた結果に対する事象選別}
 この結果に対し,2種類のカットをかけてバックグラウンド事象を除去しオルソポジトロニウムの崩壊由来の事象を選別する.
 \begin{itemize}
 	\item low-highカット…光電効果由来1275keVのprompt-$\gamma$線による事象を選別
 	\item エネルギーカット…オルソポジトロニウムの崩壊由来の$\gamma$線を選別
 \end{itemize}
 
-\subsection{シンチレータSに対する事象選別 (low-highカット)}
+\subsubsection{シンチレータSに対する事象選別 (low-highカット)}
 シンチレータSで観測されるパルスは主に図\ref{fig:pulse_diff}に示すような光電効果によるものとコンプトン散乱によるものの2種類あり,それぞれの特徴としては
 \begin{itemize}
 	\item 光電効果…波高が大きい
 	\item コンプトン散乱…波高が小さい
 \end{itemize}
 であるがどちらも赤点線で示す立ち上がり時間は一定となる.
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 		\includegraphics[width=15cm]{fig/isb/pulse_difference.pdf}
 		\caption{パルスの違い}
@@ -278,7 +336,7 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 これより約86\%のイベントがカットされ,$500\sim700$ns付近に存在していたピークを排除することができた.
 しかし,比較的エネルギーを大きく落としたコンプトン散乱によるピークは完全に排除できず,残っていることがわかる.
 
-\subsection{シンチレータA,B,Cに対する事象選別 (エネルギーカット)}
+\subsubsection{シンチレータA,B,Cに対する事象選別 (エネルギーカット)}
 シンチレータA,B,Cで観測される$\gamma$線のエネルギーは主にポジトロニウムの崩壊由来のもので
 \begin{itemize}
 		\item $2\gamma$崩壊由来…511keV
@@ -320,7 +378,7 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 \end{figure}
 カット前後で$2\gamma$領域では80\%が,$3\gamma$領域では34\%の事象が取り除かれたことがわかる.
 
-
+\section{寿命測定結果}
 \subsection{空気中での寿命}
 本再現実験ではオルソポジトロニウムの真空中の寿命を直接測定することはできない.
 従って,まず空気中での寿命を求めた後昨年度の実験のシミュレーションによって求められた各領域での崩壊比を用いて真空中での寿命を求めることにする.
@@ -379,16 +437,16 @@ $N_\textrm{BG}$はバックグラウンド事象を考慮したパラメータ�
 となり$\frac{dN_{2\gamma}}{dN_{3\gamma}}$を測定すれば真空中での寿命$\tau_{3\gamma \textrm{vac}}$が求められる.
 
 式\ref{eq:life_vacuum}より崩壊したポジトロニウムのうち,$2\gamma$,$3\gamma$それぞれで崩壊する事象数$N_{2\gamma}$,$N_{3\gamma}$を求めれば真空中での寿命を測定できるが実際には直接的にそれらを求めることはできない.
-そのため昨年度の実験で行ったシミュレーション結果を用いることでこの事象数を決定することとした.
+そのため昨年度の実験~\cite{卒業論文2015}で行ったシミュレーション結果を用いることでこの事象数を決定することとした.
 以下にその結果を引用して示す.
 \begin{table}[htbp]
 	\centering
-		\caption{崩壊の割合(各事象/観測した事象)}
 		\begin{tabular}{|l|c|c|} \hline
 			& $2\gamma$崩壊領域 & $3\gamma$崩壊領域 \\ \hline
 			$2\gamma$崩壊 & $R_1=19.83\%$ & $R_2=10.15\%$\\
 			$3\gamma$崩壊 & $R_3=29.65\%$ & $R_4=0.850\%$\\ \hline
 		\end{tabular}
+		\caption{崩壊の割合(各事象/観測した事象)}
 		\label{2_3gamma_ratio}
 \end{table}
 
@@ -462,14 +520,14 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 と求まった.
 これは理論値$\tau_\textrm{theory}=142\hspace{8pt}(\textrm{ns})$と比較すると$4.12\sigma$の開きがある.
 
-\subsection{再現実験の考察}
+\section{再現実験の考察}
 今回の再現実験でオルソポジトロニウムの寿命が$\tau_{3\gamma\textrm{vac}}=96.7 \pm 11.0\hspace{8pt}(\textrm{ns})$と求められた.
 ここで昨年度の結果は$\tau_{3\gamma\textrm{vac}}=128 \pm 10(\textrm{ns})$でありこちらは理論値と$1.4\sigma$で一致する.
 これは本実験で第\ref{sec:hogehoge}章(←宮辺章を参照)で試験を行ったトリガー用プラスチックシンチレータを新たに導入することを考慮し,昨年度行った別の事象選別を行っておらずバックグラウンドを同程度まで減らすことができなかったためだと考える. \\
 
 例としてシンチレータSからの信号に対してシンチレータAの信号が$\Delta t(>0)$だけ遅れた場合を考える.
 このときシンチレータSからの信号に対し電荷量を積分するためのADC gateは同じく$\Delta t$だけ遅れ,信号は正しく積分されずに見かけ上1275keVよりも小さい電荷量となる.
-また,閾値highを超える時間も$\Delta t$だけ小さくなる.(図を入れるか考え中)
+また,閾値highを超える時間も$\Delta t$だけ小さくなる.%(図を入れるか考え中)%
 これは図\ref{fig:E-tHL}と図\ref{fig:E-tHL_cut}ではっきりと確認できていることがわかる.
 
 昨年度はこれを検証するため故意にADC gateを20nsずつずらし相関を調べ,閾値highを超えた時間を10ns毎に分ける作業をlow-highカット後に行っていた.
