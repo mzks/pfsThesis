@@ -1,16 +1,21 @@
 \begin{thebibliography}{1}
 
-\bibitem{pmtR2248shape}
-浜松ホトニクス株式会社web site.
-\newblock \url{https://www.hamamatsu.com/jp/ja/index.html}.
-
-\bibitem{pmtH6410shape}
-浜松ホトニクス株式会社web site.
-\newblock \url{https://www.hamamatsu.com/jp/ja/index.html}.
+\bibitem{ToI}
+Raymond E.~Doebler Edgardo~Browne, Janis M.~Dairiki.
+\newblock {\em Table of Isotopes 7th Edition}.
+\newblock Wiley, 1978.
 
 \bibitem{nai}
 Saint-gobain crystals web site.
 \newblock \url{http://www.crystals.saint-gobain.com/}.
+
+\bibitem{pmtshape}
+浜松ホトニクス株式会社web site.
+\newblock \url{https://www.hamamatsu.com/jp/ja/index.html}.
+
+\bibitem{ToRI}
+Www table of radioactive isotopes web site.
+\newblock \url{http://nucleardata.nuclear.lu.se/toi/nuclide.asp?iZA=110022}.
 
 \bibitem{pmtH6410}
 光電子増倍管アッセンブリカタログ.
