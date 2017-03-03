@@ -1,4 +1,4 @@
-\chapter{モンテカルロシミュレーションにおける実験評価(担当:水越)}\label{simulation}
+\chapter{モンテカルロシミュレーションを用いた実験評価(担当:水越)}\label{simulation}
 
 この章では,実験が適切に構築されていることをモンテカルロシミュレーションを用いて評価する.
 また,期待されるエネルギースペクトルを推定する.
@@ -34,7 +34,7 @@
 
 \begin{figure}[!tbp]
 	\centering
-		\includegraphics[width=10cm]{img/test1_geometry.pdf}
+	\includegraphics[width=10cm]{img/test1_geometry.pdf}
 	\caption[構築したジオメトリ]{構築したジオメトリ \newline 黒線で\ce{^{22}Na}線源,赤線でプラスチックシンチレータと粒子検出器,緑線で$\gamma$線の軌跡,青線で陽電子の軌跡を示す.}
 	\label{test1_geometry}
 \end{figure}
@@ -70,15 +70,14 @@
 \begin{figure}[!tbp]
 	\centering
 		\includegraphics[width=10cm]{fig/test1.pdf}
-	\caption[シンチレータを透過した陽電子のエネルギー] {シンチレータを透過した陽電子のエネルギー \newline 赤線がシンチレータ非実装,青線が実装したとき.}
+	\caption[シンチレータを透過した陽電子のエネルギー]{シンチレータを透過した陽電子のエネルギー\newline 赤線でシンチレータ非実装,青線で実装したときのエネルギースペクトルを示す.}
 	\label{test1}
 \end{figure}
 
-
 \begin{figure}[!tbp]
 	\centering
-		\includegraphics[width=10cm]{fig/scinti_test.pdf}
-	\caption[プラスチックシンチレータ通過粒子割合] {プラスチックシンチレータ通過粒子割合 \newline 赤で磁場あり,青で磁場なしの通過割合を示す.緑破線は規格化した立体角.}
+	\includegraphics[width=10cm]{fig/scinti_test.pdf}
+	\caption[プラスチックシンチレータ通過粒子割合]{プラスチックシンチレータ通過粒子割合\newline 赤で磁場あり,青で磁場なしの通過割合を示す.緑破線は磁場なし10 cmの点で緑規格化された立体角を示す.}
 	\label{scinti_test}
 \end{figure}
 
@@ -153,10 +152,9 @@
 	\centering
 		\begin{minipage}{0.5\hsize}
 		\includegraphics[width=7cm]{fig/test2Event.pdf}
-			\caption[信号事象のエネルギースペクトル]{信号事象のエネルギースペクトル \newline 青でシールドなし,赤でシールドありの時のエネルギースペクトルを示す.\newline \newline}
+			\caption[信号事象のエネルギースペクトル]{信号事象のエネルギースペクトル \newline 青でシールドなし,赤でシールドありの時のエネルギースペクトルを示す.\newline}
 	\label{test2Event}
-		\end{minipage}&
-
+		\end{minipage}
 		\begin{minipage}{0.5\hsize}
 	\centering
 		\includegraphics[width=7cm]{fig/test2Back.pdf}
@@ -273,7 +271,7 @@
 
 \subsection{実験レートとバックグラウンドの推定}
 実験結果を統合し,実験レートを推定する.
-推定される実験での事象レートは図\ref{test1}から予測されるシリカゲルへの陽電子の到達確率,プラスチックシンチレータの発光の検出効率10 \%,$3\gamma$事象の比50 \%,図\ref{gamma3}で予測される$\gamma$線がNaI(Tl)シンチレータで検出される確率と,線源強度200 kBqの積として求められる.
+推定される実験での事象レートは図\ref{test1}から予測されるシリカゲルへの陽電子の到達確率,プラスチックシンチレータの発光の検出効率10 \%,$3\gamma$事象の比1/2,図\ref{gamma3}で予測される$\gamma$線がNaI(Tl)シンチレータで検出される確率と,線源強度200 kBqの積として求められる.
 
 \begin{equation}
 	\nonumber
