@@ -86,13 +86,13 @@
 			\begin{minipage}{0.5\hsize}
 				\centering
 					\includegraphics[width=70mm]{fig/isb/collimator1.png}
-					\hspace{1.6cm} (a)真鍮製コリメータ1
+					\hspace{1.6cm} (a)真鍮製コリメータA
 			\end{minipage}
 			%2枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
 					\includegraphics[width=70mm]{fig/isb/collimator2.png}
-					\hspace{1.6cm} (b)真鍮製コリメータ2
+					\hspace{1.6cm} (b)真鍮製コリメータB
 			\end{minipage}
 		\end{tabular}
 \end{figure}
@@ -103,13 +103,13 @@
 			\begin{minipage}{0.5\hsize}
 				\centering
 					\includegraphics[width=70mm]{fig/isb/collimator3.png}
-					\hspace{1.6cm} (c)真鍮製コリメータ3
+					\hspace{1.6cm} (c)線源用真鍮製コリメータ
 			\end{minipage}
 			%2枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
 					\includegraphics[width=70mm]{fig/isb/collimator4.png}
-					\hspace{1.6cm} (d)真鍮製コリメータ3内部構造
+					\hspace{1.6cm} (d)線源用真鍮製コリメータ内部構造
 			\end{minipage}
 		\end{tabular}
 	\end{figure}
@@ -119,14 +119,14 @@
 			%1枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=70mm]{fig/isb/leadcollimator1.png}
-					\hspace{1.6cm} (e)鉛製コリメータ1
+					\includegraphics[width=70mm]{fig/isb/leadcollimator2.png}
+					\hspace{1.6cm} (e)鉛製コリメータC
 			\end{minipage}
 			%2枚目
 			\begin{minipage}{0.5\hsize}
 				\centering
-					\includegraphics[width=70mm]{fig/isb/leadcollimator2.png}
-					\hspace{1.6cm} (f)鉛製コリメータ2
+					\includegraphics[width=70mm]{fig/isb/leadcollimator1.png}
+					\hspace{1.6cm} (f)鉛製コリメータD
 			\end{minipage}
 		\end{tabular}
 		\caption{各コリメータの概要図}
@@ -220,7 +220,7 @@
 \end{align}
 以後,再現実験ではこの較正直線を元にADCとエネルギーの変換を行う.
 
-\section{事象選別の方法と結果}
+\section{測定}
 \subsection{得られたデータ}
 本実験で得られたデータを図\ref{fig:dec_t_b4}に示す.
 \[
@@ -364,14 +364,14 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 		\begin{minipage}{0.5\hsize}
 			\centering
 				\includegraphics[width=80mm]{fig/isb/life_2gamma.pdf}
-				\caption{2$\gamma$領域での崩壊時間の分布}
+				\caption{2$\gamma$領域での崩壊時間の分布 \newline 青線:カット前,赤線:カット後}
 				\label{fig:life2gamma}
 		\end{minipage}
 		%2枚目
 		\begin{minipage}{0.5\hsize}
 			\centering
 				\includegraphics[width=80mm]{fig/isb/life_3gamma.pdf}
-				\caption{3$\gamma$領域での崩壊時間の分布}
+				\caption{3$\gamma$領域での崩壊時間の分布 \newline 青線:カット前,赤線:カット後}
 				\label{fig:life3gamma}
 		\end{minipage}
 	\end{tabular}
@@ -393,7 +393,7 @@ $N_\textrm{BG}$はバックグラウンド事象を考慮したパラメータ�
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=10cm]{fig/isb/life_air.pdf}
-		\caption{フィッティング結果}
+		\caption{事象選別後のヒストグラム(赤線)に対するフィッティング結果}
 		\label{fig:life_in_air}
 \end{figure}
 フィッティングの範囲は$(20,500)$であり,800nsを超えたイベントはカットしてある.
@@ -471,11 +471,11 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 	\label{eq:fit_for_vac}
 \end{align}
 
-フィッティングした結果を以下に示す.フィットの範囲は$(20,500)$である.
+フィッティングした結果を図\ref{fig:2_3gamma_fit}に示す.フィットの範囲は$(20,500)$である.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=12cm]{fig/isb/2-3gamma.pdf}
-		\caption{フィッティング結果}
+		\caption{$2\gamma$領域(左)と$3\gamma$領域(右)に対するフィッティング結果}
 		\label{fig:2_3gamma_fit}
 \end{figure}
 表によりまとめると
@@ -523,7 +523,7 @@ $2\gamma$,$3\gamma$崩壊領域で観測される崩壊数を$N_1,N_2$とする�
 \section{再現実験の考察}
 今回の再現実験でオルソポジトロニウムの寿命が$\tau_{3\gamma\textrm{vac}}=96.7 \pm 11.0\hspace{8pt}(\textrm{ns})$と求められた.
 ここで昨年度の結果は$\tau_{3\gamma\textrm{vac}}=128 \pm 10(\textrm{ns})$でありこちらは理論値と$1.4\sigma$で一致する.
-これは本実験で第\ref{sec:hogehoge}章(←宮辺章を参照)で試験を行ったトリガー用プラスチックシンチレータを新たに導入することを考慮し,昨年度行った別の事象選別を行っておらずバックグラウンドを同程度まで減らすことができなかったためだと考える.\newline
+これは今回の実験で第\ref{apparatus}章で試験を行ったトリガー用プラスチックシンチレータを新たに導入することを考慮し,昨年度行った別の事象選別を行っておらずバックグラウンドを同程度まで減らすことができなかったためだと考える.\newline
 
 例としてシンチレータSからの信号に対してシンチレータAの信号が$\Delta t(>0)$だけ遅れた場合を考える.
 このときシンチレータSからの信号に対し電荷量を積分するためのADC gateは同じく$\Delta t$だけ遅れ,信号は正しく積分されずに見かけ上1275keVよりも小さい電荷量となる.
