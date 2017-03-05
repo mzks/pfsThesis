@@ -1,10 +1,12 @@
-\chapter{実験装置(担当:宮辺)}
+\chapter{実験原理}
 \label{apparatus}
 
 %\section{概要}
 
 この章では本研究で用いた実験装置,
-及び新たに導入したトリガー用のプラスチックシンチレータ（以下SCtrig）の評価について述べる.
+及び新しい装置の製作と,
+新たに導入したトリガー用のプラスチックシンチレータ（以下SCtrig）の評価,
+磁場中におけるPMTの動作確認について述べる.
 %この章では本研究で用いた実験装置,
 %及び今後の研究で導入予定のトリガー用のプラスチックシンチレータ（以下SCtrig）の評価と,
 %実験装置の改良について述べる.
@@ -32,8 +34,8 @@ $\beta^{+}$崩壊（式\ref{eq:beta}）,電子捕獲により,$\mathrm{^{22}Ne}$
 \end{figure}
 
 昨年度までの研究では,トリガーとして1275 keVの$\gamma$線を使用していたが,
-本研究では,トリガーとして陽電子がSCtrigを通過した信号を用い,
-ポジトロニウムが崩壊し放出される$\gamma$線が検出された時間との差を測定することで,
+本研究では,陽電子がSCtrigを通過した信号をトリガーとして用いるための装置を製作した.
+トリガー信号と,ポジトロニウムが崩壊し放出される$\gamma$線が検出された時間差を測定することで,
 寿命を計算する.
 ポジトロニウムの寿命$\tau$は
 \begin{equation}
@@ -47,23 +49,15 @@ N(t) = N_{0} \exp( - \frac{t}{\tau})
 
 \section{実験装置}
 
-本研究ではトリガーのSCtrigから出た光を検出するために,
-浜松ホトニクス製の光電子増倍管（PMT）アッセンブリR2248（図\ref{fig:pmtmini}）を,
+\subsection{セットアップ（担当:宮辺）}
+
+本実験ではトリガーの1.275 MeVと,
 ポジトロニウムの崩壊による$\gamma$線を検出するために,
 SCIONIX製のNaI(Tl)シンチレータ（図\ref{fig:naitl}）と,
 浜松ホトニクス製の光電子増倍管アッセンブリH6410（図\ref{fig:pmtbig}）を使用する.
-NaI(Tl)シンチレータは,直径57 mm,長さ58 mmの円筒形である.
-PMT R2248の管径は9.8mm $\times$ 9.8mmの四角で,ソケットを含めた長さは100 mm,
-ダイノード構造はラインフォーカス型である.
+NaI(Tl)シンチレータは,直径57 mm,長さ58 mmの円筒形であり,
 PMT H6410の管径は直径60 mm,長さが200 mm,
 ダイノード構造はラインフォーカス型である.
-PMTは完全な暗中にあるときでも微小な電流を出力している.
-これを暗電流といい,測定する前にPMTを数十分程度暗中に放置することで減少させることができる.
-%本研究ではトリガーの1.275 MeVと,
-%ポジトロニウムの崩壊による$\gamma$線を検出するために,
-%NaI(Tl)シンチレータ（図\ref{fig:naitl}）と光電子増倍管（PMT）（図\ref{fig:pmt}）を使用する.
-%PMTは浜松ホトニクス製の光電子増倍管アッセンブリH6410で,
-%ダイノード構造はラインフォーカス型である.
 
 \begin{figure}[htbp]
 \begin{minipage}{0.5\hsize}
@@ -80,6 +74,18 @@ PMTは完全な暗中にあるときでも微小な電流を出力している.
 \end{minipage}
 \end{figure}
 
+また製作した実験装置では,
+トリガーに用いるSCtrigから出た光を検出するために,
+浜松ホトニクス製の光電子増倍管アッセンブリR2248（図\ref{fig:pmtmini}）を使用する.
+PMT R2248の管径は9.8mm $\times$ 9.8mmの四角で,ソケットを含めた長さは100 mm,
+ダイノード構造はラインフォーカス型である.
+PMTは完全な暗中にあるときでも微小な電流を出力している.
+これを暗電流といい,測定する前にPMTを数十分程度暗中に放置することで減少させることができる.
+トリガーに陽電子を用いることで,
+陽電子がシリカエアロゲルに到達し,ポジトロニウムを形成していることを確かめ,
+またSCtrigに取り付けた2本のPMTによる同時計測により,
+暗電流のレートを減らし,バックグラウンドを低減させることが,SCtrigを導入する目的である.
+
 \begin{figure}[htbp]
 \begin{minipage}{0.5\hsize}
 \centering
@@ -95,18 +101,15 @@ PMTは完全な暗中にあるときでも微小な電流を出力している.
 \end{minipage}
 \end{figure}
 
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[keepaspectratio,scale=0.4]{device1.pdf}
-%\caption{実験装置の概要図}
-%\label{fig:device1}
-%\end{figure}
-
-またポジトロニウムに磁場をかけるために図\ref{fig:mag}のような電磁石を使用する.
+またポジトロニウムに磁場をかけるために図\ref{fig:mag},\ref{fig:magnet}のような電磁石を使用する.
 コイルの直径は370 mm,コイル間の距離は185 mm,
 磁極の直径は100 mm,磁極間の距離は150 mmである.
-定格6.0 Aの電流で,0.1 Tの磁場がかかる.
+
+定格6.0 Aの電流で,1.0 Tの磁場がかかる.
+ここで\ref{fig:magnet}のように,
+$z$,$\theta$方向を定義し,
+$z=0$を磁極間中心に,$\theta=0$を水平方向にとる.
+
 
 \begin{figure}[H]
 \centering
@@ -115,45 +118,91 @@ PMTは完全な暗中にあるときでも微小な電流を出力している.
 \label{fig:mag}
 \end{figure}
 
-実験装置は図\ref{fig:device2},トリガー部分は図\ref{fig:device3}のようになる.
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio,scale=0.25]{fig/ybm/magnet.pdf}
+\caption{電磁石の概要図}
+\label{fig:magnet}
+\end{figure}
+
+本実験で使用した装置は図\ref{fig:device5},\ref{fig:device6}のようなものである,
+$\mathrm{^{22}Na}$線源から出る1275 keVの$\gamma$線を,
+上部に置いたNaI(Tl)シンチレータとPMT H6410で検出しトリガーとする.
+陽電子はコリメータを通り,
+プラスチック容器中のシリカエアロゲルでポジトロニウムを形成する.
+ポジトロニウムが崩壊し放出された$\gamma$線は,
+$120^{\circ}$の角度に置かれた3つのNaI(Tl)シンチレータとPMT H6410で検出される.
+
+\begin{figure}[H]
+\begin{minipage}{0.5\hsize}
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/device5.pdf}
+\caption{横から見た実験装置の概要図}
+\label{fig:device5}
+\end{minipage}
+\begin{minipage}{0.5\hsize}
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/device6.pdf}
+\caption{上から見た実験装置の概要図}
+\label{fig:device6}
+\end{minipage}
+\end{figure}
+
+製作した実験装置は図\ref{fig:device2},\ref{fig:device3},
+トリガー部分は図\ref{fig:device3}のようになる.
 $\mathrm{^{22}Na}$線源からの陽電子がコリメータを通り,SCtrigを通過し,
 真空容器中のシリカエアロゲルでポジトロニウムを形成する.
 SCtrigから出る光子はアクリルライトガイドを通り,
 アクリルライトガイドに取り付けた2本のPMT R2248で同時計測し,
 ポジトロニウムが崩壊し放出された$\gamma$線は,
-周囲に4つ置かれたNaI(Tl)シンチレータとPMT H6410で検出される.
-トリガーに陽電子を用いることで,
-陽電子がシリカエアロゲルに到達し,ポジトロニウムを形成していることを確かめ,
-またSCtrigに取り付けた2本のPMTによる同時計測により,
-暗電流のレートを減らし,バックグラウンドを低減させることが,SCtrigを導入する目的である.
-第\ref{PMT}章で詳しく述べるが,すべてのPMTは磁場を遮蔽するための鉄管の中に入っている.
+
+$\theta=45^{\circ},135^{\circ},225^{\circ},315^{\circ}$に
+4つ置かれたNaI(Tl)シンチレータとPMT H6410で検出される.
+後に詳しく述べるが,すべてのPMTは磁場を遮蔽するための鉄管の中に入っている.
+
 
 \begin{figure}[H]
+\begin{minipage}{0.5\hsize}
 \centering
-\includegraphics[keepaspectratio,scale=0.4]{fig/ybm/device2.pdf}
-\caption{実験装置の概要図}
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/device2.pdf}
+\caption{z方向から見た実験装置の概要図}
 \label{fig:device2}
+\end{minipage}
+\begin{minipage}{0.5\hsize}
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/device3.pdf}
+\caption{実験装置の磁極間の概要図}
+\label{fig:device3}
+\end{minipage}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[keepaspectratio,scale=0.4]{fig/ybm/device3.pdf}
+\includegraphics[keepaspectratio,scale=0.4]{fig/ybm/device4.pdf}
 \caption{トリガー部分の概要図}
 \label{fig:device3}
 \end{figure}
 
-%実験装置の写真
 
 
-\section{SCtrigの評価}
-\label{section_sctrig}
+\subsection{SCtrigの評価（担当:宮辺）}
+
 
 昨年度はトリガーに1.275 MeVの$\gamma$線を使用したが,
 本研究では測定精度の向上のために,
 トリガーに陽電子を検出するSCtrigを使用する.
 SCtrigはサンゴバン社製のBC490,
-ポリニトロトルエンでできており,厚さは150 $\si{\micro m}$,
-発光量は9000 photons/MeVである.
+
+ポリニトロトルエンでできており,厚さは150 $\si{\mu m}$,
+発光量は9000 pkotons/MeVである.図\ref{fig:SCtrig}
+
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/SCtrig.pdf}
+\caption{SCtrig}
+\label{fig:SCtrig}
+\end{figure}
+
 
 図\ref{fig:coinci1},\ref{fig:coinci2}のように,
 フィルム状のミラーでSCtrigを挟み,2本のPMTをオプティカルグリスで接着する.
@@ -166,13 +215,13 @@ SCtrigはサンゴバン社製のBC490,
 \begin{figure}[H]
 \begin{minipage}{0.5\hsize}
 \centering
-\includegraphics[keepaspectratio,scale=0.4]{fig/ybm/coinci1.pdf}
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/coinci1.pdf}
 \caption{トリガーテスト装置（横から見た図）}
 \label{fig:coinci1}
 \end{minipage}
 \begin{minipage}{0.5\hsize}
 \centering
-\includegraphics[keepaspectratio,scale=0.4]{fig/ybm/coinci2.pdf}
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/coinci2.pdf}
 \caption{トリガーテスト装置（上から見た図）}
 \label{fig:coinci2}
 \end{minipage}
@@ -181,13 +230,14 @@ SCtrigはサンゴバン社製のBC490,
 \begin{figure}[htbp]
 \centering
 \includegraphics[keepaspectratio,scale=0.3]{fig/ybm/oscillo2.pdf}
-	\caption[暗電流]{暗電流\newline
-信号はSCtrigに取り付けたPMTのもの.トリガーは下のチャンネル.}
+
+\caption{暗電流}
 \label{fig:oscillo2}
 \end{figure}
 
-\begin{figure}[htbp]
-%\begin{minipage}{0.5\hsize}
+\begin{figure}[H]
+\begin{minipage}{0.5\hsize}
+
 \centering
 \includegraphics[keepaspectratio,scale=0.3]{fig/ybm/oscillo.pdf}
 	\caption[2本のPMTの同時計測]{2本のPMTの同時計測\newline 上2本はSCtrigに取り付けたPMTの信号,下は後方に置いたPMTの信号}
@@ -220,8 +270,10 @@ Q = \frac{V}{R}
 \label{fig:charge}
 \end{figure}
 
-図\ref{fig:oscillo2}より暗電流の信号の波形の高さは数百 mVであり,
-図\ref{fig:oscillo1}より陽電子による信号の波形の高さは数十 mV,幅は10 nsであることがわかる.
+
+図\ref{fig:oscillo2}より暗電流の信号の波形の高さは数十 mVであり,
+図\ref{fig:oscillo1}より陽電子による信号の波形の高さは数十 mV,幅は10 nsecであることがわかる.
+
 図\ref{fig:oscillo2}の典型的な信号の波形は20 mV程度であり,
 これを1個の光電子による信号とみなす.
 図\ref{fig:coinci1},\ref{fig:coinci2}の治具の効率は,
@@ -241,8 +293,15 @@ PMTの量子効率は25 \%である.
 \end{equation}
 と計算することができる.
 この計算は図\ref{fig:charge}と矛盾していない.
-図\ref{fig:charge}を見ると,信号の電荷は大きくても40 pC程度であり,
-対応する電圧は400 mVであり,信号は暗電流と同程度かそれ以下の電圧であるので,
-ディスクリミネータの閾値による事象選別は不可能である.
-以上のことから,トリガーにはディスクリミネータによる閾値を設定せずに, 2本のPMTの同時計測信号を使用することとした.
 
+図\ref{fig:charge}を見ると,信号の電荷は10 pC以下がほとんどである.
+陽電子の信号は暗電流と同程度かそれ以下の電圧であるので,
+ディスクリミネータの閾値による事象選別は不可能である.
+以上のことから,トリガーにはディスクリミネータによる閾値を設定せずに,
+2本のPMTの同時計測信号を使用することとした.
+
+
+
+\subsection{磁場中のPMT（担当:井口）}
+
+井口さんの部分がここにきます
