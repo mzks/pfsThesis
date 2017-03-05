@@ -4,8 +4,12 @@ thesis.pdf
 *.log
 *.lof
 *.aux
+*.out
 *.blg
+*.bbl
 *.dvi
 *.gz
 *.fls
 *.fdb_latexmk
+NOTE.pdf
+README.pdf

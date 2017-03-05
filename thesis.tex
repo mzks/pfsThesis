@@ -8,6 +8,7 @@
 \usepackage[version=3]{mhchem}
 \setlength{\textwidth}{\fullwidth}
 \setlength{\evensidemargin}{\oddsidemargin}
+\usepackage[format=hang,labelsep=colon,margin=20pt]{caption}
 
 %Abstract environment setting
 \makeatletter
@@ -29,8 +30,6 @@
 \usepackage{float}
 \usepackage{braket}
 \usepackage{comment}
-%\usepackage[dvipdfmx, hiresbb]{graphicx}
-%\usepackage[top=35truemm,bottom=15truemm,left=25truemm,right=25truemm]{geometry}
 \def\vector#1{\mbox{\boldmath $#1$}}
 \renewcommand{\labelitemi}{・}
 \makeatletter
@@ -44,6 +43,14 @@
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{pxjahyper}
 \usepackage{url}
+\hypersetup{
+setpagesize=false,
+bookmarksnumbered=true,%
+bookmarksopen=true,%
+colorlinks=false,%
+linkcolor=black,
+citecolor=black,
+}
 
 \begin{document}
 
@@ -65,11 +72,10 @@
 \input{tex/prospect.tex}
 \input{tex/thanks.tex}
 
-%sample
+%Add appendix
 %\appendix
 
 \bibliographystyle{myjunsrt}
-%\bibliographystyle{tieice}
 \bibliography{reference}
 
 \end{document}
