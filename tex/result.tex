@@ -32,10 +32,10 @@
 		\label{fig:setting_dtl2015}
 \end{figure}
 
-イベントは,まず線源に用いている\ce{^{22}Na}からの1275keVのprompt-$\gamma$線を上方に配置されたNaI(Tl)シンチレータSで,下方に陽電子が出てシリカエアロジェル中の電子と反応してポジトロニウムを形成し,崩壊する際に放出する$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.
+線源である\ce{^{22}Na}から陽電子が下方に放出された場合に,シリカエアロジェル中の電子と反応して形成されるポジトロニウムの崩壊を観測する.ポジトロニウムの崩壊によって生じる$\gamma$線を下に配置してある3つのNaI(Tl)シンチレータを用いて検出する.
 ここで、コリメータをつけているのは線源からの$\gamma$線が直接シンチレータA,B,Cに入射することを防ぐためである.
 以下にコリメータの図を昨年度の資料~\cite{卒業発表2015}から引用し示す.
-
+また,ポジトロニウムの生成された時刻を求めるためには,\ce{^{22}Na}の崩壊によって生じる1275keVの$\gamma$線を用いる.上方に設置してシンチレータSにこの$\gamma$線が入射し,検出された場合にポジトロニウムの生成時刻を求めることができる.
 %一気に3行2列で配置する方
 %\begin{figure}[H]
 %	\begin{minipage}{0.5\hsize}
@@ -139,7 +139,7 @@
 		\item シンチレータSからの信号が2つのdividerを経てdiscriminatorに入り幅800nsのgateを出力する
 		\item シンチレータA,B,Cからの信号がSと同様にしてdividerとdiscriminatorを通りOR回路に入る
 		\item OR回路を通った後21nsの遅延をかけられ,AND回路に入る.
-		\item Sからのgateと同時の信号がやってきた場合にだけ信号が出力されて再度遅延された後ADC gateとTDC stopに到達する.
+		\item Sからのgateと同時の信号がやってきた場合にだけ信号が出力されて再度遅延された後ADC gateとTDC stopに入力される.
 \end{itemize}
 \begin{figure}[htbp]
 	\centering
@@ -151,17 +151,17 @@
 本実験では各シンチレータに入射する$\gamma$線のエネルギーと時刻を測定するためADC,TDCモジュールを用いた.表\ref{module2016}に詳細を示す.
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|c|c|c|r|} \hline
-		モジュール & 型番 & シリアルナンバー & 製造会社 \\ \hline \hline
-		ADC & V005 & 36211 & 豊伸電子 \\ \hline
-		TDC & TMC & KEK 024  & REPIC \\ \hline
+	\begin{tabular}{|c|c|c|c|c|r|} \hline
+		モジュール & 型番 & シリアルナンバー & 分解能 & ダイナミックレンジ & 製造会社 \\ \hline \hline
+		ADC & V005 & 36211 & 0 - 1000 [\si{\pico\coulomb}] & 0.061 [\si{\pico\coulomb}] & 豊伸電子 \\ \hline
+		TDC & TMC & KEK 024 & $-3$ - 0 [\si{\micro\second}] & 0.75 [\si{\nano\second}] & REPIC \\ \hline
 	\end{tabular}
 	\caption{使用したモジュール}
 	\label{module2016}
 \end{table}
 
 \subsubsection{discriminatorの閾値}
-回路図\ref{fig:circuit2015}に示すようにシンチレータSとシンチレータA,B,Cではそれぞれの回路中にあるdiscriminatorで設定されている閾値が異なる.
+回路図\ref{fig:circuit2015}に示すようにシンチレータSとシンチレータA,B,Cではそれぞれの回路中にあるdiscriminatorで設定されている閾値が異なる.その理由は以下に述べるとおりである.
 \begin{description}
 	\item[シンチレータS]\mbox{}\\
 		シンチレータSの閾値highは1275keVの$\gamma$線のみを検出するために用いられる.
@@ -184,16 +184,17 @@
 %\end{enumerate}
 
 \section{エネルギーの較正}
-まず,4つのシンチレータの較正直線を求める.
-この再現実験では\ce{^{22}Na}のスペクトルをADCを用いて取得し,2つのピークをそれぞれ既知の511keVと1275keVに対応するものとしてガウス関数でフィットする.
-図\ref{fig:calibration_raw_data}較正に用いたデータを示す.
+再現実験に先立ち,4つのシンチレータのエネルギー較正を行った.
+エネルギー較正ではでは\ce{^{22}Na}のスペクトルをADCを用いて取得し,2つのピークをそれぞれ既知の511keVと1275keVに対応するものとしてガウス関数でフィットすることによって行った.
+図\ref{fig:calibration_raw_data}に4つのシンチレータで得られたエネルギースペクトルをそれぞれ示す.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=11cm]{fig/isb/cal7001.pdf}
-		\caption{較正に用いたデータ}
+		\caption{エネルギー較正のために測定した\ce{^{22}Na}のエネルギースペクトル \newline 左上:シンチレータA 右上:シンチレータB 左下:シンチレータC 右下:シンチレータS}
 		\label{fig:calibration_raw_data}
 \end{figure}
 これらのデータに対し図\ref{fig:fit_gauss}のようにガウス関数でフィットし,図\ref{fig:fitA}のような較正直線を得た.
+4つのシンチレータに対する較正直線は以下のとおりである.
 \begin{figure}[htbp]
 	\begin{tabular}{cc}
 		%1枚目
@@ -218,20 +219,13 @@
 	E_\textrm{C}\textrm{[keV]}=1.86\times {\rm ADC}-150 \nonumber \\
 	E_\textrm{S}\textrm{[keV]}=1.86\times {\rm ADC}-145 \nonumber
 \end{align}
-以後,再現実験ではこの較正直線を元にADCとエネルギーの変換を行う.
+以後,再現実験ではこの較正直線を元にADC値とエネルギーの変換を行う.
 
 \section{測定}
 \subsection{得られたデータ}
-本実験で得られたデータを図\ref{fig:dec_t_b4}に示す.
-\[
-		\left(
-			\begin{tabular}{l}
-				測定条件:\hspace{8pt}$\textrm{S}\land(\textrm{A}\lor \textrm{B}\lor \textrm{C})$\\
-				測定日:2016/12/05  測定時間:27928 sec\\
-				run9075  500000 events
-			\end{tabular}
-		\right)
-\]
+再現実験は2016年12月5日に行い,$5\times 10^{5}$事象を27928秒の測定時間で取得した.
+1事象を取得するために設定した測定条件は\hspace{8pt}$\textrm{S}\land(\textrm{A}\lor \textrm{B}\lor \textrm{C})$である.
+この再現実験で得られたデータを図\ref{fig:dec_t_b4}図\ref{fig:calibrated9075}に示す.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=12cm]{fig/isb/decay_t.pdf}
@@ -239,12 +233,46 @@
 		\label{fig:dec_t_b4}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{fig/isb/cal_9075.pdf}
+	\caption{4つのシンチレータにおける較正後のエネルギースペクトル \newline 左上から時計回りにシンチレータA,B,S,C}
+	\label{fig:calibrated9075}
+\end{figure}
+
+%\begin{figure}[hb]
+%	\begin{tabular}{cc}
+%		%1枚目
+%		\begin{minipage}[htbp]{0.5\hsize}
+%			\centering
+%			\includegraphics[width=80mm]{fig/isb/decay_t.pdf}
+%			\caption{崩壊時間の分布}
+%			\label{fig:dec_t_b4}
+%		\end{minipage}
+%		%2枚目
+%		\begin{minipage}[htbp]{0.5\hsize}
+%			\centering
+%			\includegraphics[width=80mm]{fig/isb/cal_9075.pdf}
+%			\caption{4つのシンチレータにおける較正後のエネルギースペクトル \newline 左上から時計回りにシンチレータA,B,S,C}
+%			\label{fig:E-tHL_cut}
+%		\end{minipage}
+%	\end{tabular}
+%\end{figure}
 図\ref{fig:dec_t_b4}はシンチレータA,B,Cでの各崩壊時間の分布を足しあげたものである.ここでの崩壊時間はシンチレータSの閾値lowを超えた時刻とシンチレータA,B,Cでの閾値lowを超えた時刻の差である.
 t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊事象由来のものではないアクシデンタルなイベントが多く含まれるために現れるものである.
 また,t=800ns付近でイベントが大幅に減少しているのは,シンチレータSの閾値highを超えたときに出力されるcoincidence gateの幅を800nsとしたためである.
 
+図\ref{fig:calibrated9075}は4つのシンチレータで観測したスペクトルをエネルギー較正直線を用いてADC値からエネルギーに変換したものである.
+シンチレータA,B,Cでは$500$keV近くにピークが確認できる.
+これはパラポジトロニウムの崩壊に伴う$511$keVのエネルギーを持つ$\gamma$線を観測したものと考えられる.
+$150$keVから$350$keVにかけてもピークが確認できるがこれはオルソポジトロニウムの崩壊による連続分布のエネルギーである.
+ここで,エネルギーの低い領域では背景事象による影響が高エネルギー領域に比べ大きくなる.
+つまり,オルソポジトロニウムの崩壊領域ではパラポジトロニウムの崩壊領域に比べ目的の信号に対する雑音比が大きくなる.
+シンチレータSでは$1250$keV近くにピークが確認できる.
+これは図\ref{fig:na}に示す励起状態の\ce{^{22}Ne}が基底状態になるときに放出する$1275$keVのエネルギーを持つ$\gamma$線によるものである.
+
 \subsection{得られた結果に対する事象選別}
-この結果に対し,以下に示す2種類のカットをかけてバックグラウンド事象を除去しオルソポジトロニウムの崩壊由来の事象を選別する.
+この結果に対し,以下に示す2種類のカットをかけてバックグラウンド事象を除去し,オルソポジトロニウムの崩壊由来の事象を選別する.
 \begin{itemize}
 	\item low-highカット…光電効果由来1275keVのprompt-$\gamma$線による事象を選別
 	\item エネルギーカット…オルソポジトロニウムの崩壊由来の$\gamma$線を選別
@@ -317,7 +345,7 @@ low-highカットによりコンプトン散乱由来の事象を含む約76\%�
 		\begin{minipage}{0.5\hsize}
 			\centering
 				\includegraphics[width=80mm]{fig/isb/E-tHL.pdf}
-				\caption{閾値highを超えた時間とエネルギーの関係}
+				\caption{low-highカット前の閾値highを超えた時間とエネルギーの関係}
 				\label{fig:E-tHL}
 		\end{minipage}
 		%2枚目
@@ -381,7 +409,7 @@ low-highカットを施したあとの分布を図\ref{fig:E-tHL_cut}に示す.
 \section{寿命測定結果}
 \subsection{空気中での寿命}
 本再現実験ではオルソポジトロニウムの真空中の寿命を直接測定することはできない.
-従って,まず空気中での寿命を求めた後昨年度の実験のシミュレーションによって求められた各領域での崩壊比を用いて真空中での寿命を求めることにする.
+従って,まず空気中での寿命を求めた後,昨年度の実験のシミュレーションによって求められた各領域での崩壊比を用いて真空中での寿命を求めることにする.
 
 空気中でのオルソポジトロニウムの寿命は,カットによりバックグラウンドを削減したしたシンチレータA,B,Cの崩壊時間分布のヒストグラムを次の指数関数でフィッティングすることで得られる.
 \begin{equation}
