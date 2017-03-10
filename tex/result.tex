@@ -223,9 +223,9 @@
 
 \section{測定}
 \subsection{得られたデータ}
-再現実験は2016年12月5日に行い,$55 \times 10^{5}$事象を27928秒の測定時間で取得した.
+再現実験は2016年12月5日に行い,$5\times 10^{5}$事象を27928秒の測定時間で取得した.
 1事象を取得するために設定した測定条件は\hspace{8pt}$\textrm{S}\land(\textrm{A}\lor \textrm{B}\lor \textrm{C})$である.
-この再現実験で得られたデータを図\ref{fig:dec_t_b4}に示す.
+この再現実験で得られたデータを図\ref{fig:dec_t_b4}図\ref{fig:calibrated9075}に示す.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=12cm]{fig/isb/decay_t.pdf}
@@ -233,9 +233,43 @@
 		\label{fig:dec_t_b4}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{fig/isb/cal_9075.pdf}
+	\caption{4つのシンチレータにおける較正後のエネルギースペクトル \newline 左上から時計回りにシンチレータA,B,S,C}
+	\label{fig:calibrated9075}
+\end{figure}
+
+%\begin{figure}[hb]
+%	\begin{tabular}{cc}
+%		%1枚目
+%		\begin{minipage}[htbp]{0.5\hsize}
+%			\centering
+%			\includegraphics[width=80mm]{fig/isb/decay_t.pdf}
+%			\caption{崩壊時間の分布}
+%			\label{fig:dec_t_b4}
+%		\end{minipage}
+%		%2枚目
+%		\begin{minipage}[htbp]{0.5\hsize}
+%			\centering
+%			\includegraphics[width=80mm]{fig/isb/cal_9075.pdf}
+%			\caption{4つのシンチレータにおける較正後のエネルギースペクトル \newline 左上から時計回りにシンチレータA,B,S,C}
+%			\label{fig:E-tHL_cut}
+%		\end{minipage}
+%	\end{tabular}
+%\end{figure}
 図\ref{fig:dec_t_b4}はシンチレータA,B,Cでの各崩壊時間の分布を足しあげたものである.ここでの崩壊時間はシンチレータSの閾値lowを超えた時刻とシンチレータA,B,Cでの閾値lowを超えた時刻の差である.
 t=0付近に見られる鋭いピークは1つのポジトロニウムの崩壊事象由来のものではないアクシデンタルなイベントが多く含まれるために現れるものである.
 また,t=800ns付近でイベントが大幅に減少しているのは,シンチレータSの閾値highを超えたときに出力されるcoincidence gateの幅を800nsとしたためである.
+
+図\ref{fig:calibrated9075}は4つのシンチレータで観測したスペクトルをエネルギー較正直線を用いてADC値からエネルギーに変換したものである.
+シンチレータA,B,Cでは$500$keV近くにピークが確認できる.
+これはパラポジトロニウムの崩壊に伴う$511$keVのエネルギーを持つ$\gamma$線を観測したものと考えられる.
+$150$keVから$350$keVにかけてもピークが確認できるがこれはオルソポジトロニウムの崩壊による連続分布のエネルギーである.
+ここで,エネルギーの低い領域では背景事象による影響が高エネルギー領域に比べ大きくなる.
+つまり,オルソポジトロニウムの崩壊領域ではパラポジトロニウムの崩壊領域に比べ目的の信号に対する雑音比が大きくなる.
+シンチレータSでは$1250$keV近くにピークが確認できる.
+これは図\ref{fig:na}に示す励起状態の\ce{^{22}Ne}が基底状態になるときに放出する$1275$keVのエネルギーを持つ$\gamma$線によるものである.
 
 \subsection{得られた結果に対する事象選別}
 この結果に対し,以下に示す2種類のカットをかけてバックグラウンド事象を除去し,オルソポジトロニウムの崩壊由来の事象を選別する.
