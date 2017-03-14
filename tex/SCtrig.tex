@@ -1,0 +1,465 @@
+\chapter{装置の評価}
+\label{SCtrig}
+
+
+この章では磁場中におけるPMTの動作確認,
+及び新たに導入したトリガー用のプラスチックシンチレータ（以下SCtrig）の評価について述べる.
+
+\section{SCtrigの評価（担当:宮辺）}
+
+
+昨年度はトリガーに1.275 MeVの$\gamma$線を使用したが,
+本研究では測定精度の向上のために,
+トリガーに陽電子を検出するSCtrigを使用する.
+SCtrigはサンゴバン社製のBC490,
+
+ポリニトロトルエンでできており,厚さは150 $\si{\mu m}$,
+発光量は9000 pkotons/MeVである.図\ref{fig:SCtrig}
+
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/SCtrig.pdf}
+\caption{SCtrig}
+\label{fig:SCtrig}
+\end{figure}
+
+
+図\ref{fig:coinci1},\ref{fig:coinci2}のように,
+フィルム状のミラーでSCtrigを挟み,2本のPMTをオプティカルグリスで接着する.
+これは2本のPMTで同時計測することにより,
+暗電流（\ref{fig:oscillo2}）のレートを低減することが目的である.
+またSCtrigの後方にもうひとつプラスチックシンチレータが取り付けられたPMT H6410を置く.
+これは陽電子がSCtrigを通過していることを確かめることが目的である.
+この結果はオシロスコープで図\ref{fig:oscillo},\ref{fig:oscillo1}のようになった.
+
+\begin{figure}[H]
+\begin{minipage}{0.5\hsize}
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/coinci1.pdf}
+\caption{トリガーテスト装置（横から見た図）}
+\label{fig:coinci1}
+\end{minipage}
+\begin{minipage}{0.5\hsize}
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/coinci2.pdf}
+\caption{トリガーテスト装置（上から見た図）}
+\label{fig:coinci2}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/oscillo2.pdf}
+
+\caption{暗電流}
+\label{fig:oscillo2}
+\end{figure}
+
+\begin{figure}[tbp]
+%\begin{minipage}{0.5\hsize}
+
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/oscillo.pdf}
+	\caption[2本のPMTの同時計測]{2本のPMTの同時計測\newline 上2本はSCtrigに取り付けたPMTの信号,下は後方に置いたPMTの信号}
+\label{fig:oscillo}
+\end{figure}
+\begin{figure}[tbp]
+%\end{minipage}
+%\begin{minipage}{0.5\hsize}
+\centering
+\includegraphics[keepaspectratio,scale=0.3]{fig/ybm/oscillo1.pdf}
+\caption{図\ref{fig:oscillo}のシングルショット}
+\label{fig:oscillo1}
+%\end{minipage}
+\end{figure}
+
+図\ref{fig:oscillo}より陽電子がSCtrigを突き抜けていることが確かめられた.
+また図\ref{fig:oscillo1}の波形を積分し式（\ref{eq:charge}）で電荷に直したヒストグラムは図\ref{fig:charge}のようになった.
+
+\begin{equation}
+Q = \frac{V}{R}
+\label{eq:charge}
+\end{equation}
+
+ここで$Q$ [C]は電荷,$V$ [V]はオシロスコープの波形を積分した電圧,$R [\Omega]$は終端抵抗で今は50 $\Omega$である.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[keepaspectratio,angle=270,scale=0.7]{fig/ybm/charge.pdf}
+\caption{ヒストグラム}
+\label{fig:charge}
+\end{figure}
+
+
+図\ref{fig:oscillo2}より暗電流の信号の波形の高さは数十 mVであり,
+図\ref{fig:oscillo1}より陽電子による信号の波形の高さは数十 mV,幅は10 nsecであることがわかる.
+
+図\ref{fig:oscillo2}の典型的な信号の波形は20 mV程度であり,
+これを1個の光電子による信号とみなす.
+図\ref{fig:coinci1},\ref{fig:coinci2}の治具の効率は,
+SCtrigの屈折率や立体角から3 \%と見積もった.
+PMTの量子効率は25 \%である.
+また$\mathrm{^{22}Na}$から出る陽電子が,SCtrigを通過するときのエネルギー損失は約40 keVであり,
+そのエネルギーによって約360 個の光子が放出される.
+\begin{equation}
+360 \times 0.03 \times 0.25 \simeq 3
+\label{eq:pe}
+\end{equation}
+より約3個の光子がPMTに入射していることがわかる.
+以上より信号の電荷は
+\begin{equation}
+	Q = \frac{\frac{1}{2} \times 20 [\si{mV}] \times 10[\si{ns}]}{50 \Omega} \times 3 = 6 [\si{pC}]
+\label{eq:charge1}
+\end{equation}
+と計算することができる.
+この計算は図\ref{fig:charge}と矛盾していない.
+
+図\ref{fig:charge}を見ると,信号の電荷は10 pC以下がほとんどである.
+陽電子の信号は暗電流と同程度かそれ以下の電圧であるので,
+ディスクリミネータの閾値による事象選別は不可能である.
+以上のことから,トリガーにはディスクリミネータによる閾値を設定せずに,
+2本のPMTの同時計測信号を使用することとした.
+
+
+\section{磁場中でのPMTの動作(担当:井口)}
+
+
+\subsection{動機}
+磁場中のポジトロニウムの寿命測定実験(本実験)では,2インチPMT\hspace{3pt}H6410~\cite{pmtH6410}と,SCtrig用に3/8インチPMT\hspace{3pt}H3164-10\cite{pmtH3164-10}を磁場中で使用する.
+この章で述べる実験(本測定)では,PMTを磁場中で使用した場合のゲインの変化を,標準$\gamma$線源のエネルギースペクトルを測定することで評価した.また鉄管でPMTを覆い同様の測定をおこなうことで磁場の遮蔽を試みた場合のゲインの変化を評価した.
+
+
+\subsection{電磁石}
+図\ref{magfigure}のように,本実験に用いる電磁石の磁極の直径は100 mm,磁極間の距離は150 mmである.以降では図\ref{magphoto}で示すように,電磁石のN極からS極へ向かう方向を$z$方向とし磁極間の中点を$z=0$ cmと定義する.さらに,磁極の半径方向を$r$方向とし磁極の中心を$r=0$ cmと定義する.
+
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[width=13cm]{fig/iguchi/magnetfigure.pdf}
+	\caption{電磁石図}
+	\label{magfigure}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[width=8cm]{fig/iguchi/magnetphoto.pdf}
+	\caption{電磁石の写真}
+	\label{magphoto}
+\end{figure}
+
+\newpage
+電磁石に定格6.0 Aの電流を流し,ガウスメータを用いて,$z=0$ cmでの$z$方向の磁場の強さと$r$方向の関係を測定した.図\ref{maggraph01}は測定結果をプロットしたものである.電磁石のコイルの半径は185 mmであるため,磁場の強い$r=20$ cm以下は2 cm毎,磁場の大きさの変化が少ない$r=20$ cm以上からは5 cm毎に測定した.
+磁極の中心の磁場の大きさは約90 mTであった.
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[width=15cm]{fig/iguchi/maggraph01.pdf}
+	\caption{$z$方向磁場の$r$依存}
+	\label{maggraph01}
+\end{figure}
+
+
+\subsection{2インチPMTの測定}\label{noFe}
+
+\begin{table}[tbp]
+	\centering
+	 \begin{tabular}{cccccccc}\hline
+	型名& 管径 & 外径 & 長さ & 最大電圧 & 印加電圧 & ゲイン & ダイノード構造 \\ \hline \hline
+	H6410 & 2 インチ & 60 mm & 200 mm & -2000 V & -1850 V & $3.0\times10{^{6}}$ &ラインフォーカス型/10段 \\ \hline
+	\end{tabular}
+	  \caption{2インチPMTデータ表}
+	  \label{PMTdata}
+\end{table}
+
+本測定では図\ref{PMTphoto}の浜松ホトニクス社製の光電子増倍管アッセンブリH6410\cite{pmtH6410}を使用する.
+2インチPMTの規格は表\ref{PMTdata}に示すとおりである。
+
+\begin{figure}[tbp]
+  \begin{center}
+    \begin{tabular}{c}
+    %1
+      \begin{minipage}[t]{0.5\hsize}    
+        \begin{center}
+          \includegraphics[width=6.5cm]{fig/iguchi/PMTphoto.jpg}
+	\caption{2インチPMT H6410}
+	\label{PMTphoto}
+     \end{center}
+    \end{minipage}
+    %2
+      \begin{minipage}[t]{0.5\hsize}    
+        \begin{center}
+          \includegraphics[width=6.5cm]{fig/iguchi/PMTinner.pdf}
+         \caption{ラインフォーカス型の内部構造}
+         \label{PMTinner}
+         \end{center}
+        \end{minipage}
+     
+     \end{tabular}
+    \end{center}
+ \end{figure}
+
+PMTを磁場中で使用すると,図\ref{PMTinner}の黄色い矢印が示すように光電子がPMT内部を進む間にローレンツ力を受けて軌道が曲がり,ダイノードに届かなくなることでゲインが著しく低下する.
+
+2インチPMTの先端に図\ref{NaIscinti}に示すNaI(Tl)シンチレータ(直径:57 mm,長さ:58 mm)を取り付け,$\ce{^{60}Co}$とPMT先端との距離を70 mmに固定し,磁場なしの場合と電磁石に定格6.0 Aの電流を流した磁場ありの場合でゲインを測定した.以下では,磁場ありとは電磁石に定格6.0 Aの電流を流して磁場をかけることを示す.また図\ref{souchizu1}に示すように磁極の中心から2インチPMTの先端までの距離を$r$方向の距離とする.
+
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[width=5cm]{fig/iguchi/NaIscinti.jpg}
+	\caption{NaI(Tl)シンチレータ}
+	\label{NaIscinti}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[width=10cm]{fig/iguchi/souchizu1.pdf}
+	\caption{磁場をかけた2インチPMTの測定装置}
+	\label{souchizu1}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[angle=-90,width=10cm]{fig/iguchi/121450of.pdf}
+	\caption{磁場なしのエネルギースペクトル}
+	\label{histoff}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[angle=-90,width=10cm]{fig/iguchi/121550on.pdf}
+	\caption{$r=50$ cmのエネルギースペクトル}
+	\label{hist50}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[angle=-90,width=10cm]{fig/iguchi/121635on.pdf}
+	\caption{$r=35$ cmのエネルギースペクトル}
+	\label{hist35}
+\end{figure}
+
+以下の測定では豊伸電子社製ADC\hspace{3pt}V005を用いた.図\ref{histoff}が磁場なしの場合で取得した$\ce{^{60}Co}$のエネルギースペクトルである.図\ref{hist50}は磁場あり,$r=50$ cm(0.28 mT)で取得したエネルギースペクトルである.磁場なしの場合と同じように$\ce{^{60}Co}$の1.17 MeV,1.33 MeVの2つのピークが見える.図\ref{hist35}は磁場あり,$r=35$ cm(1.22 mT)で取得したエネルギースペクトルである.$r=35$ cmではゲインが大幅に低下し,1.17 MeVのピークが見えにくくなっている.これはPMTの暗電流のノイズを落とすためディスクリミネータのしきい値を高くした結果,1.17 MeVのピークがしきい値によって切られためである.$r=25$ cm(4.82 mT)では信号が完全に消失した.
+図\ref{plot2inchoff}は縦軸に2インチPMTの磁場中のゲインを,横軸にr方向の距離をとってプロットしたグラフである.ゲインはエネルギースペクトルの2つのピークをそれぞれガウシアンでフィットすることで求め,磁場なしの場合のゲインで規格化した.$r=35$ cm以下では,ピークがフィット出来なかったためプロットしていない.
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[angle=-90,width=15cm]{fig/iguchi/plot2inchPMT.pdf}
+	\caption{2インチPMTの磁場中でのゲイン変化}
+	\label{plot2inchoff}
+\end{figure}
+2インチPMTは$r=35$ cm,$z$方向磁場の強さが1.22 mTで使用出来なくなると結論付ける.
+
+2インチPMTを磁場中で使用した場合,$r=35$ cmでエネルギースペクトルを取得できなくなる.本実験では2インチPMTを磁場中で$r=12$ cmに設置するので,磁場を遮蔽することで2インチPMTを使用できるか評価するため,表\ref{ironpipedata}で規格を示す図\ref{ironpipe}の鉄管に2インチPMTを挿入して,図\ref{2inchinFe}で示すセットアップで先述と同様の測定をおこなった.
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[width=10cm]{fig/iguchi/ironpipe.JPG}
+	\caption{鉄管}
+	\label{ironpipe}
+\end{figure}
+
+\begin{table}[tbp]
+	\centering
+	 \begin{tabular}{cccc} \hline
+		素材 & 外径 & 内径 & 長さ \\ \hline \hline
+		軟鉄 & 76.3 mm & 62.3 mm & 270 mm \\ \hline
+	\end{tabular}
+	  \caption{鉄管データ表}
+	  \label{ironpipedata}
+\end{table}
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[width=7cm]{fig/iguchi/2inchinFe.jpg}
+	\caption{2インチPMTを磁場遮蔽した測定装置}
+	\label{2inchinFe}
+\end{figure}
+
+磁力線が鉄管端から内部に入り込む可能性を考慮して,鉄管内部を示す図\ref{PMTinFe}のように鉄管端と2インチPMTの先端との距離が70 mmになるように取り付けた.
+鉄は強磁性体であり,磁力線は強磁性体に吸収されるため,図\ref{jibakyusyu}のように鉄管内部は磁力線が通らなくなり磁場が遮蔽される.
+
+\begin{figure}[tbp]
+  \begin{center}
+    \begin{tabular}{c}
+    %1
+      \begin{minipage}[tbp]{0.6\hsize}    
+        \begin{center}
+          \includegraphics[width=6.5cm]{fig/iguchi/PMTinFe.pdf}
+	\caption{鉄管内部図}
+	\label{PMTinFe}
+     \end{center}
+    \end{minipage}
+    %2
+      \begin{minipage}[tbp]{0.4\hsize}    
+        \begin{center}
+          \includegraphics[width=6.5cm]{fig/iguchi/jibakyusyu.jpg}
+         \caption{強磁性体によって吸収される磁場\cite{jibashield}}
+	  \label{jibakyusyu}
+         \end{center}
+        \end{minipage}
+     
+     \end{tabular}
+      \end{center}
+   \end{figure}
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[clip,angle=-90,width=10cm]{fig/iguchi/122350fe.pdf}
+	\caption{2インチPMTを磁場遮蔽した$r=50$ cmのエネルギースペクトル}
+	\label{hist50fe}
+\end{figure}
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[clip,angle=-90,width=10cm]{fig/iguchi/12237fe.pdf}
+	\caption{2インチPMTを磁場遮蔽した$r=7$ cmのエネルギースペクトル}
+	\label{hist7fe}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[angle=-90,width=15cm]{fig/iguchi/bigPMTfit.pdf}
+	\caption{2インチPMTを磁場遮蔽したときのゲイン変化\newline 青色は鉄管なしの場合のゲイン,赤色は鉄管で磁場遮蔽した場合のゲインを示す.}
+	\label{bigPMTfit}
+\end{figure}
+
+鉄管なしの場合と同様にADCを用いて$\ce{^{60}Co}$のエネルギースペクトルを取得した.
+鉄管に入れて磁場を遮蔽した場合,$r=50$ cmでは図\ref{hist50fe}で示すようなエネルギースペクトルが得られた.また図\ref{hist7fe}は$r=7$ cmで取得したエネルギースペクトルであり,$r=50$ cmのときと同じように$\ce{^{60}Co}$の1.17 MeV,1.33 MeVの二つのピークが見える.
+図\ref{bigPMTfit}は,第\ref{noFe}節と同様の手法でピークをフィットして得たゲインを磁場なしのゲインで規格化してプロットしたものである.$r=20$ cmまでゲインがほとんど低下せず,$r=20$ cm以下でもゲインの低下は一割程度である.
+2インチPMTは$r=12$ cmに設置するため,鉄管に挿入し磁場を遮蔽することで,本実験でも使用可能であることが示された.
+
+
+\subsection{3/8インチPMTの測定}
+図\ref{3/8inch}で示す3/8インチPMT\hspace{3pt}H3164-10\cite{pmtH3164-10}は,本実験でSCtrig用に使用するため,第\ref{apparatus}章の図\ref{fig:device2}のように2インチPMTより磁極に近い位置に,光電面が$r=1.5$ cmとなるように設置する.表\ref{3/8inchPMT}と表\ref{R2248data}で示すように,第\ref{apparatus}章でSCtrigの評価のために使用したPMT\hspace{3pt}R2248\cite{pmtR2248}と本実験で使用する3/8インチPMT\cite{pmtH3164-10}は同じダイノード構造を持つ。
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[width=10cm]{fig/iguchi/miniPMT.jpg}
+	\caption{3/8インチPMT H3164-10}
+	\label{3/8inch}
+\end{figure}
+
+
+\begin{table}[tbp]
+	\centering
+	  \begin{tabular}{cccccccc} \hline
+		型名& 管径 & 外径 & 長さ & 最大電圧 & 印加電圧 & ゲイン & ダイノード構造 \\ \hline \hline
+		R2248 & 8 mm(四角型) & 9.8 mm(四角型)& 45 mm & -1500 V & - & $1.1\times10{^{6}}$ &ラインフォーカス型/8段 \\ \hline
+	\end{tabular}
+	  \caption{四角型PMT\hspace{3pt}R2248データ表}
+	  \label{R2248data}
+\end{table}
+
+\begin{table}[tbp]
+	\centering
+	
+	  \begin{tabular}{cccccccc} \hline
+		型名& 管径 & 外径 & 長さ & 最大電圧 & 印加電圧 & ゲイン & ダイノード構造 \\ \hline \hline
+		H3164－10 & 3/8 インチ & 10.5 mm & 45 mm & -1500 V & -1400 V & $1.0\times10{^{6}}$ &ラインフォーカス型/8段　\\ \hline
+	\end{tabular}
+	  \caption{3/8インチPMTデータ表}
+	  \label{3/8inchPMT}
+\end{table}
+
+鉄管も含め,2インチPMTを用いた測定と同様の装置を使用し,図\ref{miniset}で示すように線源と3/8インチPMTの先端との距離を100 mmで固定し,鉄管に入れた場合と入れない場合でゲインを測定した.線源はエネルギースペクトルのピークの位置が区別しやすい標準線源として$\ce{^{22}Na}$を使用した.
+3/8インチPMTは暗電流由来のノイズが多く線源のエネルギースペクトルが見えにくかったため,図\ref{PPMT}で示す治具を製作して一つのNaI(Tl)シンチレータに二つの3/8インチPMTを取り付け,それらの信号を同時計測することでノイズとシンチレータの発光の信号を区別した.
+
+\begin{figure}[tbp]
+  \begin{center}
+    \begin{tabular}{c}
+    %1
+      \begin{minipage}[tbp]{0.6\hsize}    
+        \begin{center}
+          \includegraphics[width=10cm]{fig/iguchi/miniset.pdf}
+         \caption{3/8インチPMTの装置図}
+	\label{miniset}
+         \end{center}
+        \end{minipage}
+        %2
+      \begin{minipage}[tbp]{0.4\hsize}    
+        \begin{center}
+          \includegraphics[width=6.5cm]{fig/iguchi/PPMT.jpg}
+	\caption{3/8インチPMTの同時計測用治具}
+	\label{PPMT}
+     \end{center}
+    \end{minipage}
+ 
+     \end{tabular}
+    \end{center}
+   \end{figure}
+
+
+2インチPMTの測定と同様にADCを用いて$\ce{^{22}Na}$のエネルギースペクトルを取得した.
+図\ref{histminicoincidence2}が磁場なしで取得した$\ce{^{22}Na}$のエネルギースペクトルである.
+図\ref{miniPMTgainG}のグラフは1.275MeVのピークをガウシアンと二次関数でフィットしてゲインを求め,2インチPMTの測定と同様に磁場なしの場合のゲインで規格化してプロットしたものである.
+磁場遮蔽しない場合,$r=30$ cm(2.36 mT)まではゲインが低下しないが,$r=25$ cm(4.82 mT)付近からゲインが低下し,図\ref{histminicoout22}のように$r=22$ cm(約10 mT)でゲインが低下しピークが見えなくなった.
+鉄管に入れた場合,$r=50$ cmでは図\ref{histminicoin22}で示すエネルギースペクトルが得られる.$r=6$ cmでも図\ref{histminicoin21}のエネルギースペクトルのようにピークがはっきりと見え,ゲインもほとんど低下しない.
+測定結果から3/8インチPMTは信号を同時計測し,鉄管に入れて磁場を遮蔽することで$r=6$ cmまで使用できることがわかった.
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[angle=-90,width=10cm]{fig/iguchi/minicoincidence2.pdf}
+	\caption{磁場なしの場合の3/8インチPMTのエネルギースペクトル}
+	\label{histminicoincidence2}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[angle=-90,width=10cm]{fig/iguchi/minicoout22.pdf}
+	\caption{3/8インチPMTを磁場中の$r=22$ cmで使用したエネルギースペクトル}
+	\label{histminicoout22}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[angle=-90,width=10cm]{fig/iguchi/minicoin22.pdf}
+	\caption{3/8インチPMTを磁場遮蔽した$r=50$ cmのエネルギースペクトル}
+	\label{histminicoin22}
+\end{figure}
+
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[angle=-90,width=10cm]{fig/iguchi/minicoin21.pdf}
+	\caption{3/8インチPMTを磁場遮蔽した$r=6$ cmのエネルギースペクトル}
+	\label{histminicoin21}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[angle=-90,width=10cm]{fig/iguchi/miniPMTgainG.pdf}
+	\caption{3/8インチPMTの磁場中でのゲイン変化\newline 青色は鉄管なしの場合のゲイン,赤色は鉄管で磁場遮蔽した場合のゲインを示す.}
+	\label{miniPMTgainG}
+\end{figure}
+
+
+\subsection{磁場シミュレーション}
+本実験では図\ref{honjikken1}で示すように,3/8インチPMTを外径21.7 mm,内径16.1 mmの鉄管に挿入し,3/8インチPMTの先端を$r=1.5$ cmに設置する.また鉄管端は$r=1$ cmに設置する.
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[width=10cm]{fig/iguchi/honjikken1.pdf}
+	\caption{本実験でのセットアップ}
+	\label{honjikken1}
+\end{figure}
+
+本実験までに管外径21.7 mmの鉄管を用意できず,またNaI(Tl)シンチレータと先述まで測定で使用した管外径76.3 mmの鉄管では3/8インチPMTの先端を$r=1.5$ cmに設置できなかったため,3/8インチPMTを使用出来るかを確認するのために,ムラタソフトウェア社製の有限要素法解析システムであるFemtetを使用して電磁石の磁場を再現し,管外径21.7 mmの鉄管も同様に再現して,鉄管内部の磁場をシミュレーションした.
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[width=16cm]{fig/iguchi/magnetgraph2.pdf}
+	\caption{Femtetで再現した磁場と実測定した磁場\newline　赤色が実際に測定した磁場の強さ,水色がFemtetで再現した磁場の強さを表す.}
+	\label{magnetgraph2}
+\end{figure}
+
+図\ref{magnetgraph2}のグラフは,横軸に$r$方向の距離をとり,縦軸にFemtetで再現した磁場と実際に測定した$z$方向磁場をプロットし,比較したものである.Femtetで再現した$z$方向磁場と実際の測定結果を比較すると,ほぼ一致していることからFemtetの磁場シュミレーションは妥当であることがわかる.
+
+\begin{figure}[tbp]
+	\centering
+		\includegraphics[width=15cm]{fig/iguchi/Femtetsaigengraph.pdf}
+	\caption{Femtetで鉄管を含めて再現した磁場\newline}
+	\label{Femtetsaigengraph}
+\end{figure}
+
+図\ref{Femtetsaigengraph}のグラフは横軸に$r$方向距離をとり,縦軸に鉄管内部の$z$方向磁場のシミュレーション結果をプロットしたものである.シミュレーションの結果から,本実験で3/8インチPMTが設置される$r=1.5$ cmでの磁場の強さは約1.5 mTである.3/8インチPMTが使用可能であった$r=30$ cmでの磁場の強さは2.36 mT,また3/8インチPMTが使用不可能になった磁場の強さは約10 mTである.これらの結果を比較すると,シミュレーションで再現した鉄管内部の磁場の方が弱く,鉄管で磁場を十分に遮蔽できると考えられるため,3/8インチPMTは管外径21.7 mmの鉄管に挿入することで磁場中でも使用可能であると示された.
+
+\subsection{まとめ}
+2インチPMTは鉄管に挿入し磁場を遮蔽することで$r=7$ cmまで使用可能であったため,本実験で設置する予定である$r=12$ cmでも鉄管で磁場遮蔽することで使用可能であると結論付ける.また3/8インチPMTは2つのPMTの信号を同時計測し鉄管に挿入することで$r=6$ cmまで使用可能であった.本実験でSCtrig用の3/8インチPMTを挿入する鉄管の内部磁場を磁場シュミレーションで再現したものと,実際の測定結果を比較することで,3/8インチPMTは本実験で設置する$r=1.5$ cmでも鉄管で磁場遮蔽することで使用可能であると結論付ける.
+
+
