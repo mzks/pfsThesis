@@ -1,12 +1,18 @@
 \chapter{再現実験における事象選別と結果(担当:礒部)}\label{result}
 
 超微細構造の測定にはポジトロニウムの寿命を求める必要がある.
-そのため,超微細構造の測定に先立ち昨年度の再現実験を行い真空中でのオルソポジトロニウムの寿命測定を試みた.
+そのため,超微細構造の測定に先立ち昨年度の再現実験を行い真空中でのオルソポジトロニウムの寿命測定を行った.
+
+本再現実験の原理については\ref{life_measurement}節で述べる.
+事象のトリガーとして図\ref{fig:na}に示す励起状態の\ce{^{22}Ne}が基底状態の\ce{^{22}Ne}になるときに放出される$1275\si{\kilo\electronvolt}$の$\gamma$線を用いた.
+トリガーの信号とポジトロニウムの崩壊の際に放出される$\gamma$線の検出された時刻の差を測定し,崩壊時間の分布のヒストグラムを作成する.
+そのヒストグラムに対し式\ref{eq:lifefit}でフィッティングすることで寿命が得られる.
+装置については\ref{apparatus_overview}節で説明するSCIONIX製のNaI(Tl)シンチレータ~\cite{nai}(図\ref{fig:naitl})と浜松ホトニクス製の光電子増倍管アッセンブリ H6410~\cite{pmtshape}(図\ref{fig:pmtbig})を用いた.
 
 \section{再現実験の実験装置}
 昨年度の測定~\cite{卒業論文2015}を参考にし,同様のセットアップで行った.
 図\ref{fig:setting2015}と図\ref{fig:pmt_setting2015}にそれぞれ装置の全体図とシンチレータA,B,Cの配置の写真を,図\ref{fig:setting_dtl2015}に装置の概要図を示す.
-\begin{figure}[tbp]
+\begin{figure}[H]
 	\begin{tabular}{cc}
 		%1枚目
 		\begin{minipage}[t]{0.5\hsize}
